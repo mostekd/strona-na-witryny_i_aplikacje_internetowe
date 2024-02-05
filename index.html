@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteka</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/searchBooks.js" defer></script>
+    <script src="./js/searchGuests.js" defer></script>
+    <script src="./js/contactInfo.js" defer></script>
+    <script src="./js/adminPanel.js" defer></script>
+    <script src="./js/common.js" defer></script>
+</head>
+<body>
+    <div class="header-container">
+        <span id="menu-icon" onclick="openNav()">&#9776; </span>
+        <h2>Biblioteka Wesoła Szkoła</h2>
+    </div>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Strona Główna</a>
+            <a href="#" onclick="showSearchBooks()">Wyszukaj Ksiązki</a>
+            <a href="#" onclick="showSearchGuests()">Księga Gości</a>
+            <a href="#" onclick="showContactInfo()">Kontakt</a>
+            <a href="#" onclick="showAdminPanel()">Panel Administracyjny</a>
+        </div>
+        <div class="container">
+            <div class="temp">-°C</div>
+            <div class="summary">----</div>
+            <div class="location"></div>
+        </div>
+        <div id="calendar">
+        </div>
+    </div>
+    <div id="searchBooks" class="search-container">
+        <h3>Wyszukaj Książki</h3>
+        <form id="searchBooksForm">
+            <label for="bookTitle">Tytuł książki:</label>
+            <input type="text" id="bookTitle" name="bookTitle" required>
+            <button type="button" onclick="searchBooks()">Szukaj</button>
+        </form>
+        <div id="searchBooksResults"></div>
+    </div>
+    <div id="searchGuests" class="search-container">
+        <h3>Księga Gości</h3>
+        <form id="searchGuestsForm">
+            <label for="guestName">Imię gościa:</label>
+            <input type="text" id="guestName" name="guestName" required>
+            <button type="button" onclick="searchGuests()">Szukaj</button>
+        </form>
+        <div id="searchGuestsResults"></div>
+    </div>
+    <div id="contactInfo" class="contact-container">
+        <h3>Informacje Kontaktowe</h3>
+        <p>Adres: ul. Biblioteczna 123, 00-000 Miastowo</p>
+        <p>Telefon: 123-456-789</p>
+        <p>Email: biblioteka@example.com</p>
+    </div>
+    <div id="adminPanel" class="admin-container">
+        <h3>Panel Administracyjny</h3>
+        <form id="adminLoginForm">
+            <label for="username">Nazwa użytkownika:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="loginAdmin()">Zaloguj się</button>
+        </form>
+    </div>
+    <footer id="footer">
+        Dawid Mostowski 3A
+    </footer>
+    <script src="./js/pogoda.js"></script>
+    <script src="./js/calendar.js"></script>
+</body>
+</html>
