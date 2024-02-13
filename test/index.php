@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteka</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./js/menu.js" defer></script>
-    <script src="./js/searchBooks.js" defer></script>
-    <script src="./js/searchGuests.js" defer></script>
-    <script src="./js/contactInfo.js" defer></script>
-    <script src="./js/adminPanel.js" defer></script>
-    <script src="./js/common.js" defer></script>
 </head>
 <body>
     <div class="header-container">
@@ -40,6 +34,7 @@
     <footer id="footer">
         Dawid Mostowski 3A
     </footer>
+    <script src="./js/script.js" defer></script>
     <script src="./js/pogoda.js"></script>
     <script src="./js/calendar.js"></script>
 </body>
