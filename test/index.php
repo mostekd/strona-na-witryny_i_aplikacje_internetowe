@@ -25,12 +25,51 @@
         </div>
         <div id="calendar">
         </div>
+        <div class="zdjecie">
+        <?php
+                //include('db_connection.php');
+            
+                //$con = connect();
+                
+                $host = "localhost"; // Host bazy danych
+                $dbname = "wiai"; // Nazwa bazy danych
+                $username = "root"; // Nazwa użytkownika bazy danych
+                $password = ""; // Hasło użytkownika bazy danych
+
+                try {
+                    $con = mysqli_connect($host, $username, $password, $dbname);
+                }
+                catch (PDOException $e) {
+                    die("Błąd połączenia z bazą danych: " . $e->getMessage());
+                }
+
+                $select = "SELECT `id`, `nazwa`, `opis`, `path` FROM `zdj` WHERE 1";
+                $data = mysqli_query($con, $select);
+
+                $ilosc = 0;
+                while($row = mysqli_fetch_array($data))
+                {
+                    $ilosc += 1;
+                }
+                $losowe = rand(1,$ilosc);
+                $select = "SELECT `id`, `nazwa`, `opis`, `path` FROM `zdj` WHERE id = $losowe";
+                $data = mysqli_query($con, $select);
+
+                while($row = mysqli_fetch_array($data))
+                {
+                    echo "<img src=".$row[3].">".$row[3]."</img>";
+                }
+                
+
+            ?>
+        </div>
     </div>
-
-    <?php include('search_books.php'); ?>
-    <?php include('search_guests.php'); ?>
-    <?php include('contact_info.php'); ?>
-
+    
+    <?php 
+        include('search_books.php'); 
+        include('search_guests.php');
+        include('contact_info.php'); 
+    ?>
     <footer id="footer">
         Dawid Mostowski 3A
     </footer>
