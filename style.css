@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+* {
+  margin: 0px;
+  font-family: 'Playpen Sans', cursive;
+}
+#searchBooks,
+#searchGuests,
+#contactInfo,
+#loginPage {
+  margin-top: 2%;
+  text-align: center;
+  display: none;   
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
+}
+#bookTitle,
+#guestName,
+#username,
+#password{
+  border-radius: 10px;
+}
+body {
+  background-image: url('./zdj/ksiazki.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  width: auto;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+h2 {
+    font-weight: bold;
+    background-image: url('./zdj/header_tło.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+    padding: 14px;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.header-container {
+  position: relative;
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: url('zdj/panel_lewy.jpg');
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #787878;
+  text-shadow: 3px 3px 5px #000000;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 60px;
+}
+
+.overlay .container{
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
+  align-items: center;
+  text-align: center;
+  margin-top: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+
+.zdj_menu{
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+#menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 10px; /* Adjust this value as needed */
+}
+#footer{
+    position: fixed;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+    margin-left: 20px;
+    text-align: left;
+    bottom: 0;
+    margin-bottom: 0; 
+    height: 30px;
+}
