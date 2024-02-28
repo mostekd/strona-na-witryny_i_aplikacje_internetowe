@@ -12,6 +12,12 @@ function showSearchBooks() {
     document.getElementById("searchBooks").style.display = "block";
 }
 
+//wpisy.js
+function showWpisy() {
+    hideAllContainers();
+    document.getElementById("wpisy").style.display = "block";
+}
+
 function searchBooks() {
     var bookTitle = document.getElementById("bookTitle").value;
 
