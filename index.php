@@ -63,7 +63,7 @@
         <?php
             include('wpisy.php');
         ?>
-        <a href=""><button>Pokaż wszystkie artykuły</button></a>
+        <a href="wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a>
     </div>
     <?php
         include('search_books.php'); 

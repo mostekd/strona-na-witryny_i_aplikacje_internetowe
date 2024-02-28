@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artykuł</title>
+    <title>Biblioteka</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="header-container">
+        <h2>Biblioteka Wesoła Szkoła</h2>
+    </div>
 <?php
 		$article_id = $_GET['id'];
 		
