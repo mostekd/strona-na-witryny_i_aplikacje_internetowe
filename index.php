@@ -59,8 +59,9 @@
             ?>
         </div>
     </div>
+    <div id='wpisy' class='artykul'></div>
     <?php
-        include('wpisy.php')
+        include('wpisy.php');
         include('search_books.php'); 
         include('search_guests.php');
         include('contact_info.php'); 
