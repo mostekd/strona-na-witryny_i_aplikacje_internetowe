@@ -23,7 +23,7 @@
 		{
 			while($row = mysqli_fetch_assoc($data))
 			{
-				echo "<div class='artykul'>".$row['title']."<article>".$row['content']."</article></div>";
+				echo "<div class='artykul'>".$row['title']."<article>".$row['tresc']."</article></div>";
 			}
 		}	
 
