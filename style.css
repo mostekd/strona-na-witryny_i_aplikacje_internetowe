@@ -22,7 +22,7 @@
 body {
   background-image: url('./zdj/ksiazki.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-size: 100% 100%;
   width: auto;
   height: 100vh;
@@ -129,7 +129,18 @@ h2 {
   margin-bottom: 5px;
 }
 
+article{
+  padding-top: 10px;
+}
+
 .artykul_full{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin-top: 2%;
+  height: 80%;
+  border-radius: 20px;
+  width: 80%;
   color: #000000;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -137,6 +148,16 @@ h2 {
 #wpisy{
   margin-top: 2%;
   text-align: center;
+}
+
+button{
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
 }
 
 @media screen and (max-height: 450px) {
