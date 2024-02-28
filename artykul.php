@@ -10,13 +10,13 @@
 <?php
 		$article_id = $_GET['id'];
 		
-		$connect = mysqli_connect("localhost","root","","strona");
+		$connect = mysqli_connect("localhost","root","","wiai");
 		if (!$connect) 
 		{
 			die("Connection failed: " . mysqli_connect_error());
 		}
 		
-		$query = "SELECT `article_id`, `title`, `content`, `photo_link` FROM `article` WHERE article_id =".$article_id;
+		$query = "SELECT `artykul_id`, `title`, `tresc`, `link` FROM `article` WHERE artykul_id =".$article_id;
 		$data = mysqli_query($connect, $query);
 		
 		if (mysqli_num_rows($data) > 0) 
