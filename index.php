@@ -27,10 +27,6 @@
         </div>
         <div class="zdjecie">
         <?php
-                //include('db_connection.php');
-            
-                //$con = connect();
-                
                 $host = "localhost"; // Host bazy danych
                 $dbname = "wiai"; // Nazwa bazy danych
                 $username = "root"; // Nazwa użytkownika bazy danych
@@ -62,8 +58,14 @@
             ?>
         </div>
     </div>
-    
-    <?php 
+    <?php
+        $host = "localhost"; // Host bazy danych
+        $dbname = "wiai"; // Nazwa bazy danych
+        $username = "root"; // Nazwa użytkownika bazy danych
+        $password = ""; // Hasło użytkownika bazy danych
+
+        
+
         include('search_books.php'); 
         include('search_guests.php');
         include('contact_info.php'); 
