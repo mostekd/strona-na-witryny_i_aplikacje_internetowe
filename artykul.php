@@ -29,6 +29,6 @@
 
 		mysqli_close($connect);
 		?>
-    <button><a href="index.php"></a>Powrót</button>
+    <button><a href="./index.php"></a>Powrót</button>
 </body>
 </html>
