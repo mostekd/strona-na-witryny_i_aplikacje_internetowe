@@ -134,6 +134,11 @@ h2 {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+#wpisy{
+  margin-top: 2%;
+  text-align: center;
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px
