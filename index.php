@@ -14,6 +14,7 @@
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
+            <a href="#" onclick="hideAllContainers()">Strona Główna</a>
             <a href="#" onclick="showSearchBooks()">Wyszukaj Książki</a>
             <a href="#" onclick="showSearchGuests()">Księga Gości</a>
             <a href="#" onclick="showContactInfo()">Kontakt</a>
