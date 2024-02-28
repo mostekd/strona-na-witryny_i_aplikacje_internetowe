@@ -15,7 +15,6 @@
 		{
 			die("Connection failed: " . mysqli_connect_error());
 		}
-
 		
 		$query = "SELECT `article_id`, `title`, `content`, `photo_link` FROM `article` WHERE article_id =".$article_id;
 		$data = mysqli_query($connect, $query);
