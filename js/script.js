@@ -1,5 +1,6 @@
 // common.js
 function hideAllContainers() {
+    document.getElementById("wpisy").style.display = "none";
     document.getElementById("searchBooks").style.display = "none";
     document.getElementById("searchGuests").style.display = "none";
     document.getElementById("contactInfo").style.display = "none";
