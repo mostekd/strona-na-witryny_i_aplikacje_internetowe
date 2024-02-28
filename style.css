@@ -109,11 +109,19 @@ h2 {
   width: 100%;
 }
 
-.wpisy{
+.artykuly{
+  color: #000000;
+  background-color: #fff;
   margin-left: auto;
   margin-right: auto;
   height: 10%;
   width: 80%;
+  border-radius: 10px;
+}
+
+.artykul a{
+  text-decoration: none;
+  color: #422e2e;
 }
 
 @media screen and (max-height: 450px) {

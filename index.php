@@ -59,7 +59,6 @@
             ?>
         </div>
     </div>
-    <div id='wpisy' class='artykul'></div>
     <?php
         include('wpisy.php');
         include('search_books.php'); 
