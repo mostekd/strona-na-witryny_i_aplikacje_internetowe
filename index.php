@@ -64,8 +64,8 @@
         $username = "root"; // Nazwa użytkownika bazy danych
         $password = ""; // Hasło użytkownika bazy danych
 
-        $connect = mysqli_connect($host, $username, $password, $dbname)
-        if (!connect)
+        $connect = mysqli_connect($host, $username, $password, $dbname);
+        if(!$connect)
         {
             die("Connection failed: " . mysqli_connect_error());
         }
