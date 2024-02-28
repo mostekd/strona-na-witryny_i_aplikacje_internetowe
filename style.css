@@ -109,6 +109,13 @@ h2 {
   width: 100%;
 }
 
+.wpisy{
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+  width: 80%;
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px
