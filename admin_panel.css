@@ -1,5 +1,6 @@
 body{
     background-color: #000;
+    color: #fff;
 }
 header{
     display: flex;
@@ -15,6 +16,5 @@ header{
 
 .logout button{
     background-color: #3498db;
-    padding: 10px;
     border-radius: 20px;
 }
