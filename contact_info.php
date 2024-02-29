@@ -5,3 +5,4 @@
     <p>Telefon: 123-456-789</p>
     <p>Email: biblioteka@wesolaszkola.pl</p>
 </div>
+<div class="class"></div>
