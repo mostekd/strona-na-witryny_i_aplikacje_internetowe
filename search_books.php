@@ -1,5 +1,9 @@
 <?php
-require_once("db_connection.php");
+$host = "localhost"; // Host bazy danych
+$dbname = "wiai"; // Nazwa bazy danych
+$username = "root"; // Nazwa użytkownika bazy danych
+$password = ""; // Hasło użytkownika bazy danych
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bookTitle = $_POST["bookTitle"];
