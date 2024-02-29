@@ -14,7 +14,8 @@ if(!$connect) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+    $adress = "admin_panel.php";
+    
     $sql = "SELECT * FROM `administratorzy` WHERE login='$username' AND haslo='$password'";
     $result = mysqli_query($connect, $sql);
 
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Zalogowano pomyślnie
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
-        header("location: admin_panel.php"); // Przekierowanie do panelu administracyjnego
+        header("location:". $adress); // Przekierowanie do panelu administracyjnego
     } else {
         $error_message = "Nieprawidłowa nazwa użytkownika lub hasło.";
     }
