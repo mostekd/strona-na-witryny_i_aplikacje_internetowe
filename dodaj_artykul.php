@@ -15,7 +15,7 @@
             <input type=text name="tytul" placeholder="tytuł" id="tytul" class="tytul"></input>
             <input type=text name="tresc" placeholder="treść" id="tresc" class="tresc"></input>
             <input type=text name="link" placeholder="link" id="link" class="link"></input>
-            <input type="submit"></input>
+            <input type="submit"><button>Dodaj artykuł</button></input>
         </form>
     </body>
 </html>
