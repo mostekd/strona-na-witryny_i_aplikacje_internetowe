@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Zalogowano pomyślnie
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
-        header("location: admin_panel.php"); // Przekierowanie do panelu administracyjnego
+        header("location:". admin_panel.php); // Przekierowanie do panelu administracyjnego
     } else {
         $error_message = "Nieprawidłowa nazwa użytkownika lub hasło.";
     }
