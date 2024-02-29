@@ -9,7 +9,7 @@
 <body>
     <header>
         <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
-        <a href="login.php" id="logout">Wyloguj się</a>
+        <a href="login.php" class="logout" id="logout"><button>Wyloguj się</button></a>
     </header>
     <?php
     $host = "localhost"; // Host bazy danych

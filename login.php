@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <head>
-    <link rel="stylesheet" href="admin_panel.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <div id="loginPage" class="login-container">
     <h2>Logowanie do Panelu Administracyjnego</h2>
