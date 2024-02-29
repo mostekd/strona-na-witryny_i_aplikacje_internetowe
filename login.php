@@ -1,26 +1,30 @@
 <?php
 session_start();
 
+$host = "localhost"; // Host bazy danych
+$dbname = "wiai"; // Nazwa bazy danych
+$username = "root"; // Nazwa użytkownika bazy danych
+$password = ""; // Hasło użytkownika bazy danych
+
+$connect = mysqli_connect($host, $username, $password, $dbname);
+if(!$connect) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    require_once("db_connection.php"); // Załóżmy, że to plik z połączeniem do bazy danych
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $sql = "SELECT * FROM `administratorzy` WHERE login='$username' AND haslo='$password'";
+    $result = mysqli_query($connect, $sql);
 
-    // Sprawdzenie danych logowania w bazie danych
-    $query = "SELECT * FROM Administratorzy WHERE login = :username AND haslo = :password";
-    $stmt = $pdo->prepare($query);
-    $stmt->bindParam(":username", $username);
-    $stmt->bindParam(":password", $password);
-    $stmt->execute();
-
-    // Jeśli dane logowania są poprawne, zaloguj użytkownika
-    if ($stmt->rowCount() > 0) {
-        $_SESSION["admin_logged_in"] = true;
-        header("Location: admin_panel.php");
-        exit();
+    if (mysqli_num_rows($result) == 1) {
+        // Zalogowano pomyślnie
+        $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $username;
+        header("location: admin_panel.php"); // Przekierowanie do panelu administracyjnego
     } else {
-        $error_message = "Błędny login lub hasło.";
+        $error_message = "Nieprawidłowa nazwa użytkownika lub hasło.";
     }
 }
 ?>
