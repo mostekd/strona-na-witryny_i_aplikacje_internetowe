@@ -11,27 +11,38 @@
         <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
         <a href="login.php" class="logout" id="logout"><button>Wyloguj się</button></a>
     </header>
+    <a href="./dodaj_artykul.php"><button>Dodaj artykuł</button></a>
     <?php
-    $host = "localhost"; // Host bazy danych
-    $dbname = "wiai"; // Nazwa bazy danych
-    $username = "root"; // Nazwa użytkownika bazy danych
-    $password = ""; // Hasło użytkownika bazy danych
+    include('db_connection.php');
+    $baza = new db_connection();
 
-    $connect = mysqli_connect($host, $username, $password, $dbname);
-    if(!$connect)
-    {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    $query = 'SELECT `artykul_id`, `title`, `tresc`, `link` FROM `artykul` WHERE 1';
-    $data = mysqli_query($connect, $query);
-    if (mysqli_num_rows($data) > 0)
-    {
-        while($row = mysqli_fetch_assoc($data))
+    if(!empty($_GET)){
+        $baza->databaseConnect();
+        if(isset($_GET['del']))
         {
-            echo "<div id='wpis' class='artykul'><a href='artykul_admin.php?id=".$row['artykul_id']."'>".$row['title']."</a><article>".substr($row['tresc'],0,150)." ...</article></div>";
+            $artykul_id=$_GET['id'];
+            $baza->deleteArtykul($artykul_id);
+        }
+        elseif(isset($_GET['tytul'])){
+            $tytul = $_GET['tytul'];
+            $tresc = $_GET['tresc'];
+            $link = $_GET['link'];
+            $baza->insertArtykul($tytul, $tresc, $link);
         }
     }
-    mysqli_close($connect);
+    
+    $baza->databaseConnect();
+    $data = $baza->selectArtykul();
+    while($row = mysqli_fetch_assoc($data))
+    {
+        echo "<div id='wpis' class='artykul'><a href='artykul_admin.php?id=".$row['artykul_id']."'>".$row['title']."</a><article>".substr($row['tresc'],0,150)." ...</article>
+        <button><a href=admin_panel.php?del=True&id=".$row['artykul_id'].">
+            Usuń wpis
+        </a></button>
+        </div>";
+    }
+    $baza->close();
+
 ?>
 </body>
 </html>
