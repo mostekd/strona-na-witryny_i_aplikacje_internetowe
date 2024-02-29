@@ -33,13 +33,18 @@
     
     $baza->databaseConnect();
     $data = $baza->selectArtykul();
-    while($row = mysqli_fetch_assoc($data))
-    {
-        echo "<div id='wpis' class='artykul'><a href='artykul_admin.php?id=".$row['artykul_id']."'>".$row['title']."</a><article>".substr($row['tresc'],0,150)." ...</article>
-        <button><a href=admin_panel.php?del=True&id=".$row['artykul_id'].">
+    if (!empty($data)){
+
+        while($row = mysqli_fetch_assoc($data))
+        {
+            echo "<div id='wpis' class='artykul'><a href='artykul_admin.php?id=".$row['artykul_id']."'>".$row['title']."</a><article>".substr($row['tresc'],0,150)." ...</article>
+            <button><a href=admin_panel.php?del=True&id=".$row['artykul_id'].">
             Usuń wpis
-        </a></button>
-        </div>";
+            </a></button>
+            </div>";
+        }
+    } else {
+        echo "Brak artykułów";
     }
     $baza->close();
 
