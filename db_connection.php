@@ -27,15 +27,15 @@ class db_connection{
     }
 
     function selectArtykul(){
-        $query = 'SELECT `artykul_id`, `title`, `tresc`, `link` FROM `artykul` WHERE 1';
+        $query = 'SELECT `artykul_id`, `title`, `tresc`, `link`, `autor` FROM `artykul` WHERE 1';
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0){
             return $data;
         }
     }
 
-    function insertArtykul($tytul, $tresc, $link){
-        $query = "INSERT INTO `artykul`( `title`, `tresc`, `link`) VALUES ('".$tytul."','".$tresc."','".$link."')";
+    function insertArtykul($tytul, $tresc, $link, $autor){
+        $query = "INSERT INTO `artykul`(`artykul_id`, `title`, `tresc`, `link`, `autor`) VALUES ('".$tytul."','".$tresc."','".$link."','".$autor."')";
         $data = mysqli_query($this->connect, $query);
         $this->close();
     }

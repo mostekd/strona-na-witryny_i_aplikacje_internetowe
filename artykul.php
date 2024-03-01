@@ -19,14 +19,14 @@
 			die("Connection failed: " . mysqli_connect_error());
 		}
 		
-		$query = "SELECT `artykul_id`, `title`, `tresc`, `link` FROM `artykul` WHERE artykul_id =".$article_id;
+		$query = "SELECT `artykul_id`, `title`, `tresc`, `link`, `autor` FROM `artykul` WHERE artykul_id =".$article_id;
 		$data = mysqli_query($connect, $query);
 		
 		if (mysqli_num_rows($data) > 0) 
 		{
 			while($row = mysqli_fetch_assoc($data))
 			{
-				echo "<div class='artykul_full'>".$row['title']."<article>".$row['tresc']."</article></div>";
+				echo "<div class='artykul_full'>".$row['title']."<article>".$row['tresc']."</article>".$row['autor']."</div>";
 			}
 		}	
 
