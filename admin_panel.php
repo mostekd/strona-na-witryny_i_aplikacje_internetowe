@@ -27,7 +27,8 @@
             $tytul = $_GET['tytul'];
             $tresc = $_GET['tresc'];
             $link = $_GET['link'];
-            $baza->insertArtykul($tytul, $tresc, $link);
+            $autor = $_GET['autor'];
+            $baza->insertArtykul($tytul, $tresc, $link, $autor);
         }
     }
     

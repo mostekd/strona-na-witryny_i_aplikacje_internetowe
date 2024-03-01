@@ -26,7 +26,7 @@
 		{
 			while($row = mysqli_fetch_assoc($data))
 			{
-				echo "<div class='artykul_full'>".$row['title']."<article>".$row['tresc']."</article>".$row['autor']."</div>";
+				echo "<div class='artykul_full'><p>Tytuł:</p>".$row['title']."<article><p>Treść:</p>".$row['tresc']."</article><p>Autor:</p>".$row['autor']."</div>";
 			}
 		}	
 

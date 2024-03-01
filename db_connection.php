@@ -35,7 +35,7 @@ class db_connection{
     }
 
     function insertArtykul($tytul, $tresc, $link, $autor){
-        $query = "INSERT INTO `artykul`(`artykul_id`, `title`, `tresc`, `link`, `autor`) VALUES ('".$tytul."','".$tresc."','".$link."','".$autor."')";
+        $query = "INSERT INTO `artykul`(`title`, `tresc`, `link`, `autor`) VALUES ('".$tytul."','".$tresc."','".$link."','".$autor."')";
         $data = mysqli_query($this->connect, $query);
         $this->close();
     }
