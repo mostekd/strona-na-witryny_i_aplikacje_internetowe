@@ -11,6 +11,11 @@
         <span id="menu-icon" onclick="openNav()">&#9776; </span>
         <h2>Biblioteka Wesoła Szkoła</h2>
     </div>
+    <div class="zdj_header">
+        <?php
+        // wyświetlanie 3 zdjęć które można podmienić w panelu administracyjnym w zakładce zmień zdjęcie
+        ?>
+    </div>
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
@@ -25,6 +30,7 @@
             <div class="location"></div>
         </div>
         <div id="calendar">
+            <!-- kalendarz z istniejącego skryptu js propozycja: https://air-datepicker.com/ -->
         </div>
         <div class="zdjecie">
         <?php
@@ -63,6 +69,7 @@
     <div id="wpisy">
         <div class="link">
             <a href="wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a>
+            <a href="ksiazki.php"><button>Dostępne książki</button></a> <!-- Przycisk prowadzący do podsrtony z wszystkimi aktywnymi książkami czyli te które są dostępne (nie są wypożyczone ani zniszczone) -->
         </div>
         <?php
             include('wpisy.php');

@@ -9,7 +9,7 @@
     {
         die("Connection failed: " . mysqli_connect_error());
     }
-    $query = 'SELECT `artykul_id`, `title`, `tresc`, `link`, `autor`, `data` FROM `artykul` WHERE 1';
+    $query = 'SELECT * FROM artykul ORDER BY artykul_id DESC';
     $data = mysqli_query($connect, $query);
     
     $counter = 0; // Licznik artykułów wyświetlonych
