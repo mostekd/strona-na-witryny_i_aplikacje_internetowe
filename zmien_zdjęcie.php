@@ -14,3 +14,6 @@
     <a class="przycisk" href="./admin_panel.php">Strona Główna</a>
 
     <!-- możliwość podmiany zdjęć które wyświetlają się na index.php -->
+
+</body>
+</html>

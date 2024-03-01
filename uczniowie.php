@@ -14,3 +14,6 @@
     <a class="przycisk" href="./admin_panel.php">Strona Główna</a>
 
 <!-- dodatkowy raport (tabela) po kliknięciu na przycisk będzie pokazywała wszystkich uczniów lub uczniów zaczynających się na określoną literę nazwiska lub imienia (wyszukiwanie ucznia) wraz z informacją jakie książki wypożyczył do tej pory i jakie książki ma wypożyczone, -->
+
+</body>
+</html>

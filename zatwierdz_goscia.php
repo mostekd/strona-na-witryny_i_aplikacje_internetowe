@@ -13,6 +13,8 @@
     </header>
     <a class="przycisk" href="./admin_panel.php">Strona Główna</a>
 
-
 <!-- administrator będzie miał możliwość wspomnianej wcześniej akceptacji nowych wpisów do księgi gości
 tabela uczeń powinna zawierać (id, imię, nazwisko, pesel, email, uwagi), -->
+
+</body>
+</html>
