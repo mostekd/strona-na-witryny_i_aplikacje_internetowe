@@ -27,7 +27,7 @@
     {
         while($row = mysqli_fetch_assoc($data))
         {
-            echo "<div id='wpis' class='artykul'><a href='artykul.php?id=".$row['artykul_id']."'>".$row['title']."</a><article>".substr($row['tresc'],0,150)." ...</article></div>";
+            echo "<div id='wpis' class='artykul'><a href='artykul.php?id=".$row['artykul_id']."'><p>Tytuł:</p>".$row['title']."<p>Data:</p>".$row['data']."</a><article><p>Treść:</p>".substr($row['tresc'],0,150)." ...</article></div>";
         }
     }
     mysqli_close($connect);

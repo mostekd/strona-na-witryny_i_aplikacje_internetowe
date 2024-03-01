@@ -9,7 +9,7 @@
     {
         die("Connection failed: " . mysqli_connect_error());
     }
-    $query = 'SELECT `artykul_id`, `title`, `tresc`, `link`, `autor` FROM `artykul` WHERE 1';
+    $query = 'SELECT `artykul_id`, `title`, `tresc`, `link`, `autor`, `data` FROM `artykul` WHERE 1';
     $data = mysqli_query($connect, $query);
     
     $counter = 0; // Licznik artykułów wyświetlonych
@@ -17,7 +17,7 @@
     {
         while($row = mysqli_fetch_assoc($data))
         {
-            echo "<div id='wpis' class='artykul'><a href='artykul.php?id=".$row['artykul_id']."'>".$row['title']."</a><article>".substr($row['tresc'],0,150)." ...</article></div>";
+            echo "<div id='wpis' class='artykul'><a href='artykul.php?id=".$row['artykul_id']."'><p>Tytuł:</p>".$row['title']."</a><p>Data:</p>".$row['data']."<article><p>Treść:</p>".substr($row['tresc'],0,150)." ...</article></div>";
             $counter++;
             if ($counter >= 5) {
                 break; // Przerwij pętlę po wyświetleniu 5 artykułów
