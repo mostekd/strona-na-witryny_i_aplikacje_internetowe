@@ -17,8 +17,6 @@
     <a class="przycisk" href="./wpisy_admin.php">Dodaj wpis</a>
     <a class="przycisk" href="./wypozyczenia.php">Wypożyczenia</a>
     <a class="przycisk" href="./uczniowie.php">Uczniowie</a>
-
-    <!-- tabela wypożyczenia powinna zawierać (id, id książki, id ucznia wypożyczającego, data wypożyczenia, data zwrotu), Administrator będzie mógł również po kliknięciu w przycisk w osobnym raporcie (tabeli) zobaczyć wszystkie książki przetrzymywane powyżej określonego okresu (okres wypożyczenia książki będzie możliwy do zmiany przez Administratora w osobnym miejscu, domyślnie 2 tygodnie), dodatkowy raport (tabela) po kliknięciu na przycisk będzie pokazywała wszystkich uczniów lub uczniów zaczynających się na określoną literę nazwiska lub imienia (wyszukiwanie ucznia) wraz z informacją jakie książki wypożyczył do tej pory i jakie książki ma wypożyczone, inne przyciski powinny pokazywać każdą z trzech tabel opisaną powyżej (czyli trzy przyciski z napisami książki, uczniowie, wypożyczenia) po kliknięciu w te przyciski pojawiać będą się tabele zawierające wszystkie wpisy w bazie z danej tabeli -->
     </div>
 </body>
 </html>
