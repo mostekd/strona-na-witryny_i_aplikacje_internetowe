@@ -27,7 +27,18 @@
     {
         while($row = mysqli_fetch_assoc($data))
         {
-            echo "<div id='wpis' class='artykul'><a href='artykul.php?id=".$row['artykul_id']."'><p>Tytuł:</p>".$row['title']."</a><p>Data dodania:</p>".$row['data']."<article><p>Treść:</p>".substr($row['tresc'],0,150)." ...</article></div>";
+            echo "<div id='wpis' class='artykul'>
+                <a href='artykul.php?id=".$row['artykul_id']."'>
+                    <section class='gorny_panel_wpisu'>
+                        <p>Tytuł:".$row['title']."</p>
+                        <p>Data dodania: ".$row['data']."</p>
+                    </section>
+                    <article>
+                        <p>Treść:</p>
+                        ".substr($row['tresc'],0,150)." ...
+                    </article>
+                </a>
+            </div>";
         }
     }
     mysqli_close($connect);
