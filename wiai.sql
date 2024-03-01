@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2024 at 11:48 AM
+-- Generation Time: Mar 02, 2024 at 12:00 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administratorzy` (
   `id` int(11) NOT NULL,
-  `login` varchar(50) NOT NULL,
-  `haslo` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
+  `login` varchar(255) NOT NULL,
+  `haslo` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Dumping data for table `administratorzy`
@@ -48,12 +48,54 @@ INSERT INTO `administratorzy` (`id`, `login`, `haslo`) VALUES
 
 CREATE TABLE `artykul` (
   `artykul_id` int(11) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `tresc` mediumtext NOT NULL,
-  `link` varchar(100) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `tresc` longtext NOT NULL,
+  `link` longtext NOT NULL,
   `autor` varchar(255) NOT NULL,
   `data` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ksiazki`
+--
+
+CREATE TABLE `ksiazki` (
+  `id_ksiazki` int(11) NOT NULL,
+  `tytul` varchar(255) NOT NULL,
+  `wydawnictwo` varchar(255) NOT NULL,
+  `rok_wydania` date NOT NULL,
+  `aktywna` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `uczen`
+--
+
+CREATE TABLE `uczen` (
+  `id_ucznia` int(11) NOT NULL,
+  `imie` int(50) NOT NULL,
+  `nazwisko` int(50) NOT NULL,
+  `PESEL` varchar(11) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `wypożyczenia`
+--
+
+CREATE TABLE `wypożyczenia` (
+  `id_wyporzyczenia` int(11) NOT NULL,
+  `id_ksiazki` int(11) NOT NULL,
+  `id_ucznia` int(11) NOT NULL,
+  `data_wypozyczenia` datetime NOT NULL,
+  `data_zwrotu` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 -- --------------------------------------------------------
 
@@ -63,10 +105,10 @@ CREATE TABLE `artykul` (
 
 CREATE TABLE `zdj` (
   `id` int(11) NOT NULL,
-  `nazwa` varchar(100) NOT NULL,
+  `nazwa` varchar(255) NOT NULL,
   `opis` varchar(255) NOT NULL,
   `path` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Dumping data for table `zdj`
@@ -101,6 +143,26 @@ ALTER TABLE `artykul`
   ADD PRIMARY KEY (`artykul_id`);
 
 --
+-- Indeksy dla tabeli `ksiazki`
+--
+ALTER TABLE `ksiazki`
+  ADD PRIMARY KEY (`id_ksiazki`);
+
+--
+-- Indeksy dla tabeli `uczen`
+--
+ALTER TABLE `uczen`
+  ADD PRIMARY KEY (`id_ucznia`);
+
+--
+-- Indeksy dla tabeli `wypożyczenia`
+--
+ALTER TABLE `wypożyczenia`
+  ADD PRIMARY KEY (`id_wyporzyczenia`),
+  ADD KEY `id_ksiazki` (`id_ksiazki`),
+  ADD KEY `id_ucznia` (`id_ucznia`);
+
+--
 -- Indeksy dla tabeli `zdj`
 --
 ALTER TABLE `zdj`
@@ -120,13 +182,42 @@ ALTER TABLE `administratorzy`
 -- AUTO_INCREMENT for table `artykul`
 --
 ALTER TABLE `artykul`
-  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `ksiazki`
+--
+ALTER TABLE `ksiazki`
+  MODIFY `id_ksiazki` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `uczen`
+--
+ALTER TABLE `uczen`
+  MODIFY `id_ucznia` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `wypożyczenia`
+--
+ALTER TABLE `wypożyczenia`
+  MODIFY `id_wyporzyczenia` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `zdj`
 --
 ALTER TABLE `zdj`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `wypożyczenia`
+--
+ALTER TABLE `wypożyczenia`
+  ADD CONSTRAINT `wypożyczenia_ibfk_1` FOREIGN KEY (`id_ucznia`) REFERENCES `uczen` (`id_ucznia`),
+  ADD CONSTRAINT `wypożyczenia_ibfk_2` FOREIGN KEY (`id_ksiazki`) REFERENCES `ksiazki` (`id_ksiazki`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
