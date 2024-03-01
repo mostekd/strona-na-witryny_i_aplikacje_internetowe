@@ -9,7 +9,7 @@
 <body>
     <header>
         <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
-        <a href="login.php" class="logout" id="logout"><button>Wyloguj się</button></a>
+        <a href="login.php" class="logout" id="logout">Wyloguj się</a>
     </header>
     <a href="./dodaj_artykul.php"><button>Dodaj artykuł</button></a>
     <?php
@@ -48,7 +48,6 @@
         echo "Brak artykułów";
     }
     $baza->close();
-
 ?>
 </body>
 </html>

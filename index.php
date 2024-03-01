@@ -35,11 +35,12 @@
 
                 try {
                     $con = mysqli_connect($host, $username, $password, $dbname);
+                  
                 }
                 catch (PDOException $e) {
                     die("Błąd połączenia z bazą danych: " . $e->getMessage());
                 }
-
+                
                 $select = "SELECT `id`, `nazwa`, `opis`, `path` FROM `zdj` WHERE 1";
                 $data = mysqli_query($con, $select);
 
