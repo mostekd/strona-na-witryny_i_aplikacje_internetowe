@@ -40,6 +40,11 @@ h2 {
     border-radius: 10px;
 }
 
+.artykul a{
+    text-decoration: none;
+    color: aqua;
+}
+
 .artykul{
     padding: 5px;
     background-color: rgba(98, 99, 98, 0.5);
