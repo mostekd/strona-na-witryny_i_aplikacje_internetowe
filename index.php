@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <title>Biblioteka</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/theme1.css"/>
 </head>
 <body>
     <div class="header-container">
@@ -83,6 +85,8 @@
     <footer id="footer">
         Dawid Mostowski 3A
     </footer>
+    <script type="text/javascript" src="js/caleandar.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
     <script src="./js/script.js" defer></script>
     <script src="./js/pogoda.js"></script>
     <script src="./js/calendar.js"></script>
