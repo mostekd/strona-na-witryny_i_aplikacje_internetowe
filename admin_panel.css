@@ -2,25 +2,49 @@ body{
     background-color: #000;
     color: #fff;
 }
+
 header{ 
     width: 100%;
     float: left;
 }
+
 h2 {
     width: 90%;
-   float: left;
+    float: left;
 }
+
 .logout{        /* link do wyloguj admin_panel */
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
     background-color: #3498db;
     border-radius: 10px;
- float: right;
+    float: right;
 }
+
 .logout:hover{  
     background-color: #0099ff;
     border-radius: 15px;
+}
+
+.przycisk{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 10px;
+}
+
+.wpisy{
+    background-color: rgba(42, 43, 42, 0.5);
+    border-radius: 10px;
+}
+
+.artykul{
+    padding: 5px;
+    background-color: rgba(98, 99, 98, 0.5);
+    border-radius: 20px;
+    margin-top: 15px;
 }
 
 .delete{  /* przycisk usuń wpis admin_panel */

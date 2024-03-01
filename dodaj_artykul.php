@@ -9,7 +9,7 @@
     <body>
         <header>
             <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
-            <a href="login.php" class="logout" id="logout"><button>Wyloguj się</button></a>
+            <a href="login.php" class="logout" id="logout">Wyloguj się</a>
         </header>
         <form class="MyForm" action="./admin_panel.php" method = "get">
             <input type=text name="tytul" placeholder="tytuł" id="tytul" class="tytul"></input>
