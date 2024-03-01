@@ -19,7 +19,7 @@
         {
             echo "<div id='wpis' class='artykul'><a href='artykul.php?id=".$row['artykul_id']."'><p>Tytuł:</p>".$row['title']."</a><p>Data:</p>".$row['data']."<article><p>Treść:</p>".substr($row['tresc'],0,150)." ...</article></div>";
             $counter++;
-            if ($counter >= 4) {
+            if ($counter >= 3) {
                 break; // Przerwij pętlę po wyświetleniu 5 artykułów
             }
         }
