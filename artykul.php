@@ -10,6 +10,9 @@
     <div class="header-container">
         <h2>Biblioteka Wesoła Szkoła</h2>
     </div>
+	<div class="link">
+		<a class="link" href="./index.php"><button>Powrót</button></a>
+	</div>
 <?php
 		$article_id = $_GET['id'];
 		
@@ -32,6 +35,5 @@
 
 		mysqli_close($connect);
 		?>
-    <a href="./index.php"><button>Powrót</button></a>
 </body>
 </html>
