@@ -17,7 +17,18 @@
     {
         while($row = mysqli_fetch_assoc($data))
         {
-            echo "<div id='wpis' class='artykul'><a href='artykul.php?id=".$row['artykul_id']."'><section class='gorny_panel_wpisu'><p class='tytul'>Tytuł:".$row['title']."</p><p class='data'>Data dodania: ".$row['data']."</p></section><article><p>Treść:</p>".substr($row['tresc'],0,150)." ...</article></a></div>";
+            echo "<div id='wpis' class='artykul'>
+                <a href='artykul.php?id=".$row['artykul_id']."'>
+                    <section class='gorny_panel_wpisu'>
+                        <p class='tytul'>Tytuł:".$row['title']."</p>
+                        <p class='data'>Data dodania: ".$row['data']."</p>
+                    </section>
+                    <article>
+                        <p>Treść:</p>
+                        ".substr($row['tresc'],0,150)." ...
+                    </article>
+                </a>
+            </div>";
             $counter++;
             if ($counter >= 5) {
                 break; // Przerwij pętlę po wyświetleniu 5 artykułów
