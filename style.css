@@ -133,14 +133,7 @@ h2 {
 
 .gorny_panel_wpisu{
   display: flex;
-}
-
-.gorny_panel_wpisu p{
-  
-}
-
-.gorny_panel_wpisu .data{
-  margin-right: 15%;
+  justify-content: space-around;
 }
 
 article{

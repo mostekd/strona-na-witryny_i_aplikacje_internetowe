@@ -20,8 +20,8 @@
             echo "<div id='wpis' class='artykul'>
                 <a href='artykul.php?id=".$row['artykul_id']."'>
                     <section class='gorny_panel_wpisu'>
-                        <p class='tytul'>Tytuł:".$row['title']."</p>
-                        <p class='data'>Data dodania: ".$row['data']."</p>
+                        <p>Tytuł:".$row['title']."</p>
+                        <p>Data dodania: ".$row['data']."</p>
                     </section>
                     <article>
                         <p>Treść:</p>
