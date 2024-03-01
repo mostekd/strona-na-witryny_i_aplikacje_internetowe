@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 29, 2024 at 01:50 PM
+-- Generation Time: Feb 29, 2024 at 10:04 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -50,18 +50,29 @@ CREATE TABLE `artykul` (
   `artykul_id` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
   `tresc` mediumtext NOT NULL,
-  `link` varchar(100) NOT NULL
+  `link` varchar(100) NOT NULL,
+  `autor` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `artykul`
 --
 
-INSERT INTO `artykul` (`artykul_id`, `title`, `tresc`, `link`) VALUES
-(4, 'tytul4', 'tresc4', ''),
-(5, 'tytul5', 'tresc5', ''),
-(10, 'asdqwe', 'qweqwwwee', 'asdsdfewr'),
-(11, 'tytul1', 'tresc', 'link');
+INSERT INTO `artykul` (`artykul_id`, `title`, `tresc`, `link`, `autor`) VALUES
+(37, '1', '1', '1', ''),
+(38, '2', '2', '2', ''),
+(39, '3', '3', '3', ''),
+(40, '4', '4', '4', ''),
+(41, '5', '5', '5', ''),
+(42, '6', '6', '6', ''),
+(43, '7', '7', '7', ''),
+(44, '8', '8', '8', ''),
+(45, '9', '9', '9', ''),
+(46, '10', '10', '10', ''),
+(47, '11', '11', '11', ''),
+(48, '12', '12', '12', ''),
+(49, '13', '13', '13', ''),
+(50, '14', '14', '14', '');
 
 -- --------------------------------------------------------
 
@@ -128,7 +139,7 @@ ALTER TABLE `administratorzy`
 -- AUTO_INCREMENT for table `artykul`
 --
 ALTER TABLE `artykul`
-  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `zdj`
