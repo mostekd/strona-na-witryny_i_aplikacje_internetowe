@@ -17,6 +17,23 @@
     <?php
     include('db_connection.php');
     $baza = new db_connection();
+
+    if(!empty($_GET)){
+        $baza->databaseConnect();
+        if(isset($_GET['del']))
+        {
+            $artykul_id=$_GET['id'];
+            $baza->deleteArtykul($artykul_id);
+        }
+        elseif(isset($_GET['tytul'])){
+            $tytul = $_GET['tytul'];
+            $tresc = $_GET['tresc'];
+            $link = $_GET['link'];
+            $autor = $_GET['autor'];
+            $baza->insertArtykul($tytul, $tresc, $link, $autor);
+        }
+    }
+    
     $baza->databaseConnect();
     $data = $baza->selectArtykul();
     if (!empty($data)){
