@@ -11,6 +11,26 @@
             <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
             <a href="login.php" class="logout" id="logout">Wyloguj się</a>
         </header>
+        <?php
+    include('db_connection.php');
+    $baza = new db_connection();
+
+    if(!empty($_GET)){
+        $baza->databaseConnect();
+        if(isset($_GET['del']))
+        {
+            $artykul_id=$_GET['id'];
+            $baza->deleteArtykul($artykul_id);
+        }
+        elseif(isset($_GET['tytul'])){
+            $tytul = $_GET['tytul'];
+            $tresc = $_GET['tresc'];
+            $link = $_GET['link'];
+            $autor = $_GET['autor'];
+            $baza->insertArtykul($tytul, $tresc, $link, $autor);
+        }
+    }
+    ?>
         <form class="MyForm" action="./admin_panel.php" method = "get">
             <input type=text name="tytul" placeholder="tytuł" id="tytul" class="tytul"></input>
             <textarea type=text name="tresc" placeholder="treść" id="tresc" class="tresc"></textarea>
