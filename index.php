@@ -68,8 +68,7 @@
     </div>
     <div id="wpisy">
         <div class="link">
-            <a href="wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a>
-            <a href="ksiazki.php"><button>Dostępne książki</button></a> <!-- Przycisk prowadzący do podsrtony z wszystkimi aktywnymi książkami czyli te które są dostępne (nie są wypożyczone ani zniszczone) -->
+            <a href="wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
         </div>
         <?php
             include('wpisy.php');
