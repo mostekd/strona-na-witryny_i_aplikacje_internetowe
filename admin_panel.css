@@ -65,3 +65,11 @@ h2 {
     text-decoration: none;
     color: #000;
 }
+
+.dodaj_ksiazki_frmularz{
+    margin-top: 15px;
+}
+
+.dodaj_ksiazki_frmularz input{
+    border-radius: 8px;
+}

@@ -18,6 +18,14 @@
         <input type=text name="wydawnictwo" placeholder="wydawnictwo" id="wydawnictwo" class="wydawnictwo"></input>
         <input type=text name="rok wydania" placeholder="rok_wydania" id="rok_wydania" class="rok_wydania"></input>
         <input type=text name="isbn" placeholder="isbn" id="tytul" class="tytul"></input>
-        <input type="checkbox" id="active" name="active">
+        Aktywna: <input type="checkbox" id="active" name="active">
     </form>
+    <div class="ksiazki">
+        <?php
+            include('db_connection.php');
+            $baza = new db_connection();
+
+            $query = "SELECT * FROM `ksiazki` WHERE 1"
+        ?>
+    </div>
     <!-- Administrator będzie miał również możliwość wprowadzania nowych książek, jak również ich modyfikację i usuwanie, tabela książki powinna zawierać (id, tytuł, autor, wydawnictwo, rok wydania, isbn, aktywna(bool), uwagi), -->
