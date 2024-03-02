@@ -21,7 +21,7 @@ class db_connection{
         $query = 'Delete from artykul where artykul_id ='.$artykul_id;
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
-        header('location: admin_panel.php');   
+        header('location: wpisy_admin.php');   
 
         $this->close();
     }
