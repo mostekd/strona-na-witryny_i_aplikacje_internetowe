@@ -13,5 +13,4 @@
     </header>
     <a class="przycisk" href="./admin_panel.php">Strona Główna</a>
 
-
-<!-- Administrator będzie miał również możliwość wprowadzania nowych książek, jak również ich modyfikację i usuwanie, tabela książki powinna zawierać (id, tytuł, autor, wydawnictwo, rok wydania, isbn, aktywna(bool), uwagi), -->
+    <!-- Administrator będzie miał również możliwość wprowadzania nowych książek, jak również ich modyfikację i usuwanie, tabela książki powinna zawierać (id, tytuł, autor, wydawnictwo, rok wydania, isbn, aktywna(bool), uwagi), -->
