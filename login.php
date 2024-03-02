@@ -52,8 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
         </div>
         <div class="form-group">
-            <button type="submit">Zaloguj się</button><br><br>
-            <button><a href="index.php">Strona Główna</a></button>
+            <button class="button" type="submit">Zaloguj się</button><br><br>
+            <a class="button" href="index.php">Strona Główna</a>
         </div>
     </form>
 </div>
