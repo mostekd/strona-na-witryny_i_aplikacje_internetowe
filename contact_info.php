@@ -24,7 +24,7 @@
 </div>
 
 <!-- 
-1. strona zawiera formularz kontaktowy zdolny wysłać wiadomość e-mail na e-mail podany w punkcie nr 1 w opisie zadania (na potrzeby sprawdzenia działania funkcjonalności można zamienić na dawid-mostowski@o2.pl). 
+1. strona zawiera formularz kontaktowy zdolny wysłać wiadomość e-mail na e-mail biblioteka@wesolaszkola.pl (na potrzeby sprawdzenia działania funkcjonalności można zamienić na dawid-mostowski@o2.pl). 
 Kopia wiadomości jest również wysyłana na adres klienta podany w formularzu. 
 2. Po naciśnięciu przycisku wyślij wykonuje się czynność opisana w punkcie 1 
 3. W polu adres e-mail ustaw wymagany symbol @-->
