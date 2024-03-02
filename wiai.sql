@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2024 at 07:46 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Mar 02, 2024 at 08:43 PM
+-- Wersja serwera: 10.4.32-MariaDB
+-- Wersja PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `administratorzy`
+-- Struktura tabeli dla tabeli `administratorzy`
 --
 
 CREATE TABLE `administratorzy` (
@@ -43,7 +43,7 @@ INSERT INTO `administratorzy` (`id`, `login`, `haslo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artykul`
+-- Struktura tabeli dla tabeli `artykul`
 --
 
 CREATE TABLE `artykul` (
@@ -58,7 +58,7 @@ CREATE TABLE `artykul` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ksiazki`
+-- Struktura tabeli dla tabeli `ksiazki`
 --
 
 CREATE TABLE `ksiazki` (
@@ -66,6 +66,7 @@ CREATE TABLE `ksiazki` (
   `tytul` varchar(255) NOT NULL,
   `wydawnictwo` varchar(255) NOT NULL,
   `rok_wydania` date NOT NULL,
+  `isbn` varchar(255) NOT NULL,
   `aktywna` tinyint(1) NOT NULL,
   `uwagi` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
@@ -73,7 +74,7 @@ CREATE TABLE `ksiazki` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `uczen`
+-- Struktura tabeli dla tabeli `uczen`
 --
 
 CREATE TABLE `uczen` (
@@ -88,7 +89,7 @@ CREATE TABLE `uczen` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wypożyczenia`
+-- Struktura tabeli dla tabeli `wypożyczenia`
 --
 
 CREATE TABLE `wypożyczenia` (
@@ -102,7 +103,7 @@ CREATE TABLE `wypożyczenia` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `zdj`
+-- Struktura tabeli dla tabeli `zdj`
 --
 
 CREATE TABLE `zdj` (
@@ -129,35 +130,35 @@ INSERT INTO `zdj` (`id`, `nazwa`, `opis`, `path`) VALUES
 (10, '', '', './zdj/10.jpeg');
 
 --
--- Indexes for dumped tables
+-- Indeksy dla zrzutów tabel
 --
 
 --
--- Indexes for table `administratorzy`
+-- Indeksy dla tabeli `administratorzy`
 --
 ALTER TABLE `administratorzy`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `artykul`
+-- Indeksy dla tabeli `artykul`
 --
 ALTER TABLE `artykul`
   ADD PRIMARY KEY (`artykul_id`);
 
 --
--- Indexes for table `ksiazki`
+-- Indeksy dla tabeli `ksiazki`
 --
 ALTER TABLE `ksiazki`
   ADD PRIMARY KEY (`id_ksiazki`);
 
 --
--- Indexes for table `uczen`
+-- Indeksy dla tabeli `uczen`
 --
 ALTER TABLE `uczen`
   ADD PRIMARY KEY (`id_ucznia`);
 
 --
--- Indexes for table `wypożyczenia`
+-- Indeksy dla tabeli `wypożyczenia`
 --
 ALTER TABLE `wypożyczenia`
   ADD PRIMARY KEY (`id_wyporzyczenia`),
@@ -165,7 +166,7 @@ ALTER TABLE `wypożyczenia`
   ADD KEY `id_ucznia` (`id_ucznia`);
 
 --
--- Indexes for table `zdj`
+-- Indeksy dla tabeli `zdj`
 --
 ALTER TABLE `zdj`
   ADD PRIMARY KEY (`id`);
@@ -184,7 +185,7 @@ ALTER TABLE `administratorzy`
 -- AUTO_INCREMENT for table `artykul`
 --
 ALTER TABLE `artykul`
-  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `ksiazki`
