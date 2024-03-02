@@ -11,7 +11,7 @@
             <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
             <a href="login.php" class="logout" id="logout">Wyloguj się</a>
         </header>
-        <form class="MyForm" action="./admin_panel.php" method = "get">
+        <form class="MyForm" action="./wpisy_admin.php" method = "get">
             <input type=text name="tytul" placeholder="tytuł" id="tytul" class="tytul"></input>
             <textarea type=text name="tresc" placeholder="treść" id="tresc" class="tresc"></textarea>
             <input type=text name="link" placeholder="link" id="link" class="link"></input>

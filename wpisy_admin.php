@@ -44,7 +44,7 @@
             while($row = mysqli_fetch_assoc($data))
             {
                 echo "<div id='wpis' class='artykul'><a href='artykul_admin.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
-                <button class='delete'><a href=admin_panel.php?del=True&id=".$row['artykul_id'].">
+                <button class='delete'><a href=wpisy_admin.php?del=True&id=".$row['artykul_id'].">
                 Usuń wpis
                 </a></button>
                 </div>";
