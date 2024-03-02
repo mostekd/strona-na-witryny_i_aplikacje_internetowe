@@ -7,6 +7,16 @@ function hideAllContainers() {
     // Dodaj kolejne linie w razie dodania nowych kontenerów
 }
 
+//reset_form.js
+function resetForm() {
+    const form = document.querySelector('.formularz_kontaktowy');
+
+    document.querySelector('button[type="reset"]').addEventListener('click', function(event) {
+        event.preventDefault();
+        form.reset();
+    });
+}
+
 // searchBooks.js
 function showSearchBooks() {
     hideAllContainers();

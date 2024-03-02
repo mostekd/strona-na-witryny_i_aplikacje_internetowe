@@ -15,11 +15,16 @@
         </select>
         <input type=text name="imie" placeholder="imię" id="imie" class="imie"></input>
         <input type=text name="nazwisko" placeholder="nazwisko" id="nazwisko" class="nazwisko"></input>
+        <input type=text name="e-mail" placeholder="adres e-mail" id="email" class="email"></input>
         <textarea type=text name="wiadomosc" placeholder="treść wiadomości" id="wiadomosc" class="wiadomosc"></textarea>
+
+        <button type="submit">Wyślij</button>
+        <button type="reset">Resetuj</button>
     </form>
 </div>
 
-<!-- strona zawiera formularz kontaktowy zdolny wysłać wiadomość e-mail na e-mail podany w punkcie nr 1 w opisie zadania (na potrzeby sprawdzenia działania funkcjonalności można zamienić na dawid-mostowski@o2.pl). 
+<!-- 
+1. strona zawiera formularz kontaktowy zdolny wysłać wiadomość e-mail na e-mail podany w punkcie nr 1 w opisie zadania (na potrzeby sprawdzenia działania funkcjonalności można zamienić na dawid-mostowski@o2.pl). 
 Kopia wiadomości jest również wysyłana na adres klienta podany w formularzu. 
-Formularz zawiera pola: rozwijaną listę z opcjami: “Zapytanie o dostępność książki”, “Prośba o rezerwację”, “Inna sprawa”, kolejne pola to imię, nazwisko i treść wiadomości, 
-poniżej dwa przyciski wyślij i resetuj -->
+2. Po naciśnięciu przycisku wyślij wykonuje się czynność opisana w punkcie 1 
+3. W polu adres e-mail ustaw wymagany symbol @-->
