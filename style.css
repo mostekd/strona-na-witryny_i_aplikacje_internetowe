@@ -112,7 +112,7 @@ h2 {
 .artykul{
   color: #000000;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   margin-left: auto;
   margin-right: auto;
   height: auto;
@@ -186,7 +186,7 @@ article{
   border-radius: 20px;
   width: 80%;
   color: #000000;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #wpisy{
@@ -195,7 +195,7 @@ article{
 
 button{
   display: flex;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
