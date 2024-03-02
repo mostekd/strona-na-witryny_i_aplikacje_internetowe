@@ -25,6 +25,22 @@
             include('db_connection.php');
             $baza = new db_connection();
 
+            if(!empty($_GET)){
+                $baza->databaseConnect();
+                if(isset($_GET['del']))
+                {
+                    $artykul_id=$_GET['id'];
+                    $baza->deleteKsiazka($id_ksiazki);
+                }
+                elseif(isset($_GET['tytul'])){
+                    $tytul = $_GET['tytul'];
+                    $wydawnictwo = $_GET['wydawnictwo'];
+                    $rok_wydania = $_GET['rok_wydania'];
+                    $ibsn = $_GET['ibsn'];
+                    $aktywna = $_GET['aktywna'];
+                    $baza->insertKsiazka($tytul, $tresc, $link, $autor);
+                }
+            }
         ?>
     </div>
     <!-- Administrator będzie miał również możliwość wprowadzania nowych książek, jak również ich modyfikację i usuwanie, tabela książki powinna zawierać (id, tytuł, autor, wydawnictwo, rok wydania, isbn, aktywna(bool), uwagi), -->

@@ -22,7 +22,6 @@ class db_connection{
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
         header('location: wpisy_admin.php');   
-
         $this->close();
     }
 
@@ -39,6 +38,20 @@ class db_connection{
         $query = "INSERT INTO `artykul`(`title`, `tresc`, `link`, `autor`, `data`) VALUES ('".$tytul."','".$tresc."','".$link."','".$autor."','".$dateTest."')";
         $data = mysqli_query($this->connect, $query);
         $this->close();
+    }
+
+    function insertKsiazka(){
+        $query = "INSERT INTO `ksiazki`(`tytul`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`) VALUES ('".$tytul."','".$wydawnictwo."','".$rok_wydania."','".$ibsn."','".$aktywna."')";
+        $data = mysqli_query($this->connect, $query);
+        $this->close();
+    }
+
+    function deleteKsiazka(){
+            $query = 'Delete from ksiazki where id_ksiazka ='.$id_ksiazki;
+            $data = mysqli_query($this->connect, $query);
+            unset($_GET['id']);
+            header('location: dodaj_ksiazki.php');   
+            $this->close();
     }
 
     function close(){
