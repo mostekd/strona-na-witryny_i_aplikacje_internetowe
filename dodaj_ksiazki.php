@@ -25,7 +25,6 @@
             include('db_connection.php');
             $baza = new db_connection();
 
-            $query = "SELECT * FROM `ksiazki` WHERE 1"
         ?>
     </div>
     <!-- Administrator będzie miał również możliwość wprowadzania nowych książek, jak również ich modyfikację i usuwanie, tabela książki powinna zawierać (id, tytuł, autor, wydawnictwo, rok wydania, isbn, aktywna(bool), uwagi), -->
