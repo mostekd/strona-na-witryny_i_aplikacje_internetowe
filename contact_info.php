@@ -4,10 +4,10 @@
     <p>Adres: ul. Szkolna 1 , 54-230 Gdańsk</p>
     <p>Telefon: 123-456-789</p>
     <p>Email: biblioteka@wesolaszkola.pl</p>
-
+    <br>
     <form class="formularz_kontaktowy">
         <label for="inquiryType">Typ zapytania:</label>
-        <select id="inquiryType" name="inquiryType">
+        <select class="contact_form_select" id="inquiryType" name="inquiryType">
             <option value="null">--</option>
             <option value="Dostępność książki">Zapytanie o dostępność książki</option>
             <option value="Rezerwacja">Prośba o rezerwację</option>
@@ -18,8 +18,8 @@
         <input type=text name="e-mail" placeholder="adres e-mail" id="email" class="email"></input>
         <textarea type=text name="wiadomosc" placeholder="treść wiadomości" id="wiadomosc" class="wiadomosc"></textarea>
 
-        <button type="submit">Wyślij</button>
-        <button type="reset">Resetuj</button>
+        <button class="kontakt_button" type="submit">Wyślij</button>
+        <button class="kontakt_button" type="reset">Resetuj</button>
     </form>
 </div>
 

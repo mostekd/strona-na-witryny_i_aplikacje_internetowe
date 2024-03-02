@@ -144,6 +144,35 @@ h2 {
   width: 100%;
 }
 
+.formularz_kontaktowy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formularz_kontaktowy input,
+.formularz_kontaktowy textarea {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.formularz_kontaktowy textarea{
+  min-height: 130px;
+  min-width: 300px;
+  max-height: 50vh;
+  max-width: 80vw;
+}
+
+.kontakt_button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contact_form_select{
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
 article{
   padding-top: 10px;
 }
