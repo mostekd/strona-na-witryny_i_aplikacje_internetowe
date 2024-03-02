@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2024 at 04:03 PM
--- Wersja serwera: 10.4.32-MariaDB
--- Wersja PHP: 8.2.12
+-- Generation Time: Mar 02, 2024 at 07:46 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `administratorzy`
+-- Table structure for table `administratorzy`
 --
 
 CREATE TABLE `administratorzy` (
@@ -38,12 +38,12 @@ CREATE TABLE `administratorzy` (
 --
 
 INSERT INTO `administratorzy` (`id`, `login`, `haslo`) VALUES
-(1, 'admin', 'admin');
+(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `artykul`
+-- Table structure for table `artykul`
 --
 
 CREATE TABLE `artykul` (
@@ -58,7 +58,7 @@ CREATE TABLE `artykul` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ksiazki`
+-- Table structure for table `ksiazki`
 --
 
 CREATE TABLE `ksiazki` (
@@ -73,7 +73,7 @@ CREATE TABLE `ksiazki` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `uczen`
+-- Table structure for table `uczen`
 --
 
 CREATE TABLE `uczen` (
@@ -88,7 +88,7 @@ CREATE TABLE `uczen` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `wypożyczenia`
+-- Table structure for table `wypożyczenia`
 --
 
 CREATE TABLE `wypożyczenia` (
@@ -102,7 +102,7 @@ CREATE TABLE `wypożyczenia` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `zdj`
+-- Table structure for table `zdj`
 --
 
 CREATE TABLE `zdj` (
@@ -129,35 +129,35 @@ INSERT INTO `zdj` (`id`, `nazwa`, `opis`, `path`) VALUES
 (10, '', '', './zdj/10.jpeg');
 
 --
--- Indeksy dla zrzutów tabel
+-- Indexes for dumped tables
 --
 
 --
--- Indeksy dla tabeli `administratorzy`
+-- Indexes for table `administratorzy`
 --
 ALTER TABLE `administratorzy`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `artykul`
+-- Indexes for table `artykul`
 --
 ALTER TABLE `artykul`
   ADD PRIMARY KEY (`artykul_id`);
 
 --
--- Indeksy dla tabeli `ksiazki`
+-- Indexes for table `ksiazki`
 --
 ALTER TABLE `ksiazki`
   ADD PRIMARY KEY (`id_ksiazki`);
 
 --
--- Indeksy dla tabeli `uczen`
+-- Indexes for table `uczen`
 --
 ALTER TABLE `uczen`
   ADD PRIMARY KEY (`id_ucznia`);
 
 --
--- Indeksy dla tabeli `wypożyczenia`
+-- Indexes for table `wypożyczenia`
 --
 ALTER TABLE `wypożyczenia`
   ADD PRIMARY KEY (`id_wyporzyczenia`),
@@ -165,7 +165,7 @@ ALTER TABLE `wypożyczenia`
   ADD KEY `id_ucznia` (`id_ucznia`);
 
 --
--- Indeksy dla tabeli `zdj`
+-- Indexes for table `zdj`
 --
 ALTER TABLE `zdj`
   ADD PRIMARY KEY (`id`);

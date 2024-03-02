@@ -14,9 +14,10 @@ if(!$connect) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $encrypted = sha1($password);
     $adress = "./admin_panel.php";
     
-    $sql = "SELECT * FROM `administratorzy` WHERE login='$username' AND haslo='$password'";
+    $sql = "SELECT * FROM `administratorzy` WHERE login='$username' AND haslo='$encrypted'";
     $result = mysqli_query($connect, $sql);
 
     if (mysqli_num_rows($result) == 1) {
