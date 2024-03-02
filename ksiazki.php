@@ -13,5 +13,6 @@
     <div class="link">
         <a href="./index.php"><button>Powrót</button></a>
     </div>
+    <div class="test"></div>
 </body>
 </html>
