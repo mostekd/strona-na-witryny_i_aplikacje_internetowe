@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2024 at 12:00 AM
+-- Generation Time: Mar 02, 2024 at 04:03 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -66,7 +66,8 @@ CREATE TABLE `ksiazki` (
   `tytul` varchar(255) NOT NULL,
   `wydawnictwo` varchar(255) NOT NULL,
   `rok_wydania` date NOT NULL,
-  `aktywna` tinyint(1) NOT NULL
+  `aktywna` tinyint(1) NOT NULL,
+  `uwagi` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 -- --------------------------------------------------------
@@ -80,7 +81,8 @@ CREATE TABLE `uczen` (
   `imie` int(50) NOT NULL,
   `nazwisko` int(50) NOT NULL,
   `PESEL` varchar(11) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `uwagi` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 -- --------------------------------------------------------
