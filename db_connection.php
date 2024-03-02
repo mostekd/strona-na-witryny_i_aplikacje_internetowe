@@ -54,6 +54,10 @@ class db_connection{
             $this->close();
     }
 
+    function updateKsiazka(){
+        $query = "UPDATE `ksiazki` SET `tytul`='".$tytul."',`wydawnictwo`='".$wydawnictwo."',`rok_wydania`='".$rok_wydania."',`isbn`='".$ibsn."',`aktywna`='".$aktywna."',`uwagi`='.$uwagi."
+    }
+
     function close(){
         mysqli_close($this->connect);
     }
