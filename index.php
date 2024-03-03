@@ -12,7 +12,9 @@
         <h2>Biblioteka Wesoła Szkoła</h2>
     </div>
     <div class="zdj_header">
-        <?php
+        <?php|
+            include('db_connection.php');
+            $baza = new db_connection();
         // wyświetlanie 3 zdjęć które można podmienić w panelu administracyjnym w zakładce zmień zdjęcie
         ?>
     </div>
