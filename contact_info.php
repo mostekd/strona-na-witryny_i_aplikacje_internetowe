@@ -15,7 +15,7 @@
         </select>
         <input type=text name="imie" placeholder="imię" id="imie" class="imie"></input>
         <input type=text name="nazwisko" placeholder="nazwisko" id="nazwisko" class="nazwisko"></input>
-        <input type=text name="e-mail" placeholder="adres e-mail" id="email" class="email"></input>
+        <input type=email name="e-mail" placeholder="adres e-mail" id="email" class="email"></input>
         <textarea type=text name="wiadomosc" placeholder="treść wiadomości" id="wiadomosc" class="wiadomosc"></textarea>
 
         <button class="kontakt_button" type="submit">Wyślij</button>
