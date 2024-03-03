@@ -30,7 +30,7 @@
 		{
 			while($row = mysqli_fetch_assoc($data))
 			{
-				echo "<div class='artykul_full'>Tytuł: ".$row['tytul']."<br>Wydawnictwo: ".$row['wydawnictwo']."<p>Treść:</p>".$row['tresc']."<br>Autor: ".$row['autor']."</div>";
+				echo "<div id='ksiazka' class='ksiazka'>Tytuł: ".$row['tytul']."Wydawnictwo: ".$row['$wydawnictwo']."Rok wydania: ".$row['$rok_wydania']."ibsn: ".$row['$ibsn']."Aktywna: ".$row['$aktywna']." </div>";
 			}
 		}	
 
