@@ -12,7 +12,7 @@
     </div>
     <div class="link">
         <a href="./index.php"><button>Powrót</button></a>
-    </div>\
+    </div>
     <div class="ksiazki">
     <?php
 		$is_ksiazki = $_GET['id'];
