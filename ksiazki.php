@@ -14,7 +14,28 @@
         <a href="./index.php"><button>Powrót</button></a>
     </div>\
     <div class="ksiazki">
-        
+    <?php
+		$is_ksiazki = $_GET['id'];
+		
+		$connect = mysqli_connect("localhost","root","","wiai");
+		if (!$connect) 
+		{
+			die("Connection failed: " . mysqli_connect_error());
+		}
+		
+		$query = "SELECT * FROM `ksiazki` WHERE id_ksiazki =".$id_ksiazki;
+		$data = mysqli_query($connect, $query);
+		
+		if (mysqli_num_rows($data) > 0) 
+		{
+			while($row = mysqli_fetch_assoc($data))
+			{
+				echo "<div class='artykul_full'>Tytuł: ".$row['title']."<br>Data: ".$row['data']."<article><p>Treść:</p>".$row['tresc']."</article><br>Autor: ".$row['autor']."</div>";
+			}
+		}	
+
+		mysqli_close($connect);
+		?>
     </div>
 </body>
 </html>
