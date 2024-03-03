@@ -40,10 +40,21 @@
                     $aktywna = $_GET['aktywna'];
                     $baza->insertKsiazka($tytul, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
                 }
+                elseif(isset($_GET['tytul'])){
+                    $tytul = $_GET['tytul'];
+                    $wydawnictwo = $_GET['wydawnictwo'];
+                    $rok_wydania = $_GET['rok_wydania'];
+                    $ibsn = $_GET['ibsn'];
+                    $aktywna = $_GET['aktywna'];
+                    $baza->updateKsiazka($tytul, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
+                }
             }
             echo "<div id='ksiazka' class='ksiazka'>Tytuł: ".$row['tytul']."Wydawnictwo: ".$row['$wydawnictwo']."Rok wydania: ".$row['$rok_wydania']."ibsn: ".$row['$ibsn']."Aktywna: ".$row['$aktywna']."
                 <button class='delete'><a href=dodaj_ksiazki.php?del=True&id=".$row['id_ksiazki'].">
-                Usuń wpis
+                Usuń książkę
+                </a></button>
+                <button class='edit'><a href=dodaj_ksiazki.php?edit=True&id=".$row['id_ksiazki'].">
+                Edytuj
                 </a></button>
                 </div>";
         ?>
