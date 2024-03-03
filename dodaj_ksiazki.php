@@ -34,19 +34,21 @@
                 }
                 elseif(isset($_GET['tytul'])){
                     $tytul = $_GET['tytul'];
+                    $autor = $_GET['autor'];
                     $wydawnictwo = $_GET['wydawnictwo'];
                     $rok_wydania = $_GET['rok_wydania'];
                     $ibsn = $_GET['ibsn'];
                     $aktywna = $_GET['aktywna'];
-                    $baza->insertKsiazka($tytul, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
+                    $baza->insertKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
                 }
                 elseif(isset($_GET['tytul'])){
                     $tytul = $_GET['tytul'];
+                    $autor = $_GET['autor'];
                     $wydawnictwo = $_GET['wydawnictwo'];
                     $rok_wydania = $_GET['rok_wydania'];
                     $ibsn = $_GET['ibsn'];
                     $aktywna = $_GET['aktywna'];
-                    $baza->updateKsiazka($tytul, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
+                    $baza->updateKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
                 }
             }
             echo "<div id='ksiazka' class='ksiazka'>Tytuł: ".$row['tytul']."Wydawnictwo: ".$row['$wydawnictwo']."Rok wydania: ".$row['$rok_wydania']."ibsn: ".$row['$ibsn']."Aktywna: ".$row['$aktywna']."
