@@ -14,26 +14,17 @@
 		<a class="link" href="./index.php"><button>Powrót</button></a>
 	</div>
 <?php
-		$article_id = $_GET['id'];
-		
-		$connect = mysqli_connect("localhost","root","","wiai");
-		if (!$connect) 
-		{
-			die("Connection failed: " . mysqli_connect_error());
-		}
-		
-		$query = "SELECT `artykul_id`, `title`, `tresc`, `link`, `autor`, `data` FROM `artykul` WHERE artykul_id =".$article_id;
-		$data = mysqli_query($connect, $query);
-		
-		if (mysqli_num_rows($data) > 0) 
-		{
-			while($row = mysqli_fetch_assoc($data))
-			{
-				echo "<div class='artykul_full'>Tytuł: ".$row['title']."<br>Data: ".$row['data']."<article><p>Treść:</p>".$row['tresc']."</article><br>Autor: ".$row['autor']."</div>";
-			}
-		}	
+		include('db_artykuly.php');
 
-		mysqli_close($connect);
+		$article_id = $_GET['id'];
+		data = selectArtykulByID($article_id);
+		
+		while($row = mysqli_fetch_assoc($data))
+		{
+			echo "<div class='artykul_full'>Tytuł: ".$row['title']."<br>Data: ".$row['data']."<article><p>Treść:</p>".$row['tresc']."</article><br>Autor: ".$row['autor']."</div>";
+		}
+
+		close();
 		?>
 </body>
 </html>

@@ -15,8 +15,8 @@
     <a class="przycisk" href="./dodaj_artykul.php">Dodaj artykuł</a>
 
     <?php
-    include('db_connection.php');
-    $baza = new db_connection();
+    include('db_artykuly.php');
+    $baza = new db_artykuly();
 
     if(!empty($_GET)){
         $baza->databaseConnect();
