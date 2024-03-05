@@ -5,10 +5,10 @@ class db_uczniowie extends db_connection{
         $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `uwagi`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);
         if ($data == TRUE){
-            mysqli_commit();
+            mysqli_commit($this->connect);
         }
         else{
-            mysqli_rollback();
+            mysqli_rollback($this->connect);
         }
         $this->close();
     }
