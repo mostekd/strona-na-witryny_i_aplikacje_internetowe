@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2024 at 08:43 PM
+-- Generation Time: Mar 05, 2024 at 05:46 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -64,6 +64,7 @@ CREATE TABLE `artykul` (
 CREATE TABLE `ksiazki` (
   `id_ksiazki` int(11) NOT NULL,
   `tytul` varchar(255) NOT NULL,
+  `autor` varchar(255) NOT NULL,
   `wydawnictwo` varchar(255) NOT NULL,
   `rok_wydania` date NOT NULL,
   `isbn` varchar(255) NOT NULL,
@@ -79,12 +80,19 @@ CREATE TABLE `ksiazki` (
 
 CREATE TABLE `uczen` (
   `id_ucznia` int(11) NOT NULL,
-  `imie` int(50) NOT NULL,
-  `nazwisko` int(50) NOT NULL,
+  `imie` varchar(50) NOT NULL,
+  `nazwisko` varchar(50) NOT NULL,
   `PESEL` varchar(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `uwagi` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `uczen`
+--
+
+INSERT INTO `uczen` (`id_ucznia`, `imie`, `nazwisko`, `PESEL`, `email`, `uwagi`) VALUES
+(11, 'asdas', 'Mostowski', 'asdas', 'dawid-mostowski@o2.pl', '12312');
 
 -- --------------------------------------------------------
 
@@ -185,7 +193,7 @@ ALTER TABLE `administratorzy`
 -- AUTO_INCREMENT for table `artykul`
 --
 ALTER TABLE `artykul`
-  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `ksiazki`
@@ -197,7 +205,7 @@ ALTER TABLE `ksiazki`
 -- AUTO_INCREMENT for table `uczen`
 --
 ALTER TABLE `uczen`
-  MODIFY `id_ucznia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ucznia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `wypożyczenia`
