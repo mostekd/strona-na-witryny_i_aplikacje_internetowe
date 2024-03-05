@@ -5,11 +5,12 @@ class db_uczniowie extends db_connection{
         $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `uwagi`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);
         if ($data == TRUE){
-            $mysqli->commit();
+            mysqli_commit();
         }
         else{
-            mysqli->rollback();
+            mysqli_rollback();
         }
+        $this->close();
     }
 
     function deleteUczen($id_ucznia){
