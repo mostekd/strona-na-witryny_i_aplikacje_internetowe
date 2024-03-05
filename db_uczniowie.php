@@ -7,6 +7,9 @@ class db_uczniowie extends db_connection{
         if ($data == TRUE){
             $mysqli->commit();
         }
+        else{
+            mysqli->rollback();
+        }
     }
 
     function deleteUczen($id_ucznia){
