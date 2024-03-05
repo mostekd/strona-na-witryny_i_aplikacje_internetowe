@@ -17,7 +17,7 @@
 		include('db_artykuly.php');
 
 		$article_id = $_GET['id'];
-		data = selectArtykulByID($article_id);
+		$data = selectArtykulByID($article_id);
 		
 		while($row = mysqli_fetch_assoc($data))
 		{

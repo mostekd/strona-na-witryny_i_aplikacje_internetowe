@@ -10,6 +10,7 @@ class db_uczniowie extends db_connection{
         else{
             mysqli_rollback($this->connect);
         }
+        header('location: uczniowie.php');
         $this->close();
     }
 
@@ -17,7 +18,7 @@ class db_uczniowie extends db_connection{
         $query = "DELETE FROM `uczen` WHERE id_ucznia = ".$id_ucznia.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
-        header('location: uczniowie.php');   
+        header('location: uczniowie.php');
         $this->close();
     }
 

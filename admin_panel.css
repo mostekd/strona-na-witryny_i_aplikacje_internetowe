@@ -66,6 +66,13 @@ h2 {
     color: #000;
 }
 
+.uczniowie{
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #646464;
+    padding: 5px;
+}
+
 .dodaj_ksiazki_frmularz{
     margin-top: 15px;
 }
