@@ -5,16 +5,16 @@ class db_uczniowie extends db_connection{
         $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `uwagi`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);
         if ($data == TRUE){
-            mysqli_commit($this->connect);
+            mysqli_commit();
         }
         else{
-            mysqli_rollback($this->connect);
+            mysqli_rollback();
         }
         $this->close();
     }
 
     function deleteUczen($id_ucznia){
-        $query = 'Delete from artykul where artykul_id ='.$id_ucznia;
+        $query = "DELETE FROM `uczen` WHERE id_ucznia = ".$id_ucznia.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
         header('location: uczniowie.php');   

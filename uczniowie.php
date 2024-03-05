@@ -61,7 +61,7 @@
                 </div>";
             }
             } else {
-                echo "Brak artykułów";
+                echo "Brak uczniów";
             }
             $baza->close();
         ?>
