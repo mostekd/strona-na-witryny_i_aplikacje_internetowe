@@ -47,6 +47,9 @@
                 <button class='delete'><a href=wpisy_admin.php?del=True&id=".$row['artykul_id'].">
                 Usuń wpis
                 </a></button>
+                <button class='delete'><a href=wpisy_admin.php?edit=True&id=".$row['artykul_id'].">
+                Edytuj wpis
+                </a></button>
                 </div>";
             }
             } else {
