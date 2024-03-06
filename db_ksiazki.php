@@ -10,13 +10,13 @@ class db_ksiazki extends db_connection{
         }
     }
 
-    function insertKsiazka(){
+    function insertKsiazka($tytul, $wydawnictwo, $rok_wydania, $ibsn, $aktywna){
         $query = "INSERT INTO `ksiazki`(`tytul`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`) VALUES ('".$tytul."','".$wydawnictwo."','".$rok_wydania."','".$ibsn."','".$aktywna."');";
         $data = mysqli_query($this->connect, $query);
         $this->close();
     }
 
-    function deleteKsiazka(){
+    function deleteKsiazka($id_ksiazki){
             $query = "Delete from ksiazki where id_ksiazka =".$id_ksiazki.";";
             $data = mysqli_query($this->connect, $query);
             unset($_GET['id']);
@@ -24,7 +24,7 @@ class db_ksiazki extends db_connection{
             $this->close();
     }
 
-    function updateKsiazka(){
+    function updateKsiazka($tytul, $wydawnictwo, $rok_wydania, $ibsn, $aktywna, $uwagi){
         $query = "UPDATE `ksiazki` SET `tytul`='".$tytul."',`wydawnictwo`='".$wydawnictwo."',`rok_wydania`='".$rok_wydania."',`isbn`='".$ibsn."',`aktywna`='".$aktywna."',`uwagi`='".$uwagi.";";
     }
 
