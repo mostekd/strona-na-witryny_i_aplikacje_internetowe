@@ -41,15 +41,6 @@
                     $aktywna = $_GET['aktywna'];
                     $baza->insertKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
                 }
-                elseif(){
-                    $tytul = $_GET['tytul'];
-                    $autor = $_GET['autor'];
-                    $wydawnictwo = $_GET['wydawnictwo'];
-                    $rok_wydania = $_GET['rok_wydania'];
-                    $ibsn = $_GET['ibsn'];
-                    $aktywna = $_GET['aktywna'];
-                    $baza->updateKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
-                }
             }
 
             
