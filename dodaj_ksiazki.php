@@ -29,7 +29,7 @@
                 $baza->databaseConnect();
                 if(isset($_GET['del']))
                 {
-                    $artykul_id=$_GET['id'];
+                    $id_ksiazki=$_GET['id'];
                     $baza->deleteKsiazka($id_ksiazki);
                 }
                 elseif(isset($_GET['tytul'])){

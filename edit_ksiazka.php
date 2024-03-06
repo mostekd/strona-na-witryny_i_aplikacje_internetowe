@@ -16,7 +16,7 @@
 <?php
  include('db_connection.php');
  $baza = new db_connection();
-
+ 
     elseif(){
         $tytul = $_GET['tytul'];
         $autor = $_GET['autor'];
