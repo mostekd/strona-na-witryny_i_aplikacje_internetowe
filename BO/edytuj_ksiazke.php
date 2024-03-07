@@ -14,22 +14,25 @@
         <a class="przycisk" href="./lista_ksiazki.php">Książki</a>
 
         <?php
-         include('../DB/db_artykuly.php');
-         $baza = new db_artykuly();
+         include('../DB/db_ksiazki.php');
+         $baza = new db_ksiazki();
          
             if(!empty($_GET)){                
                 $baza->databaseConnect();
-                $artykul_id=$_GET['id'];
-                $data = $baza->selectArtykulByID($artykul_id);
+                $id_ksiazki=$_GET['id'];
+                $data = $baza->selectKsiazkaByID($id_ksiazki);
                 if (!empty($data)){
                     while($row = mysqli_fetch_assoc($data))
                     {
                         echo "<form class='MyForm' action='./lista_ksiazki.php' method = 'get'>";
                         echo "<input type=text name='tytul' placeholder='tytuł' id='tytul' class='tytul' value=".$row['title']."></input>";
-                        echo "<textarea type=text name='tresc' placeholder='treść' id='tresc' class='tresc'>".$row['tresc']."</textarea>";
-                        echo "<input type=url  name='link' placeholder='link' id='link' class='link' value=".$row['link']."></input>";
-                        echo "<input type=text name='autor' placeholder='autor' id='autor' class='autor' value=".$row['autor']."></input>";
-                        echo "<input type=hidden name='artykul_id' id='artykul_id' class='artykul_id' value=".$row['artykul_id']."></input>";
+                        echo "<input type=text  name='autor' placeholder='autor' id='autor' class='autor' value=".$row['autor']."></input>";
+                        echo "<input type=text name='wydawnictwo' placeholder='wydawnictwo' id='wydawnictwo' class='wydawnictwo' value=".$row['wydawnictwo']."></input>";
+                        echo "<input type=text name='rok_wydania' placeholder='rok_wydania' id='rok_wydania' class='rok_wydania' value=".$row['rok_wydania']."></input>";
+                        echo "<input type=text name='isbn' placeholder='isbn' id='isbn' class='isbn' value=".$row['isbn']."></input>";
+                        echo "<textarea type=text name='uwagi' placeholder='uwagi' id='uwagi' class='uwagi' value=".$row['uwagi']."></textarea>";
+                        echo "<textarea type=checkbox name='aktywna' placeholder='aktywna' id='aktywna' class='aktywna' value=".$row['aktywna']."></textarea>";
+                        echo "<input type=hidden name='id_ksiazki' id='id_ksiazki' class='id_ksiazki' value=".$row['id_ksiazki']."></input>";
                         echo "<input type=hidden name='opcja' id='opcja' class='opcja' value='edytuj'></input>";
                         echo "<input type='submit'></input>";
                         echo "</form>";
