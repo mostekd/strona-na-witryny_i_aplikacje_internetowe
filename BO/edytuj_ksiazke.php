@@ -31,7 +31,7 @@
                         echo "<input type=text name='rok_wydania' placeholder='rok_wydania' id='rok_wydania' class='rok_wydania' value=".$row['rok_wydania']."></input>";
                         echo "<input type=text name='isbn' placeholder='isbn' id='isbn' class='isbn' value=".$row['isbn']."></input>";
                         echo "<textarea type=text name='uwagi' placeholder='uwagi' id='uwagi' class='uwagi' value=".$row['uwagi']."></textarea>";
-                        echo "<textarea type=checkbox name='aktywna' placeholder='aktywna' id='aktywna' class='aktywna' value=".$row['aktywna']."></textarea>";
+                        echo "Aktywna: <input type=checkbox name='aktywna' placeholder='aktywna' id='aktywna' class='aktywna' value=".$row['aktywna']."></input>";
                         echo "<input type=hidden name='id_ksiazki' id='id_ksiazki' class='id_ksiazki' value=".$row['id_ksiazki']."></input>";
                         echo "<input type=hidden name='opcja' id='opcja' class='opcja' value='edytuj'></input>";
                         echo "<input type='submit'></input>";
