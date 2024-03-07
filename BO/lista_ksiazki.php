@@ -12,7 +12,7 @@
         <a href="login.php" class="logout" id="logout">Wyloguj się</a>
     </header>
     <a class="przycisk" href="./admin_panel.php">Strona główna</a>
-    <a class="przycisk" href="./dodaj_wpis.php">Dodaj wpis</a>
+    <a class="przycisk" href="./dodaj_wpis.php">Dodaj książkę</a>
 
     <?php
     include('../DB/db_artykuly.php');
