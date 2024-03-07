@@ -11,10 +11,10 @@
             <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
             <a href='login.php' class='logout' id='logout'>Wyloguj się</a>
         </header>
-        <a class="przycisk" href="./wpisy_admin.php">Wpisy</a>
+        <a class="przycisk" href="./lista_wpisy.php">Wpisy</a>
 
         <?php
-         include('db_artykuly.php');
+         include('../DB/db_artykuly.php');
          $baza = new db_artykuly();
          
             if(!empty($_GET)){                
@@ -24,7 +24,7 @@
                 if (!empty($data)){
                     while($row = mysqli_fetch_assoc($data))
                     {
-                        echo "<form class='MyForm' action='./wpisy_admin.php' method = 'get'>";
+                        echo "<form class='MyForm' action='./lista_wpisy.php' method = 'get'>";
                         echo "<input type=text name='tytul' placeholder='tytuł' id='tytul' class='tytul' value=".$row['title']."></input>";
                         echo "<textarea type=text name='tresc' placeholder='treść' id='tresc' class='tresc'>".$row['tresc']."</textarea>";
                         echo "<input type=url  name='link' placeholder='link' id='link' class='link' value=".$row['link']."></input>";

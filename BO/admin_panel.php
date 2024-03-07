@@ -14,7 +14,7 @@
     <a class="przycisk" href="./zatwierdz_goscia.php">Zatwierdzenie wpisów użytkowników</a>
     <a class="przycisk" href="./dodaj_ksiazki.php">Ksiązki</a>
     <a class="przycisk" href="./zmien_zdjecie.php">Zmień zdjęcie</a>
-    <a class="przycisk" href="./wpisy_admin.php">Wpisy</a>
+    <a class="przycisk" href="./lista_wpisy.php">Wpisy</a>
     <a class="przycisk" href="./wypozyczenia.php">Wypożyczenia</a>
     <a class="przycisk" href="./uczniowie.php">Uczniowie</a>
     </div>

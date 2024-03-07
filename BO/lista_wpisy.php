@@ -15,7 +15,7 @@
     <a class="przycisk" href="./dodaj_wpis.php">Dodaj wpis</a>
 
     <?php
-    include('db_artykuly.php');
+    include('../DB/db_artykuly.php');
     $baza = new db_artykuly();
 
     if(!empty($_GET)){
@@ -57,7 +57,7 @@
             while($row = mysqli_fetch_assoc($data))
             {
                 echo "<div id='wpis' class='artykul'><a href='artykul_admin.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
-                <button class='delete'><a href=wpisy_admin.php?del=True&id=".$row['artykul_id'].">
+                <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['artykul_id'].">
                 Usuń wpis
                 </a></button>
                 <button class='delete'><a href=edit_wpis.php?id=".$row['artykul_id'].">
