@@ -27,19 +27,21 @@
         }
         if(isset($_GET['opcja'])){
             if($_GET['opcja'] == 'dodaj'){
-                $tytul = $_GET['tytul'];
-                $tresc = $_GET['tresc'];
-                $link = $_GET['link'];
-                $autor = $_GET['autor'];
-                $baza->insertUczen($tytul, $tresc, $link, $autor);
+                $imie = $_GET['imie'];
+                $nazwisko = $_GET['nazwisko'];
+                $PESEL = $_GET['PESEL'];
+                $email = $_GET['email'];
+                $uwagi = $_GET['uwagi'];
+                $baza->insertUczen($imie, $nazwisko, $PESEL, $email, $uwagi);
             }
             elseif($_GET['opcja'] == 'edytuj'){
-                $tytul = $_GET['tytul'];
-                $tresc = $_GET['tresc'];
-                $link = $_GET['link'];
-                $autor = $_GET['autor'];
+                $imie = $_GET['imie'];
+                $nazwisko = $_GET['nazwisko'];
+                $PESEL = $_GET['PESEL'];
+                $email = $_GET['email'];
+                $uwagi = $_GET['uwagi'];
                 $id_ucznia = $_GET['id_ucznia'];
-                $baza->updateUczen($id_ucznia, $tytul, $tresc, $link, $autor);
+                $baza->updateUczen($id_ucznia, $imie, $nazwisko, $PESEL, $email, $uwagi);
             }
         }
         else{
