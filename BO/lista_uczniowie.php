@@ -58,7 +58,7 @@
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='lista_uczniowie.php?id=".$row['id_ucznia']."'>Imię: ".$row['imie']." Nazwisko: ".$row['nazwisko']." PESEL: ".$row['PESEL']." e-mail: ".$row['email']." Uwagi: ".$row['uwagi']."</a>
+                echo "<div id='wpis' class='artykul'>Imię: ".$row['imie']." Nazwisko: ".$row['nazwisko']." PESEL: ".$row['PESEL']." e-mail: ".$row['email']." Uwagi: ".$row['uwagi']."
                 <button class='delete'><a href=lista_uczniowie.php?del=True&id=".$row['id_ucznia'].">
                 Usuń ucznia
                 </a></button>
