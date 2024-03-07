@@ -3,15 +3,15 @@ include('db_connection.php');
 class db_ksiazki extends db_connection{
     
     function selectKsiazki(){
-        $query = 'SELECT `id_ksiazki`, `tytul`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`, `uwagi` FROM `ksiazki` WHERE 1';
+        $query = 'SELECT * FROM `ksiazki` WHERE 1';
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0){
             return $data;
         }
     }
 
-    function insertKsiazka($tytul, $wydawnictwo, $rok_wydania, $isbn, $aktywna){
-        $query = "INSERT INTO `ksiazki`(`tytul`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`) VALUES ('".$tytul."','".$wydawnictwo."','".$rok_wydania."','".$isbn."','".$aktywna."');";
+    function insertKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
+        $query = "INSERT INTO `ksiazki`(`tytul`, `autor`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`, `uwagi`) VALUES ('".$tytul."','".$autor."','".$wydawnictwo."','".$rok_wydania."','".$isbn."','".$aktywna."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);
         $this->close();
     }
@@ -24,8 +24,8 @@ class db_ksiazki extends db_connection{
             $this->close();
     }
 
-    function updateKsiazka($tytul, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
-        $query = "UPDATE `ksiazki` SET `tytul`='".$tytul."',`wydawnictwo`='".$wydawnictwo."',`rok_wydania`='".$rok_wydania."',`isbn`='".$isbn."',`aktywna`='".$aktywna."',`uwagi`='".$uwagi.";";
+    function updateKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
+        $query = "UPDATE `ksiazki` SET `tytul`='".$tytul."',`autor`='".$autor."',`wydawnictwo`='".$wydawnictwo."',`rok_wydania`='".$rok_wydania."',`isbn`='".$isbn."',`aktywna`='".$aktywna."',`uwagi`='".$uwagi.";";
     }
 
 }
