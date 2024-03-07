@@ -16,7 +16,7 @@
     <a class="przycisk" href="./zmien_zdjecie.php">Zmień zdjęcie</a>
     <a class="przycisk" href="./lista_wpisy.php">Wpisy</a>
     <a class="przycisk" href="./wypozyczenia.php">Wypożyczenia</a>
-    <a class="przycisk" href="./uczniowie.php">Uczniowie</a>
+    <a class="przycisk" href="./lista_uczniowie.php">Uczniowie</a>
     </div>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administracyjny</title>    
+    <link rel="stylesheet" href="admin_panel.css">
+</head>
+<body>
+    <header>
+        <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
+        <a href="login.php" class="logout" id="logout">Wyloguj się</a>
+    </header>
+    <a class="przycisk" href="./admin_panel.php">Strona główna</a>
+    <a class="przycisk" href="./dodaj_ucznia.php">Dodaj ucznia</a>
+
+    <?php
+    include('../DB/db_uczniowie.php');
+    $baza = new db_uczniowie();
+
+    if(!empty($_GET)){
+        $baza->databaseConnect();
+        if(isset($_GET['del']))
+        {
+            $id_ucznia=$_GET['id'];
+            $baza->deleteUczen($id_ucznia);
+        }
+        if(isset($_GET['opcja'])){
+            if($_GET['opcja'] == 'dodaj'){
+                $tytul = $_GET['tytul'];
+                $tresc = $_GET['tresc'];
+                $link = $_GET['link'];
+                $autor = $_GET['autor'];
+                $baza->insertUczen($tytul, $tresc, $link, $autor);
+            }
+            elseif($_GET['opcja'] == 'edytuj'){
+                $tytul = $_GET['tytul'];
+                $tresc = $_GET['tresc'];
+                $link = $_GET['link'];
+                $autor = $_GET['autor'];
+                $id_ucznia = $_GET['id_ucznia'];
+                $baza->updateUczen($id_ucznia, $tytul, $tresc, $link, $autor);
+            }
+        }
+        else{
+            echo "<p>Ucznia nie ma w naszej bazie</p>";
+        }
+    }
+    
+    $baza->databaseConnect();
+    $data = $baza->selectUczen();
+    if (!empty($data)){
+    
+    ?>
+    <div class="wpisy">
+        <?php
+            while($row = mysqli_fetch_assoc($data))
+            {
+                echo "<div id='wpis' class='artykul'><a href='artykul_admin.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
+                <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['artykul_id'].">
+                Usuń wpis
+                </a></button>
+                <button class='delete'><a href=edytuj_wpis.php?id=".$row['artykul_id'].">
+                Edytuj wpis
+                </a></button>
+                </div>";
+            }
+            } else {
+                echo "Brak uczniów";
+            }
+            $baza->close();
+        ?>
+    </div>
+</body>
+</html>
+<!-- Formularz dodający ucznia do bazy danych, pole wyszukiwania uczniów, raport (tabela) po kliknięciu na przycisk będzie pokazywała wszystkich uczniów lub uczniów zaczynających się na określoną literę nazwiska lub imienia (wyszukiwanie ucznia) wraz z informacją jakie książki wypożyczył do tej pory i jakie książki ma wypożyczone, -->
