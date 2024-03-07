@@ -3,29 +3,29 @@ include('db_connection.php');
 class db_uczniowie extends db_connection{
     
     function selectUczen(){
-        $query = 'SELECT * FROM `ksiazki` WHERE 1';
+        $query = 'SELECT * FROM `uczen` WHERE 1';
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0){
             return $data;
         }
     }
 
-    function insertUczen($tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
-        $query = "INSERT INTO `ksiazki`(`tytul`, `autor`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`, `uwagi`) VALUES ('".$tytul."','".$autor."','".$wydawnictwo."','".$rok_wydania."','".$isbn."','".$aktywna."','".$uwagi."');";
+    function insertUczen($imie, $nazwisko, $PESEL, $email, $uwagi){
+        $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `uwagi`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);
         $this->close();
     }
 
     function deleteUczen($id_ucznia){
-            $query = "Delete from ksiazki where id_ksiazki =".$id_ksiazki.";";
+            $query = "Delete from uczen where id_ucznia =".$id_ucznia.";";
             $data = mysqli_query($this->connect, $query);
             unset($_GET['id']);
-            header('location: ./lista_ksiazki.php');   
+            header('location: ./lista_uczniowie.php');   
             $this->close();
     }
 
-    function updateUczen($tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
-        $query = "UPDATE `ksiazki` SET `tytul`='".$tytul."',`autor`='".$autor."',`wydawnictwo`='".$wydawnictwo."',`rok_wydania`='".$rok_wydania."',`isbn`='".$isbn."',`aktywna`='".$aktywna."',`uwagi`='".$uwagi.";";
+    function updateUczen($imie, $nazwisko, $PESEL, $email, $uwagi){
+        $query = "UPDATE `uczen` SET `imie`='".$imie."',`nazwisko`='".$nazwisko."',`PESEL`='".$PESEL."',`email`='".$email."',`uwagi`='".$uwagi.";";
     }
 
 }
