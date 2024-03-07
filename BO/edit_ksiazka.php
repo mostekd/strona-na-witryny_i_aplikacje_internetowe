@@ -14,7 +14,7 @@
         <a class="przycisk" href="./wpisy_admin.php">Wpisy</a>
 
         <?php
-         include('db_artykuly.php');
+         include('../DB/db_artykuly.php');
          $baza = new db_artykuly();
          
             if(!empty($_GET)){                

@@ -11,7 +11,7 @@
         <h2>Biblioteka Wesoła Szkoła</h2>
     </div>
     <div class="link">
-        <a href="./index.php"><button>Powrót</button></a>
+        <a href="../index.php"><button>Powrót</button></a>
     </div>
     <?php
     $host = "localhost"; // Host bazy danych

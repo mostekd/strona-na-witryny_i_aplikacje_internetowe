@@ -43,7 +43,7 @@
             }
         }
         else{
-            echo "<p>Nie wybrnao funkcji</p>";
+            echo "<p>Wpisu nie ma w naszej bazie</p>";
         }
     }
     
@@ -60,7 +60,7 @@
                 <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['artykul_id'].">
                 Usuń wpis
                 </a></button>
-                <button class='delete'><a href=edit_wpis.php?id=".$row['artykul_id'].">
+                <button class='delete'><a href=edytuj_wpis.php?id=".$row['artykul_id'].">
                 Edytuj wpis
                 </a></button>
                 </div>";

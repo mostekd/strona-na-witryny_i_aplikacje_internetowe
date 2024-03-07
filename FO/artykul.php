@@ -11,10 +11,10 @@
         <h2>Biblioteka Wesoła Szkoła</h2>
     </div>
 	<div class="link">
-		<a class="link" href="./index.php"><button>Powrót</button></a>
+		<a class="link" href="../index.php"><button>Powrót</button></a>
 	</div>
 <?php
-		include('db_artykuly.php');
+		include('../DB/db_artykuly.php');
 
 		$article_id = $_GET['id'];
 		$data = selectArtykulByID($article_id);

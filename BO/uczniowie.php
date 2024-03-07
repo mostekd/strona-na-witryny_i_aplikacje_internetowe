@@ -15,7 +15,7 @@
     <a class="przycisk" href="./dodaj_ucznia.php">Dodaj ucznia</a>
 
     <?php
-    include('db_uczniowie.php');
+    include('../DB/db_uczniowie.php');
     $baza = new db_uczniowie();
 
     if(!empty($_GET)){

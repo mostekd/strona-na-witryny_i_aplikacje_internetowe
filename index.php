@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteka</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./FO/style.css">
 </head>
 <body>
     <div class="header-container">
@@ -13,7 +13,7 @@
     </div>
     <div class="zdj_header">
         <?php
-            include('db_connection.php');
+            include('./DB/db_connection.php');
             $baza = new db_connection();
         // wyświetlanie 3 zdjęć które można podmienić w panelu administracyjnym w zakładce zmień zdjęcie
         ?>
@@ -70,16 +70,16 @@
     </div>
     <div id="wpisy">
         <div class="link">
-            <a href="wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
+            <a href="./FO/wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
         </div>
         <?php
-            include('wpisy.php');
+            include('./FO/wpisy.php');
         ?>
     </div>
     <?php
-        include('search_books.php'); 
-        include('search_guests.php');
-        include('contact_info.php'); 
+        include('./FO/search_books.php'); 
+        include('./FO/search_guests.php');
+        include('./FO/contact_info.php'); 
     ?>
     <footer id="footer">
         Dawid Mostowski 3A
