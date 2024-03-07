@@ -19,6 +19,7 @@
         <input type=text name="rok wydania" placeholder="rok_wydania" id="rok_wydania" class="rok_wydania"></input>
         <input type=text name="isbn" placeholder="isbn" id="tytul" class="tytul"></input>
         Aktywna: <input type="checkbox" id="active" name="active">
+        <input type="submit"></input>
     </form>
     <div class="ksiazki">
         <?php
