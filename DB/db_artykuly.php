@@ -39,7 +39,7 @@ class db_artykuly extends db_connection{
 		$data = mysqli_query($this->connect, $query);
 		
 		unset($_GET['id']);
-        header('location: ./lista_wpisy.php');   
+        header('location: ../BO/lista_wpisy.php');   
         $this->close();
     }
 }
