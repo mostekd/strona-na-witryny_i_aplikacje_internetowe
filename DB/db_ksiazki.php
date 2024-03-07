@@ -20,7 +20,7 @@ class db_ksiazki extends db_connection{
             $query = "Delete from ksiazki where id_ksiazki =".$id_ksiazki.";";
             $data = mysqli_query($this->connect, $query);
             unset($_GET['id']);
-            header('location: ../BO/lista_ksiazki.php');   
+            header('location: ./lista_ksiazki.php');   
             $this->close();
     }
 
