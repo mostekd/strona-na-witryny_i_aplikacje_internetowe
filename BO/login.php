@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="form-group">
             <button class="button" type="submit">Zaloguj się</button><br><br>
-            <a class="button" href="index.php">Strona Główna</a>
+            <a class="button" href="../index.php">Strona Główna</a>
         </div>
     </form>
 </div>
