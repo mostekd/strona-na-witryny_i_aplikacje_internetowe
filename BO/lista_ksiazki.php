@@ -62,7 +62,7 @@
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='lista_ksiazki.php?id=".$row['id_ksiazki']."'>Tytuł: ".$row['title']." Autor: ".$row['autor']." Wydawnictwo: ".$row['wydawnictwo']." Rok wydania: ".$row['rok_wydania']." ISBN: ".$row['isbn']." Aktywna: ".$row['aktywna']." Uwagi: ".$row['uwagi']."</a>
+                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']." Autor: ".$row['autor']." Wydawnictwo: ".$row['wydawnictwo']." Rok wydania: ".$row['rok_wydania']." ISBN: ".$row['isbn']." Aktywna: ".$row['aktywna']." Uwagi: ".$row['uwagi']."
                 <button class='delete'><a href=lista_ksiazki.php?del=True&id=".$row['id_ksiazki'].">
                 Usuń książke
                 </a></button>
