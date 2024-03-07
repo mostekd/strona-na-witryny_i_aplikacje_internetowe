@@ -11,7 +11,7 @@ class db_artykuly extends db_connection{
     }
 
     function selectArtykul(){
-        $query = 'SELECT `artykul_id`, `title`, `tresc`, `link`, `autor` FROM `artykul` WHERE 1';
+        $query = 'SELECT * FROM `artykul` ORDER BY artykul_id DESC';
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0){
             return $data;

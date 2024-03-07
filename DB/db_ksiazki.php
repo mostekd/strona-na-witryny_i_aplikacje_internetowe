@@ -17,10 +17,10 @@ class db_ksiazki extends db_connection{
     }
 
     function deleteKsiazka($id_ksiazki){
-            $query = "Delete from ksiazki where id_ksiazka =".$id_ksiazki.";";
+            $query = "Delete from ksiazki where id_ksiazki =".$id_ksiazki.";";
             $data = mysqli_query($this->connect, $query);
             unset($_GET['id']);
-            header('location: dodaj_ksiazki.php');   
+            header('location: ../BO/lista_ksiazki.php');   
             $this->close();
     }
 

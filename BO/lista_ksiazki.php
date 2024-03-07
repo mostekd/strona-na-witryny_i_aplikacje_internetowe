@@ -15,8 +15,8 @@
     <a class="przycisk" href="./dodaj_ksiazka.php">Dodaj książkę</a>
 
     <?php
-    include('../DB/db_artykuly.php');
-    $baza = new db_artykuly();
+    include('../DB/db_ksiazki.php');
+    $baza = new db_ksiazki();
 
     if(!empty($_GET)){
         $baza->databaseConnect();
@@ -54,7 +54,7 @@
     }
     
     $baza->databaseConnect();
-    $data = $baza->selectArtykul();
+    $data = $baza->selectKsiazki();
     if (!empty($data)){
     
     ?>
