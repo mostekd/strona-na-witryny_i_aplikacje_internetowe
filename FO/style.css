@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+* {
+  margin: 0px;
+  font-family: 'Playpen Sans', cursive;
+}
+#searchBooks,
+#searchGuests,
+#contactInfo,
+#loginPage {
+  margin-top: 2%;
+  text-align: center;
+  display: none;   
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
+}
+#bookTitle,
+#guestName,
+#username,
+#password{
+  border-radius: 10px;
+}
+body {
+  background-image: url('./zdj/ksiazki.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  width: auto;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+h2 {
+    font-weight: bold;
+    background-image: url('./zdj/header_tło.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+    padding: 14px;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.header-container {
+  position: relative;
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: url('zdj/panel_lewy.jpg');
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #787878;
+  text-shadow: 3px 3px 5px #000000;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 60px;
+}
+
+.overlay .container{
+  color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
+  align-items: center;
+  text-align: center;
+  margin-top: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+
+.zdj_menu{
+  height: 100%;
+  width: 100%;
+}
+
+.artykul{
+  color: #000000;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.artykul a{
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: rgba(158, 158, 158, 0.5);
+  text-decoration: none;
+  color: #000000;
+  float: right;
+  border-radius: 10px;
+}
+
+.gorny_panel_wpisu{
+  display: flex;
+  justify-content: space-around;
+}
+
+.link{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.formularz_kontaktowy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formularz_kontaktowy input,
+.formularz_kontaktowy textarea {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.formularz_kontaktowy textarea{
+  min-height: 130px;
+  min-width: 300px;
+  max-height: 50vh;
+  max-width: 80vw;
+}
+
+.kontakt_button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contact_form_select{
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+article{
+  padding-top: 10px;
+}
+
+.artykul_full{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin-top: 2%;
+  height: auto;
+  border-radius: 20px;
+  width: 80%;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#wpisy{
+  margin-top: 2%;
+}
+
+button{
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+#menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 10px; /* Adjust this value as needed */
+}
+#footer{
+    position: fixed;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #000000;
+    margin-left: 20px;
+    text-align: left;
+    bottom: 0;
+    margin-bottom: 0; 
+    height: 30px;
+}

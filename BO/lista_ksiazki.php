@@ -12,7 +12,7 @@
         <a href="login.php" class="logout" id="logout">Wyloguj się</a>
     </header>
     <a class="przycisk" href="./admin_panel.php">Strona główna</a>
-    <a class="przycisk" href="./dodaj_artykul.php">Dodaj artykuł</a>
+    <a class="przycisk" href="./dodaj_wpis.php">Dodaj wpis</a>
 
     <?php
     include('db_artykuly.php');
@@ -25,12 +25,25 @@
             $artykul_id=$_GET['id'];
             $baza->deleteArtykul($artykul_id);
         }
-        elseif(isset($_GET['tytul'])){
-            $tytul = $_GET['tytul'];
-            $tresc = $_GET['tresc'];
-            $link = $_GET['link'];
-            $autor = $_GET['autor'];
-            $baza->insertArtykul($tytul, $tresc, $link, $autor);
+        if(isset($_GET['opcja'])){
+            if($_GET['opcja'] == 'dodaj'){
+                $tytul = $_GET['tytul'];
+                $tresc = $_GET['tresc'];
+                $link = $_GET['link'];
+                $autor = $_GET['autor'];
+                $baza->insertArtykul($tytul, $tresc, $link, $autor);
+            }
+            elseif($_GET['opcja'] == 'edytuj'){
+                $tytul = $_GET['tytul'];
+                $tresc = $_GET['tresc'];
+                $link = $_GET['link'];
+                $autor = $_GET['autor'];
+                $artykul_id = $_GET['artykul_id'];
+                $baza->updateArtykul($artykul_id, $tytul, $tresc, $link, $autor);
+            }
+        }
+        else{
+            echo "<p>Nie wybrnao funkcji</p>";
         }
     }
     
@@ -47,7 +60,7 @@
                 <button class='delete'><a href=wpisy_admin.php?del=True&id=".$row['artykul_id'].">
                 Usuń wpis
                 </a></button>
-                <button class='delete'><a href=wpisy_admin.php?edit=True&id=".$row['artykul_id'].">
+                <button class='delete'><a href=edit_wpis.php?id=".$row['artykul_id'].">
                 Edytuj wpis
                 </a></button>
                 </div>";

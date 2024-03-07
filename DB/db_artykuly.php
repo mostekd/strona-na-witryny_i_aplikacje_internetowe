@@ -1,5 +1,6 @@
 <?php
 include('db_connection.php');
+
 class db_artykuly extends db_connection{
     function deleteArtykul($artykul_id){
         $query = 'Delete from artykul where artykul_id ='.$artykul_id;
@@ -24,13 +25,22 @@ class db_artykuly extends db_connection{
         $this->close();
     }
     
-    function selectArtykulByID($id_artykul){
-        $query = "SELECT `artykul_id`, `title`, `tresc`, `link`, `autor` FROM `artykul` WHERE artykul_id =".$article_id;
-		$data = mysqli_query($connect, $query);
+    function selectArtykulByID($artykul_id){
+        $query = "SELECT `artykul_id`, `title`, `tresc`, `link`, `autor` FROM `artykul` WHERE artykul_id =".$artykul_id;
+		$data = mysqli_query($this->connect, $query);
 		
 		if (mysqli_num_rows($data) > 0) {
             return $data;
         }
+    }
+
+    function updateArtykul($artykul_id, $tytul, $tresc, $link, $autor){
+        $query = "UPDATE `artykul` SET `title`='".$tytul."',`tresc`='".$tresc."',`link`='".$link."',`autor`='".$autor."' WHERE `artykul_id`=".$artykul_id.";";
+		$data = mysqli_query($this->connect, $query);
+		
+		unset($_GET['id']);
+        header('location: wpisy_admin.php');   
+        $this->close();
     }
 }
 ?>
