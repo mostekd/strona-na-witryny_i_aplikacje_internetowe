@@ -43,9 +43,7 @@
                 }
             }
 
-            
-
-            echo "<div id='ksiazka' class='ksiazka'>Tytuł: ".$row['tytul']."Wydawnictwo: ".$row['$wydawnictwo']."Rok wydania: ".$row['$rok_wydania']."ibsn: ".$row['$ibsn']."Aktywna: ".$row['$aktywna']."
+            echo "<div id='ksiazka' class='ksiazka'>Tytuł: ".$row['tytul']."Autor: ".$row['autor']."Wydawnictwo: ".$row['$wydawnictwo']."Rok wydania: ".$row['$rok_wydania']."ibsn: ".$row['$ibsn']."Aktywna: ".$row['$aktywna']."
                 <button class='delete'><a href=dodaj_ksiazki.php?del=True&id=".$row['id_ksiazki'].">
                 Usuń książkę
                 </a></button>
