@@ -54,16 +54,16 @@
     if (!empty($data)){
     
     ?>
-    <div class="wpisy">
+    <div class="uczniowie">
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='lista_uczniowie.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
-                <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['artykul_id'].">
-                Usuń wpis
+                echo "<div id='wpis' class='artykul'><a href='lista_uczniowie.php?id=".$row['id_ucznia']."'>Imię: ".$row['imie']." Nazwisko: ".$row['nazwisko']." PESEL: ".$row['PESEL']." e-mail: ".$row['email']." Uwagi: ".$row['uwagi']."</a>
+                <button class='delete'><a href=lista_uczniowie.php?del=True&id=".$row['id_ucznia'].">
+                Usuń ucznia
                 </a></button>
-                <button class='delete'><a href=edytuj_ucznia.php?id=".$row['artykul_id'].">
-                Edytuj wpis
+                <button class='delete'><a href=edytuj_ucznia.php?id=".$row['id_ucznia'].">
+                Edytuj ucznia
                 </a></button>
                 </div>";
             }
