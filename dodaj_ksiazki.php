@@ -23,8 +23,8 @@
     </form>
     <div class="ksiazki">
         <?php
-            include('db_connection.php');
-            $baza = new db_connection();
+            include('db_ksiazki.php');
+            $baza = new db_ksiazki();
 
             if(!empty($_GET)){
                 $baza->databaseConnect();
@@ -43,7 +43,8 @@
                     $baza->insertKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $ibsn, $aktywna);
                 }
             }
-
+            while($row = mysqli_fetch_assoc($data))
+            {
             echo "<div id='ksiazka' class='ksiazka'>Tytuł: ".$row['tytul']."Autor: ".$row['autor']."Wydawnictwo: ".$row['$wydawnictwo']."Rok wydania: ".$row['$rok_wydania']."ibsn: ".$row['$ibsn']."Aktywna: ".$row['$aktywna']."
                 <button class='delete'><a href=dodaj_ksiazki.php?del=True&id=".$row['id_ksiazki'].">
                 Usuń książkę
@@ -52,6 +53,7 @@
                 Edytuj
                 </a></button>
                 </div>";
+            }
         ?>
     </div>
     <!-- Administrator będzie miał również możliwość wprowadzania nowych książek, jak również ich modyfikację
