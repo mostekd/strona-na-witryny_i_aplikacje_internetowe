@@ -58,7 +58,7 @@
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='artykul_admin.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
+                echo "<div id='wpis' class='artykul'><a href='lista_wpis.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
                 <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['artykul_id'].">
                 Usuń wpis
                 </a></button>
