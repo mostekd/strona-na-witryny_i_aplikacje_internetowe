@@ -25,13 +25,12 @@ class db_uczniowie extends db_connection{
     }
 
     function updateUczen($imie, $nazwisko, $PESEL, $email, $uwagi){
-        $query = "UPDATE `uczen` SET `imie`='".$imie."',`nazwisko`='".$nazwisko."',`PESEL`='".$PESEL."',`email`='".$email."',`uwagi`='".$uwagi.";";
+        $query = "UPDATE `uczen` SET `imie`='".$imie."',`nazwisko`='".$nazwisko."',`PESEL`='".$PESEL."',`email`='".$email."',`uwagi`='".$uwagi."';";
 		$data = mysqli_query($this->connect, $query);
 		
 		unset($_GET['id']);
         header('location: ../BO/lista_uczniowie.php');   
         $this->close();
-    }
     }
 
     function selectUczenByID($id_ucznia){
@@ -41,5 +40,6 @@ class db_uczniowie extends db_connection{
 		if (mysqli_num_rows($data) > 0) {
             return $data;
         }
+    }
     }
 ?>
