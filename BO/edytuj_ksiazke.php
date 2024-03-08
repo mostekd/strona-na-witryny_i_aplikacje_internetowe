@@ -25,7 +25,7 @@
                     while($row = mysqli_fetch_assoc($data))
                     {
                         echo "<form class='MyForm' action='./lista_ksiazki.php' method = 'get'>";
-                        echo "<input type=text name='tytul' placeholder='tytuł' id='tytul' class='tytul' value=".$row['title']."></input>";
+                        echo "<input type=text name='tytul' placeholder='tytuł' id='tytul' class='tytul' value=".$row['tytul']."></input>";
                         echo "<input type=text  name='autor' placeholder='autor' id='autor' class='autor' value=".$row['autor']."></input>";
                         echo "<input type=text name='wydawnictwo' placeholder='wydawnictwo' id='wydawnictwo' class='wydawnictwo' value=".$row['wydawnictwo']."></input>";
                         echo "<input type=text name='rok_wydania' placeholder='rok_wydania' id='rok_wydania' class='rok_wydania' value=".$row['rok_wydania']."></input>";

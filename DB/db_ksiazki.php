@@ -24,8 +24,14 @@ class db_ksiazki extends db_connection{
             $this->close();
     }
 
-    function updateKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
-        $query = "UPDATE `ksiazki` SET `tytul`='".$tytul."',`autor`='".$autor."',`wydawnictwo`='".$wydawnictwo."',`rok_wydania`='".$rok_wydania."',`isbn`='".$isbn."',`aktywna`='".$aktywna."',`uwagi`='".$uwagi.";";
+    function updateKsiazka($id_ksiazki, $tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
+        $query = "UPDATE `ksiazki` SET `tytul`='".$tytul."',`autor`='".$autor."',`wydawnictwo`='".$wydawnictwo."',`rok_wydania`='".$rok_wydania."',`isbn`='".$isbn."',`aktywna`='".$aktywna."',`uwagi`='".$uwagi."' WHERE `id_ksiazki` = ".$id_ksiazki.";";
+
+        $data = mysqli_query($this->connect, $query);
+		
+		unset($_GET['id']);
+        header('location: ../BO/lista_ksiazki.php');   
+        $this->close();
     }
 
     function selectKsiazkaByID($id_ksiazki){
