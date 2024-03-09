@@ -24,8 +24,8 @@ class db_uczniowie extends db_connection{
             $this->close();
     }
 
-    function updateUczen($imie, $nazwisko, $PESEL, $email, $uwagi){
-        $query = "UPDATE `uczen` SET `imie`='".$imie."',`nazwisko`='".$nazwisko."',`PESEL`='".$PESEL."',`email`='".$email."',`uwagi`='".$uwagi."';";
+    function updateUczen($id_ucznia, $imie, $nazwisko, $PESEL, $email, $uwagi){
+        $query = "UPDATE `uczen` SET `imie`='".$imie."',`nazwisko`='".$nazwisko."',`PESEL`='".$PESEL."',`email`='".$email."',`uwagi`='".$uwagi."' WHERE `id_ucznia`=".$id_ucznia.";";
 		$data = mysqli_query($this->connect, $query);
 		
 		unset($_GET['id']);
