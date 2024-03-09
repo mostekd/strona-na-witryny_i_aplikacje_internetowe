@@ -41,7 +41,7 @@ class db_ksiazki extends db_connection{
     }
 
     function selectKsiazkaByAktywna(){
-        $query = "SELECT * FROM `ksiazki` WHERE `aktywna` = 1";
+        $query = "SELECT `tytul`, `autor`, `wydawnictwo`, `rok_wydania` FROM `ksiazki` WHERE `aktywna` = 1";
         $data = mysqli_query($this->connect, $query);
 	    if (mysqli_num_rows($data) > 0) {
             return $data;

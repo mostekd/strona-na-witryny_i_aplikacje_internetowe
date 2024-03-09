@@ -17,7 +17,7 @@
 
         while($row = mysqli_fetch_assoc($data))
         {
-            echo "<div id='aktywana_ksiazka'>Tytuł: ".$row['tytul']." Autor: ".$row['autor']." Wydawnictwo: ".$row['wydawnictwo']." Rok wydania: ".$row['rok_wydania']." ISBN: ".$row['isbn']." Aktywna: ".$row['aktywna']." Uwagi: ".$row['uwagi']."
+            echo "<div id='aktywana_ksiazka'>Tytuł: ".$row['tytul']." Autor: ".$row['autor']." Wydawnictwo: ".$row['wydawnictwo']." Rok wydania: ".$row['rok_wydania']."
             </div>";
         }
     }else {
