@@ -1,7 +1,7 @@
 <!-- search_books.php -->
 <?php
-         include('./DB/db_uczniowie.php');
-         $baza = new db_uczniowie();
+        include('./DB/db_ksiazki.php');
+        $baza = new db_ksiazki();
         
         $baza->databaseConnect();
         $data = $baza->selectKsiazkaByAktywna();

@@ -13,8 +13,6 @@
     </div>
     <div class="zdj_header">
         <?php
-            include('./DB/db_connection.php');
-            $baza = new db_connection();
         // wyświetlanie 3 zdjęć które można podmienić w panelu administracyjnym w zakładce zmień zdjęcie
         ?>
     </div>
