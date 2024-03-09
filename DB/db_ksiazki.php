@@ -28,7 +28,7 @@ class db_ksiazki extends db_connection{
         $query = "UPDATE `ksiazki` SET `tytul`='".$tytul."',`autor`='".$autor."',`wydawnictwo`='".$wydawnictwo."',`rok_wydania`='".$rok_wydania."',`isbn`='".$isbn."',`aktywna`='".$aktywna."',`uwagi`='".$uwagi."' WHERE `id_ksiazki` = ".$id_ksiazki.";";
         $data = mysqli_query($this->connect, $query);	
 	    unset($_GET['id']);
-        header('location: ../BO/lista_ksiazki.php');   
+        header('location: ../BO/lista_ksiazki.php');
         $this->close();
     }
 
