@@ -3,7 +3,7 @@ include('db_connection.php');
 class db_artykuly extends db_connection{
     
     function deleteArtykul($artykul_id){
-        $query = 'Delete from artykul where artykul_id ='.$artykul_id;
+        $query = "Delete from artykul where artykul_id =".$artykul_id.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
         header('location: ../BO/lista_wpisy.php');   
