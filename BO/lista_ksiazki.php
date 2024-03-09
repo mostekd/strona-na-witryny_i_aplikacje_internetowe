@@ -33,7 +33,7 @@
                 $rok_wydania = $_GET['rok_wydania'];
                 $isbn = $_GET['isbn'];
                 $aktywna = 0;
-                if(isset($_GET['aktywna']){
+                if(isset($_GET['aktywna'])){
                    $aktywna = 1;
                 }
                 $uwagi = $_GET['uwagi'];
@@ -46,7 +46,7 @@
                 $rok_wydania = $_GET['rok_wydania'];
                 $isbn = $_GET['isbn'];
                 $aktywna = 0;
-                if(isset($_GET['aktywna']){
+                if(isset($_GET['aktywna'])){
                    $aktywna = 1;
                 }
                 $uwagi = $_GET['uwagi'];
