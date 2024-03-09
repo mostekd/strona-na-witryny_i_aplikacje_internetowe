@@ -15,16 +15,16 @@
         <button type="button" onclick="searchBooks()">Szukaj</button>
     </form>
     <div id="searchBooksResults">
-<?php
-        while($row = mysqli_fetch_assoc($data))
-        {
-            echo "<div id='aktywana_ksiazka'>Tytuł: ".$row['tytul']." Autor: ".$row['autor']." Wydawnictwo: ".$row['wydawnictwo']." Rok wydania: ".$row['rok_wydania']."
-            </div>";
-        }
-    }else {
-            echo "Brak książek";
-        }
-        $baza->close();
-    ?>
+        <?php
+                while($row = mysqli_fetch_assoc($data))
+                {
+                    echo "<div id='aktywana_ksiazka'>Tytuł: ".$row['tytul']." Autor: ".$row['autor']." Wydawnictwo: ".$row['wydawnictwo']." Rok wydania: ".$row['rok_wydania']."
+                    </div>";
+                }
+            }else {
+                echo "Brak książek";
+            }
+            $baza->close();
+        ?>
     </div>
 </div>
