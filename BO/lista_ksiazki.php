@@ -32,7 +32,10 @@
                 $wydawnictwo = $_GET['wydawnictwo'];
                 $rok_wydania = $_GET['rok_wydania'];
                 $isbn = $_GET['isbn'];
-                $aktywna = $_GET['aktywna'];
+                $aktywna = 0;
+                if(isset($_GET['aktywna']){
+                   $aktywna = 1;
+                }
                 $uwagi = $_GET['uwagi'];
                 $baza->insertKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi);
             }
@@ -42,7 +45,10 @@
                 $wydawnictwo = $_GET['wydawnictwo'];
                 $rok_wydania = $_GET['rok_wydania'];
                 $isbn = $_GET['isbn'];
-                $aktywna = $_GET['aktywna'];
+                $aktywna = 0;
+                if(isset($_GET['aktywna']){
+                   $aktywna = 1;
+                }
                 $uwagi = $_GET['uwagi'];
                 $id_ksiazki = $_GET['id_ksiazki'];
                 $baza->updateKsiazka($id_ksiazki, $tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi);
