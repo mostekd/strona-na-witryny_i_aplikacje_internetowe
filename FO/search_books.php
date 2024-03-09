@@ -33,6 +33,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="button" onclick="searchBooks()">Szukaj</button>
     </form>
     <div id="searchBooksResults">
+    <?php
+        include('../DB/db_ksiazki.php');
+        $baza = new db_ksiazki();
         
+        $baza->databaseConnect();
+        $data = $baza->selectKsiazkaByAktywna($aktywna);
+
+
+    ?>
     </div>
 </div>

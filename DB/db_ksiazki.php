@@ -34,11 +34,18 @@ class db_ksiazki extends db_connection{
 
     function selectKsiazkaByID($id_ksiazki){
         $query = "SELECT `id_ksiazki`, `tytul`, `autor`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`, `uwagi` FROM `ksiazki` WHERE id_ksiazki =".$id_ksiazki;
-	$data = mysqli_query($this->connect, $query);
-	if (mysqli_num_rows($data) > 0) {
+        $data = mysqli_query($this->connect, $query);
+        if (mysqli_num_rows($data) > 0) {
             return $data;
         }
     }
 
+    function selectKsiazkaByAktywna($aktywna){
+        $query = "SELECT * FROM `ksiazki` WHERE `aktywna` = 1";
+        $data = mysqli_query($this->connect, $query);
+	    if (mysqli_num_rows($data) > 0) {
+            return $data;
+        }
+    }
 }
 ?>
