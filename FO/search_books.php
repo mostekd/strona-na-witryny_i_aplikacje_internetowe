@@ -12,7 +12,7 @@
         $baza = new db_ksiazki();
         
         $baza->databaseConnect();
-        $data = $baza->selectKsiazkaByAktywna($aktywna);
+        $data = $baza->selectKsiazkaByAktywna();
 
 
     ?>
