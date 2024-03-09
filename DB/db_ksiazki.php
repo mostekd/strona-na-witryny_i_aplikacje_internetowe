@@ -13,6 +13,7 @@ class db_ksiazki extends db_connection{
     function insertKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
         $query = "INSERT INTO `ksiazki`(`tytul`, `autor`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`, `uwagi`) VALUES ('".$tytul."','".$autor."','".$wydawnictwo."','".$rok_wydania."','".$isbn."','".$aktywna."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);
+        header('location: ./lista_ksiazki.php'); 
         $this->close();
     }
 
