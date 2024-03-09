@@ -2,7 +2,7 @@
 include('db_connection.php');
 class db_uczniowie extends db_connection{
     function selectUczen(){
-        $query = 'SELECT `id_uczen`,`imie`, `nazwisko`, `PESEL`, `email`, `uwagi` FROM `uczen` WHERE 1';
+        $query = 'SELECT `id_ucznia`,`imie`, `nazwisko`, `PESEL`, `email`, `uwagi` FROM `uczen` WHERE 1';
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0){
             return $data;
@@ -33,7 +33,7 @@ class db_uczniowie extends db_connection{
     }
 
     function selectUczenByID($id_ucznia){
-        $query = "SELECT `id_uczen`,`imie`, `nazwisko`, `PESEL`, `email`, `uwagi` FROM `uczen` WHERE id_ucznia =".$id_ucznia;
+        $query = "SELECT `id_ucznia`,`imie`, `nazwisko`, `PESEL`, `email`, `uwagi` FROM `uczen` WHERE id_ucznia =".$id_ucznia;
 	$data = mysqli_query($this->connect, $query);
 
 	if (mysqli_num_rows($data) > 0) {
