@@ -22,6 +22,7 @@ class db_artykuly extends db_connection{
         $dateTest = date('Y-m-d H:i:s');
         $query = "INSERT INTO `artykul`(`title`, `tresc`, `link`, `autor`, `data`) VALUES ('".$tytul."','".$tresc."','".$link."','".$autor."','".$dateTest."');";
         $data = mysqli_query($this->connect, $query);
+        header('location: ../BO/lista_wpisy.php'); 
         $this->close();
     }
     
