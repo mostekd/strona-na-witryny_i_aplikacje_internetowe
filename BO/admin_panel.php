@@ -11,7 +11,7 @@
 <body>
     <header>
         <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
-        <a href="login.php" class="logout" id="logout">Wyloguj się</a>
+        <a href="login.php" class="logout" id="logout"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #005eff;"></i> Wyloguj się</a>
     </header>
     <div class="panel_prawy">
     <a class="przycisk" href="./lista_wpisy.php"><i class="fa-regular fa-newspaper" style="color: #005eff;"></i> Wpisy</a>
