@@ -101,3 +101,36 @@ h2 {
     margin-top: 5px;
     border-radius: 10px;
 }
+
+.panel_prawy {
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    width: 200px; /* Możesz dostosować szerokość panelu prawego według potrzeb */
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.panel_prawy .przycisk {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+}
+
+.panel_prawy .przycisk:hover {
+    background-color: #ccc;
+}
+
+.panel_prawy a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+}
+
+.panel_prawy a:hover {
+    background-color: #ccc;
+}
