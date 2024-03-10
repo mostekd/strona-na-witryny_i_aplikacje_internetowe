@@ -80,3 +80,24 @@ h2 {
 .dodaj_ksiazki_frmularz input{
     border-radius: 8px;
 }
+.MyForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MyForm input{
+    width: 40vw;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.MyForm textarea{
+    min-height: 30vh;
+    min-width: 40vw;
+    max-height: 50vh;
+    max-width: 180vh;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
