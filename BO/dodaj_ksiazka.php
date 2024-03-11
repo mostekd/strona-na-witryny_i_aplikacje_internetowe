@@ -13,7 +13,7 @@
             <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
             <a href="login.php" class="logout" id="logout">Wyloguj się</a>
         </header>
-        <div class="panel_prawy">
+        <div class="panel_lewy">
         <a class="przycisk" href="./lista_ksiazki.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Ksiązki</a>
         </div>
         <form class="MyForm" action="./lista_ksiazki.php" method = "get">

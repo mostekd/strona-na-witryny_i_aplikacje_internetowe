@@ -91,7 +91,7 @@ h2 {
     border-radius: 10px;
 }
 
-.panel_prawy {
+.panel_lewy {
     position: absolute;
     top: 15vh;
     left: 0;
@@ -102,25 +102,25 @@ h2 {
     box-sizing: border-box;
 }
 
-.panel_prawy .przycisk {
+.panel_lewy .przycisk {
     display: block;
     text-decoration: none;
     color: #ffffff;
     padding: 10px 0;
 }
 
-.panel_prawy .przycisk:hover {
+.panel_lewy .przycisk:hover {
     background-color: #4458c8;
     padding: 10px;
 }
 
-.panel_prawy a {
+.panel_lewy a {
     display: block;
     text-decoration: none;
     color: #333;
     padding: 10px 0;
 }
 
-.panel_prawy a:hover {
+.panel_lewy a:hover {
     background-color: #ccc;
 }

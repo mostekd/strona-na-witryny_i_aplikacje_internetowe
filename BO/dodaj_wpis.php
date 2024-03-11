@@ -9,9 +9,10 @@
     <body>
         <header>
             <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
+            <!-- przycisk wyloguj się na być po prawej stronie na górze -->
             <a href="login.php" class="logout" id="logout">Wyloguj się</a>
         </header>
-        <div class="panel_prawy">
+        <div class="panel_lewy">
             <a class="przycisk" href="./lista_wpisy.php"><i class="fa-regular fa-newspaper" style="color: #fff;"></i> Wpisy</a>
         </div>
         <form class="MyForm" action="./lista_wpisy.php" method = "get">
