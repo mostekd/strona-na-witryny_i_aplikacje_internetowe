@@ -15,7 +15,7 @@
     </header>
     <div class="panel_lewy">
         <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i> Strona główna</a>
-        <a class="przycisk" href="./dodaj_wpis.php">Dodaj wpis</a>
+        <a class="przycisk" href="./dodaj_wpis.php"><i class="fa-solid fa-book-open" style="color: #ffffff;"></i> Dodaj wpis</a>
     </div>
 
     <?php
