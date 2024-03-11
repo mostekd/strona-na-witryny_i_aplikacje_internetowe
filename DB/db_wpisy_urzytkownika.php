@@ -6,7 +6,7 @@ class db_wpisy_urzytkownika extends db_connection{
         $query = "Delete from artykul where id_wpisu_urzytkownika =".$id_wpisu_urzytkownika.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
-        header('location: ../BO/lista_wpisy.php');   
+        header('location: ../BO/lista_wpisy_goscia.php');   
         $this->close();
     }
 
@@ -22,7 +22,7 @@ class db_wpisy_urzytkownika extends db_connection{
         $dateTest = date('Y-m-d H:i:s');
         $query = "INSERT INTO `wpisy_urzytkownika`(`tytul`, `tresc`, `autor`, `data`, `aktywny`) VALUES ('".$tytul."','".$tresc."','".$autor."','".$data."','".$aktywny."');";
         $data = mysqli_query($this->connect, $query);
-        header('location: ../BO/lista_wpisy.php'); 
+        header('location: ../BO/lista_wpisy_goscia.php'); 
         $this->close();
     }
 
@@ -34,8 +34,5 @@ class db_wpisy_urzytkownika extends db_connection{
         header('location: ../BO/lista_wpisy_goscia.php');   
         $this->close();
     }
-}
-?>
-
 }
 ?>
