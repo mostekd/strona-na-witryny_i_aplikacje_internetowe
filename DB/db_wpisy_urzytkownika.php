@@ -18,11 +18,11 @@ class db_wpisy_urzytkownika extends db_connection{
         }
     }
 
-    function insertWpisUrzytkownika($tytul, $tresc, $autor, $data, $aktywny){
-        $data = date('Y-m-d H:i:s');
-        $query = "INSERT INTO `wpisy_urzytkownika`(`tytul`, `tresc`, `autor`, `data`, `aktywny`) VALUES ('".$tytul."','".$tresc."','".$autor."','".$data."','0');";
+    function insertWpisUrzytkownika($tytul, $tresc, $autor,){
+        $date = date('Y-m-d H:i:s');
+        $query = "INSERT INTO `wpisy_urzytkownika`(`tytul`, `tresc`, `autor`, `data`, `aktywny`) VALUES ('".$tytul."','".$tresc."','".$autor."','".$date."','0');";
         $data = mysqli_query($this->connect, $query);
-        header('location: ../BO/lista_wpisy_goscia.php'); 
+        header('location: search_guests.php'); 
         $this->close();
     }
 

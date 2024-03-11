@@ -16,6 +16,10 @@
     <div class="panel_lewy">
         <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i> Strona główna</a>
     </div>
+    <?php
+    include('../DB/db_wpisy_urzytkownika.php');
+    $baza = new db_wpisy_urzytkownika();
+    ?>
 <!-- administrator będzie miał możliwość wspomnianej wcześniej akceptacji nowych wpisów do księgi gości -->
 
 </body>
