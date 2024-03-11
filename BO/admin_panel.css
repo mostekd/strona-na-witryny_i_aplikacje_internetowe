@@ -27,19 +27,6 @@ h2 {
     border-radius: 25px;
 }
 
-.przycisk{
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #3498db;
-    border-radius: 10px;
-}
-
-.przycisk:hover{
-    background-color: #0099ff;
-    border-radius: 25px;
-}
-
 .wpisy{
     background-color: rgba(42, 43, 42, 0.5);
     border-radius: 10px;
@@ -108,7 +95,7 @@ h2 {
     left: 0;
     width: 200px; /* Możesz dostosować szerokość panelu prawego według potrzeb */
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #3c00ff;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -116,12 +103,13 @@ h2 {
 .panel_prawy .przycisk {
     display: block;
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     padding: 10px 0;
 }
 
 .panel_prawy .przycisk:hover {
-    background-color: #ccc;
+    background-color: #4458c8;
+    padding: 10px;
 }
 
 .panel_prawy a {
