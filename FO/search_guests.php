@@ -1,7 +1,7 @@
 <!-- search_guests.php -->
 <div id="searchGuests" class="search-container">
     <h3>Księga Gości</h3>
-    <a class="przycisk" href="./dodaj_wpis.php">Dodaj wpis</a>
+    <a class="przycisk" href="./FO/dodaj_wpis.php">Dodaj wpis</a>
     <!-- księga gości pozwala na umieszczenie na stronie wpisu użytkownika, 
     gdzie formularz zawiera następujące pola: treść wpisu, nick, adres e-mail, poniżej przycisk wyślij i resetuj, 
     po kliknięciu przycisku wyślij treść wpisu nie jest umieszczana natychmiast w księdze gości ale pojawia się w panelu administratora, 
