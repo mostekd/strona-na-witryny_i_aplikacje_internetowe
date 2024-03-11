@@ -11,8 +11,10 @@
         <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
         <a href="login.php" class="logout" id="logout">Wyloguj się</a>
     </header>
-    <a class="przycisk" href="./admin_panel.php">Strona główna</a>
-    <a class="przycisk" href="./dodaj_wpis.php">Dodaj wpis</a>
+    <div class="panel_prawy">
+        <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i> Strona główna</a>
+        <a class="przycisk" href="./dodaj_wpis.php">Dodaj wpis</a>
+    </div>
 
     <?php
     include('../DB/db_artykuly.php');

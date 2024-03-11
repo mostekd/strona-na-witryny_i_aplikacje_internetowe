@@ -11,7 +11,9 @@
         <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
         
     </header>
-    <a class="przycisk" href="./admin_panel.php">Strona Główna</a>
+    <div class="panel_prawy">
+        <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i> Strona główna</a>
+    </div>
 
 <!-- administrator będzie miał możliwość wspomnianej wcześniej akceptacji nowych wpisów do księgi gości
 tabela uczeń powinna zawierać (id, imię, nazwisko, pesel, email, uwagi), -->

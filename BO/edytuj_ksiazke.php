@@ -11,7 +11,9 @@
             <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
             <a href='login.php' class='logout' id='logout'>Wyloguj się</a>
         </header>
-        <a class="przycisk" href="./lista_ksiazki.php">Książki</a>
+        <div class="panel_prawy">
+            <a class="przycisk" href="./lista_ksiazki.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Książki</a>
+        </div>
 
         <?php
          include('../DB/db_ksiazki.php');

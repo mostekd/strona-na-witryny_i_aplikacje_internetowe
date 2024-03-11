@@ -11,7 +11,9 @@
             <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
             <a href="login.php" class="logout" id="logout">Wyloguj się</a>
         </header>
-        <a class="przycisk" href="./lista_wpisy.php">Wpisy</a>
+        <div class="panel_prawy">
+            <a class="przycisk" href="./lista_wpisy.php"><i class="fa-regular fa-newspaper" style="color: #fff;"></i> Wpisy</a>
+        </div>
         <form class="MyForm" action="./lista_wpisy.php" method = "get">
             <input type=text name="tytul" placeholder="tytuł" id="tytul" class="tytul"></input>
             <textarea type=text name="tresc" placeholder="treść" id="tresc" class="tresc"></textarea>
