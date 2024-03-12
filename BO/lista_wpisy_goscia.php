@@ -19,6 +19,31 @@
     <?php
     include('../DB/db_wpisy_urzytkownika.php');
     $baza = new db_wpisy_urzytkownika();
+
+    $baza->databaseConnect();
+    $data = $baza->selectArtykul();
+    if (!empty($data)){
+    
+    ?>
+    <div class="wpisy">
+        <?php
+            while($row = mysqli_fetch_assoc($data))
+            {
+                echo "<div id='wpis' class='artykul'><a href='lista_wpisy.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
+                <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['artykul_id'].">
+                Usuń wpis
+                </a></button>
+                <button class='delete'><a href=edytuj_wpis.php?id=".$row['artykul_id'].">
+                Edytuj wpis
+                </a></button>
+                </div>";
+            }
+            } else {
+                echo "Brak artykułów";
+            }
+            $baza->close();
+        ?>
+    </div>
     ?>
 <!-- administrator będzie miał możliwość wspomnianej wcześniej akceptacji nowych wpisów do księgi gości -->
 
