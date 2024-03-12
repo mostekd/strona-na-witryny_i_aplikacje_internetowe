@@ -21,7 +21,7 @@
     $baza = new db_wpisy_urzytkownika();
 
     $baza->databaseConnect();
-    $data = $baza->selectArtykul();
+    $data = $baza->selectWpisUrzytkownika();
     if (!empty($data)){
     
     ?>
