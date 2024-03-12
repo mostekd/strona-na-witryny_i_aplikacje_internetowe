@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2024 at 05:46 PM
+-- Generation Time: Mar 12, 2024 at 07:39 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -55,6 +55,14 @@ CREATE TABLE `artykul` (
   `data` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
+--
+-- Dumping data for table `artykul`
+--
+
+INSERT INTO `artykul` (`artykul_id`, `title`, `tresc`, `link`, `autor`, `data`) VALUES
+(50, 'test', 'test', 'https://pl.wikipedia.org/wiki/Biblioteka', 'test', '2024-03-09 22:23:01'),
+(51, 'test2', 'test2', 'https://pl.wikipedia.org/wiki/Biblioteka', 'test2', '2024-03-10 10:24:09');
+
 -- --------------------------------------------------------
 
 --
@@ -66,11 +74,18 @@ CREATE TABLE `ksiazki` (
   `tytul` varchar(255) NOT NULL,
   `autor` varchar(255) NOT NULL,
   `wydawnictwo` varchar(255) NOT NULL,
-  `rok_wydania` date NOT NULL,
+  `rok_wydania` varchar(255) NOT NULL,
   `isbn` varchar(255) NOT NULL,
   `aktywna` tinyint(1) NOT NULL,
   `uwagi` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `ksiazki`
+--
+
+INSERT INTO `ksiazki` (`id_ksiazki`, `tytul`, `autor`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`, `uwagi`) VALUES
+(146, 'Harry Potter i Kamień Filozoficzny', 'J.K. Rowling', 'Media Rodzina', '2016', '9781408855652', 1, '');
 
 -- --------------------------------------------------------
 
@@ -92,7 +107,29 @@ CREATE TABLE `uczen` (
 --
 
 INSERT INTO `uczen` (`id_ucznia`, `imie`, `nazwisko`, `PESEL`, `email`, `uwagi`) VALUES
-(11, 'asdas', 'Mostowski', 'asdas', 'dawid-mostowski@o2.pl', '12312');
+(45, 'test', 'test', '01234567890', 'test@test.pl', 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `wpisy_urzytkownika`
+--
+
+CREATE TABLE `wpisy_urzytkownika` (
+  `id_wpisu_urzytkownika` int(11) NOT NULL,
+  `tytul` varchar(255) NOT NULL,
+  `tresc` longtext NOT NULL,
+  `autor` varchar(255) NOT NULL,
+  `data` datetime NOT NULL,
+  `aktywny` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `wpisy_urzytkownika`
+--
+
+INSERT INTO `wpisy_urzytkownika` (`id_wpisu_urzytkownika`, `tytul`, `tresc`, `autor`, `data`, `aktywny`) VALUES
+(6, 'test', 'test', 'test', '2024-03-11 21:55:46', 0);
 
 -- --------------------------------------------------------
 
@@ -166,6 +203,12 @@ ALTER TABLE `uczen`
   ADD PRIMARY KEY (`id_ucznia`);
 
 --
+-- Indeksy dla tabeli `wpisy_urzytkownika`
+--
+ALTER TABLE `wpisy_urzytkownika`
+  ADD PRIMARY KEY (`id_wpisu_urzytkownika`);
+
+--
 -- Indeksy dla tabeli `wypożyczenia`
 --
 ALTER TABLE `wypożyczenia`
@@ -193,19 +236,25 @@ ALTER TABLE `administratorzy`
 -- AUTO_INCREMENT for table `artykul`
 --
 ALTER TABLE `artykul`
-  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `ksiazki`
 --
 ALTER TABLE `ksiazki`
-  MODIFY `id_ksiazki` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ksiazki` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT for table `uczen`
 --
 ALTER TABLE `uczen`
-  MODIFY `id_ucznia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_ucznia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
+--
+-- AUTO_INCREMENT for table `wpisy_urzytkownika`
+--
+ALTER TABLE `wpisy_urzytkownika`
+  MODIFY `id_wpisu_urzytkownika` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `wypożyczenia`
