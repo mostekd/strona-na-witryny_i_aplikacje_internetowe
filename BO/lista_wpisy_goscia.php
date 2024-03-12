@@ -34,7 +34,7 @@
                 Usuń wpis
                 </a></button>
                 <button class='delete'><a href=edytuj_wpis.php?id=".$row['artykul_id'].">
-                Edytuj wpis
+                Zatwierdź wpis
                 </a></button>
                 </div>";
             }
