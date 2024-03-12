@@ -26,7 +26,7 @@
 			echo "<div class='artykul_full'>Tytuł: ".$row['title']."<br>Data: ".$row['data']."<article><p>Treść:</p>".$row['tresc']."</article><br>Autor: ".$row['autor']."</div>";
 		}
 
-		close();
+		$baza->close();
 		?>
 </body>
 </html>
