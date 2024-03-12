@@ -15,9 +15,11 @@
 	</div>
 <?php
 		include('../DB/db_artykuly.php');
-
+		$baza = new db_artykuly();
+        
+        $baza->databaseConnect();
 		$article_id = $_GET['id'];
-		$data = selectArtykulByID($article_id);
+		$data = $baza->selectArtykulByID($article_id);
 		
 		while($row = mysqli_fetch_assoc($data))
 		{

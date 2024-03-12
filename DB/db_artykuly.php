@@ -27,7 +27,7 @@ class db_artykuly extends db_connection{
     }
     
     function selectArtykulByID($artykul_id){
-        $query = "SELECT `artykul_id`, `title`, `tresc`, `link`, `autor` FROM `artykul` WHERE artykul_id =".$artykul_id;
+        $query = "SELECT * FROM `artykul` WHERE artykul_id =".$artykul_id;
 		$data = mysqli_query($this->connect, $query);
 		
 		if (mysqli_num_rows($data) > 0) {

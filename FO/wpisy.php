@@ -25,7 +25,7 @@
                     <article>
                         <p>Treść:</p>
                         ".substr($row['tresc'],0,150)." ...
-                        <a href='artykul.php?id=".$row['artykul_id']."'>Więcej</a>
+                        <a href='./FO/artykul.php?id=".$row['artykul_id']."'>Więcej</a>
                     </article>
             </div>";
             $counter++;
