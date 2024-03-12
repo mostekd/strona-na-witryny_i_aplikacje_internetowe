@@ -25,11 +25,11 @@
     if (!empty($data)){
     
     ?>
-    <div class="wpisy">
+    <div class="wpisy_urzytkownika">
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='lista_wpisy.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
+                echo "<div id='wpis' class='artykul'><a href='lista_wpisy_goscia.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
                 <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['artykul_id'].">
                 Usuń wpis
                 </a></button>
