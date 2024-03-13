@@ -1,6 +1,6 @@
 <!-- search_books.php -->
 <?php
-        include('./DB/db_ksiazki.php');
+        include('../DB/db_ksiazki.php');
         $baza = new db_ksiazki();
         
         $baza->databaseConnect();
