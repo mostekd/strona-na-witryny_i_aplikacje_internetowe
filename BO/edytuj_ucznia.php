@@ -14,11 +14,11 @@
             <a href="login.php" class="logout" id="logout"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #fff;"></i> Wyloguj się</a>
         </header>
         <div class="panel_lewy">
-            <a class="przycisk" href="./lista_uczniowie.php"><i class="fa-regular fa-user" style="color: #fff;"></i> Uczniowie</a>
+            <a class="przycisk" href="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/lista_uczniowie.php"><i class="fa-regular fa-user" style="color: #fff;"></i> Uczniowie</a>
         </div>
 
         <?php
-         include('../DB/db_uczniowie.php');
+         include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/DB/db_uczniowie.php');
          $baza = new db_uczniowie();
          
             if(!empty($_GET)){                

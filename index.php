@@ -17,7 +17,7 @@
         ?>
     </div>
     <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
         <div class="overlay-content">
             <a href="#" onclick="showWpisy()">Strona Główna</a>
             <a href="#" onclick="showSearchBooks()">Wyszukaj Książki</a>
@@ -68,22 +68,22 @@
     </div>
     <div id="wpisy">
         <div class="link">
-            <a href="./FO/wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
+            <a href="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
         </div>
         <?php
-            include('./FO/wpisy.php');
+            include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/wpisy.php');
         ?>
     </div>
     <?php
-        include('./FO/search_books.php'); 
-        include('./FO/search_guests.php');
-        include('./FO/contact_info.php'); 
+        include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/search_books.php'); 
+        include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/search_guests.php');
+        include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/contact_info.php'); 
     ?>
     <footer id="footer">
         Dawid Mostowski 3A
     </footer>
-    <script src="./js/script.js" defer></script>
-    <script src="./js/pogoda.js"></script>
-    <script src="./js/calendar.js"></script>
+    <script src="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/js/script.js" defer></script>
+    <script src="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/js/pogoda.js"></script>
+    <script src="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/js/calendar.js"></script>
 </body>
 </html>

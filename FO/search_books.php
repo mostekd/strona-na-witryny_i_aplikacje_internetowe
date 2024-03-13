@@ -1,6 +1,6 @@
 <!-- search_books.php -->
 <?php
-        include('../DB/db_ksiazki.php');
+        include 'C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/DB/db_ksiazki.php';
         $baza = new db_ksiazki();
         
         $baza->databaseConnect();
