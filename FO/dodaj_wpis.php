@@ -64,8 +64,8 @@
         </div>
     </div>
         <?php
-            include('../DB/db_wpisy_urzytkownika.php');
-            $baza = new db_wpisy_urzytkownika();
+            include('../DB/db_wpisy_uzytkownika.php');
+            $baza = new db_wpisy_uzytkownika();
 
             if(!empty($_GET)){
                 $baza->databaseConnect();

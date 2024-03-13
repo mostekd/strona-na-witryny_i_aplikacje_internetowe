@@ -3,8 +3,8 @@
     <h3>Księga Gości</h3>
     <a class="przycisk" href="./FO/dodaj_wpis.php">Dodaj wpis</a>
     <?php
-        include('../DB/db_wpisy_urzytkownika.php');
-        $baza = new db_wpisy_urzytkownika();
+        include('../DB/db_wpisy_uzytkownika.php');
+        $baza = new db_wpisy_uzytkownika();
     ?>
     <!-- księga gości pozwala na umieszczenie na stronie wpisu użytkownika, 
     gdzie formularz zawiera następujące pola: treść wpisu, nick, adres e-mail, poniżej przycisk wyślij i resetuj, 
