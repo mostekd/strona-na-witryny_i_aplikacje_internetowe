@@ -1,10 +1,6 @@
 <?php
 include('./head_admin.php');
 ?>
-    <header>
-        <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
-        <a href="login.php" class="logout" id="logout"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #fff;"></i> Wyloguj się</a>
-    </header>
     <div class="panel_lewy">
         <a class="przycisk" href="./lista_wpisy.php"><i class="fa-regular fa-newspaper" style="color: #fff;"></i> Wpisy</a>
         <a class="przycisk" href="./lista_ksiazki.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Ksiązki</a>
