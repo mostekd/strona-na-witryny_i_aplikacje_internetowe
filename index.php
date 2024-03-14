@@ -68,22 +68,22 @@
     </div>
     <div id="wpisy">
         <div class="link">
-            <a href="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
+            <a href="./FO/wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
         </div>
         <?php
-            include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/wpisy.php');
+            include('./FO/wpisy.php');
         ?>
     </div>
     <?php
-        include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/search_books.php'); 
-        include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/search_guests.php');
-        include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/contact_info.php'); 
+        include('./FO/search_books.php'); 
+        include('./FO/search_guests.php');
+        include('./FO/contact_info.php'); 
     ?>
     <footer id="footer">
         Dawid Mostowski 3A
     </footer>
-    <script src="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/js/script.js" defer></script>
-    <script src="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/js/pogoda.js"></script>
-    <script src="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/js/calendar.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/pogoda.js"></script>
+    <script src="./js/calendar.js"></script>
 </body>
 </html>
