@@ -11,7 +11,7 @@
         <h2>Biblioteka Wesoła Szkoła</h2>
     </div>
 	<div class="link">
-		<a class="link" href="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/index.php"><button>Powrót</button></a>
+		<a class="link" href="../index.php"><button>Powrót</button></a>
 	</div>
 <?php
 		include('../DB/db_artykuly.php');

@@ -1,9 +1,9 @@
 <!-- search_guests.php -->
 <div id="searchGuests" class="search-container">
     <h3>Księga Gości</h3>
-    <a class="przycisk" href="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/FO/dodaj_wpis.php">Dodaj wpis</a>
+    <a class="przycisk" href="./FO/dodaj_wpis.php">Dodaj wpis</a>
     <?php
-        include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/DB/db_wpisy_uzytkownika.php');
+        include('../DB/db_wpisy_uzytkownika.php');
         $baza = new db_wpisy_uzytkownika();
     ?>
     <!-- księga gości pozwala na umieszczenie na stronie wpisu użytkownika, 

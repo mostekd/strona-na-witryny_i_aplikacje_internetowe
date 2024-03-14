@@ -14,11 +14,11 @@
             <a href="login.php" class="logout" id="logout"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #fff;"></i> Wyloguj się</a>
         </header>
         <div class="panel_lewy">
-            <a class="przycisk" href="C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/lista_ksiazki.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Książki</a>
+            <a class="przycisk" href="./lista_ksiazki.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Książki</a>
         </div>
 
         <?php
-         include('C:/xampp/htdocs/dashboard/Strony Internetowe/strona-na-witryny_i_aplikacje_internetowe/DB/db_ksiazki.php');
+         include('../DB/db_ksiazki.php');
          $baza = new db_ksiazki();
          
             if(!empty($_GET)){                
