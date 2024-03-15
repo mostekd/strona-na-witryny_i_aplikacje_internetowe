@@ -75,9 +75,9 @@
         ?>
     </div>
     <?php
-//        include('./search_books.php'); 
-//        include('./search_guests.php');
-//        include('./contact_info.php'); 
+        include('./search_books.php'); 
+        include('./search_guests.php');
+        include('./contact_info.php'); 
     ?>
     <footer id="footer">
         Dawid Mostowski 3A
