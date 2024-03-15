@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="header-container">
-        <span id="menu-icon" onclick="openNav()">&#9776; </span>
         <h2>Biblioteka Wesoła Szkoła</h2>
     </div>
     <div class="zdj_header">
