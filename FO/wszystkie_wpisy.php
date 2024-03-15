@@ -36,5 +36,6 @@ include('./header.php');
     }
     mysqli_close($connect);
 ?>
-</body>
-</html>
+<?php
+    include('end_html.php')
+?>

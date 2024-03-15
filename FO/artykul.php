@@ -28,5 +28,6 @@
 
 		$baza->close();
 		?>
-</body>
-</html>
+<?php
+    include('end_html.php')
+?>

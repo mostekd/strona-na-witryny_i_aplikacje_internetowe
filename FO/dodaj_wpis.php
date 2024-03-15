@@ -30,7 +30,6 @@ include('./header.php');
             <input type="submit"></input>
             <input type="reset"></input>
         </form>
-        <script src="../js/pogoda.js"></script>
-        <script src="../js/calendar.js"></script>
-    </body>
-</html>
+<?php
+    include('end_html.php')
+?>

@@ -29,5 +29,6 @@ include('./header.php');
         ?>
     </div>
 </div> 
-</body>
-</head>
+<?php
+    include('end_html.php')
+?>

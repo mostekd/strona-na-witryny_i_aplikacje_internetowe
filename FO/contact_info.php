@@ -25,7 +25,9 @@ include('./header.php');
         <button class="kontakt_button" type="reset">Resetuj</button>
     </form>
 </div>
-
+<?php
+    include('end_html.php')
+?>
 <!-- 
 1. strona zawiera formularz kontaktowy zdolny wysłać wiadomość e-mail na e-mail biblioteka@wesolaszkola.pl (na potrzeby sprawdzenia działania funkcjonalności można zamienić na dawid-mostowski@o2.pl). 
 Kopia wiadomości jest również wysyłana na adres klienta podany w formularzu. 
