@@ -28,4 +28,6 @@ include('./header.php');
             $baza->close();
         ?>
     </div>
-</div>
+</div> 
+</body>
+</head>

@@ -16,3 +16,5 @@ include('./header.php');
     administrator posiada dwa przyciski do każdego wpisu o treści “zatwierdź” i “odrzuć”, odrzucenie powoduje wykasowanie wpisu z bazy danych
     tabela uczeń powinna zawierać (id, imię, nazwisko, pesel, email, uwagi) -->
 </div>
+</body>
+</head>
