@@ -1,3 +1,6 @@
+<?php
+include('./header.php');
+?>
 <!-- contact_info.php -->
 <div id="contactInfo" class="contact-container">
     <h3>Informacje Kontaktowe</h3>

@@ -1,5 +1,6 @@
-<!-- search_books.php -->
 <?php
+include('./header.php');
+//  search_books.php
     include('../DB/db_ksiazki.php');
     $baza = new db_ksiazki();
     
@@ -7,7 +8,7 @@
     $data = $baza->selectKsiazkaByAktywna();
     if (!empty($data)){
 ?>
-<div id="searchBooks" class="search-container">
+<div id="searchBooks">
     <h3>Wyszukaj Książki</h3>
     <form id="searchBooksForm">
         <label for="bookTitle">Tytuł książki:</label>

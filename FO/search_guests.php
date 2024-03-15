@@ -1,7 +1,10 @@
+<?php
+include('./header.php');
+?>
 <!-- search_guests.php -->
 <div id="searchGuests" class="search-container">
     <h3>Księga Gości</h3>
-    <a class="przycisk" href="./FO/dodaj_wpis.php">Dodaj wpis</a>
+    <a class="przycisk" href="./dodaj_wpis.php">Dodaj wpis</a>
     <?php
         include('../DB/db_wpisy_uzytkownika.php');
         $baza = new db_wpisy_uzytkownika();
