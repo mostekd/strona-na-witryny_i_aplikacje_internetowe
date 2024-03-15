@@ -20,7 +20,7 @@
   border-radius: 10px;
 }
 body {
-  background-image: url('../zdj/ksiazki.jpg');
+  /* background-image: url('../zdj/ksiazki.jpg'); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;

@@ -1,11 +1,11 @@
 <!-- search_books.php -->
 <?php
-        include '../DB/db_ksiazki.php';
-        $baza = new db_ksiazki();
-        
-        $baza->databaseConnect();
-        $data = $baza->selectKsiazkaByAktywna();
-        if (!empty($data)){
+    include('../DB/db_ksiazki.php');
+    $baza = new db_ksiazki();
+    
+    $baza->databaseConnect();
+    $data = $baza->selectKsiazkaByAktywna();
+    if (!empty($data)){
 ?>
 <div id="searchBooks" class="search-container">
     <h3>Wyszukaj Książki</h3>
