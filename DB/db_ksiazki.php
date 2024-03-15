@@ -1,6 +1,6 @@
 <?php
-include('db_artykuly.php');
-class db_ksiazki extends db_artykuly{
+include('db_connection.php');
+class db_ksiazki extends db_connection{
     
     function selectKsiazki(){
         $query = 'SELECT `id_ksiazki`, `tytul`, `autor`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`, `uwagi` FROM `ksiazki` WHERE 1';

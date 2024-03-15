@@ -34,7 +34,7 @@
         </div>
         <div class="zdjecie">
         <?php
-                $host = "localhost"; // Host bazy danych
+/*                $host = "localhost"; // Host bazy danych
                 $dbname = "wiai"; // Nazwa bazy danych
                 $username = "root"; // Nazwa użytkownika bazy danych
                 $password = ""; // Hasło użytkownika bazy danych
@@ -63,7 +63,7 @@
                 {
                     echo "<img src='{$row[3]}' class='zdj_menu'></img>";
                 }
-            ?>
+ */           ?>
         </div>
     </div>
     <div id="wpisy">
@@ -75,9 +75,9 @@
         ?>
     </div>
     <?php
-        include('./search_books.php'); 
-        include('./search_guests.php');
-        include('./contact_info.php'); 
+//        include('./search_books.php'); 
+//        include('./search_guests.php');
+//        include('./contact_info.php'); 
     ?>
     <footer id="footer">
         Dawid Mostowski 3A

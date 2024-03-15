@@ -7,7 +7,7 @@ class db_connection{
     var $username = "root"; // Nazwa użytkownika bazy danych
     var $password = ""; // Hasło użytkownika bazy danych
 
-    function databaseConnect(){
+    public function databaseConnect(){
         $con = mysqli_connect($this->host, $this->username, $this->password, $this->dbname);
         if(!$con){
             die("Connection failed: " . mysqli_connect_error());
@@ -17,7 +17,7 @@ class db_connection{
         }
     }
 
-    function close(){
+    public function close(){
         mysqli_close($this->connect);
     }
 }

@@ -3,7 +3,6 @@
     $baza = new db_artykuly();
     
     $baza->databaseConnect();
-    $article_id = $_GET['id'];
     $data = $baza->selectArtykul();
     
     $counter = 0; // Licznik artykułów wyświetlonych
