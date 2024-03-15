@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteka</title>
-    <link rel="stylesheet" href="./FO/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="header-container">
@@ -16,13 +16,12 @@
         // wyświetlanie 3 zdjęć które można podmienić w panelu administracyjnym w zakładce zmień zdjęcie
         ?>
     </div>
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
-        <div class="overlay-content">
-            <a href="#" onclick="showWpisy()">Strona Główna</a>
-            <a href="#" onclick="showSearchBooks()">Wyszukaj Książki</a>
-            <a href="#" onclick="showSearchGuests()">Księga Gości</a>
-            <a href="#" onclick="showContactInfo()">Kontakt</a>
+    <div id="myNav" class="">
+        <div class="">
+            <a href="./index.php">Strona Główna</a>
+            <a href="./search_books.php">Wyszukaj Książki</a>
+            <a href="./search_guests.php">Księga Gości</a>
+            <a href="./contact_info.php">Kontakt</a>
         </div>
         <div class="container">
             <div class="temp">-°C</div>
@@ -34,7 +33,7 @@
         </div>
         <div class="zdjecie">
         <?php
-/*                $host = "localhost"; // Host bazy danych
+/*              $host = "localhost"; // Host bazy danych
                 $dbname = "wiai"; // Nazwa bazy danych
                 $username = "root"; // Nazwa użytkownika bazy danych
                 $password = ""; // Hasło użytkownika bazy danych
@@ -74,11 +73,6 @@
             include('./wpisy.php');
         ?>
     </div>
-    <?php
-        include('./search_books.php'); 
-        include('./search_guests.php');
-        include('./contact_info.php'); 
-    ?>
     <footer id="footer">
         Dawid Mostowski 3A
     </footer>
