@@ -1,16 +1,10 @@
 <?php
-    $host = "localhost"; // Host bazy danych
-    $dbname = "wiai"; // Nazwa bazy danych
-    $username = "root"; // Nazwa użytkownika bazy danych
-    $password = ""; // Hasło użytkownika bazy danych
-
-    $connect = mysqli_connect($host, $username, $password, $dbname);
-    if(!$connect)
-    {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    $query = 'SELECT * FROM artykul ORDER BY artykul_id DESC';
-    $data = mysqli_query($connect, $query);
+    include('../DB/db_artykuly.php');
+    $baza = new db_artykuly();
+    
+    $baza->databaseConnect();
+    $article_id = $_GET['id'];
+    $data = $baza->selectArtykul();
     
     $counter = 0; // Licznik artykułów wyświetlonych
     if (mysqli_num_rows($data) > 0)
@@ -25,7 +19,7 @@
                     <article>
                         <p>Treść:</p>
                         ".substr($row['tresc'],0,150)." ...
-                        <a href='./FO/artykul.php?id=".$row['artykul_id']."'>Więcej</a>
+                        <a href='./artykul.php?id=".$row['artykul_id']."'>Więcej</a>
                     </article>
             </div>";
             $counter++;
@@ -34,5 +28,5 @@
             }
         }
     }
-    mysqli_close($connect);
+    $baza->close();
 ?>

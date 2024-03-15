@@ -1,6 +1,6 @@
 <?php
-include('db_connection.php');
-class db_wpisy_uzytkownika extends db_connection{
+include('db_ksiazki.php');
+class db_wpisy_uzytkownika extends db_ksiazki{
     
     function deleteWpisUrzytkownika($id_wpisu_urzytkownika){
         $query = "Delete from artykul where id_wpisu_urzytkownika =".$id_wpisu_urzytkownika.";";
