@@ -32,36 +32,36 @@
         </div>
         <div class="zdjecie">
         <?php
-/*              $host = "localhost"; // Host bazy danych
-                $dbname = "wiai"; // Nazwa bazy danych
-                $username = "root"; // Nazwa użytkownika bazy danych
-                $password = ""; // Hasło użytkownika bazy danych
+            $host = "localhost"; // Host bazy danych
+            $dbname = "wiai"; // Nazwa bazy danych
+            $username = "root"; // Nazwa użytkownika bazy danych
+            $password = ""; // Hasło użytkownika bazy danych
 
-                try {
-                    $con = mysqli_connect($host, $username, $password, $dbname);
-                  
-                }
-                catch (PDOException $e) {
-                    die("Błąd połączenia z bazą danych: " . $e->getMessage());
-                }
+            try {
+                $con = mysqli_connect($host, $username, $password, $dbname);
                 
-                $select = "SELECT `id`, `nazwa`, `opis`, `path` FROM `zdj` WHERE 1";
-                $data = mysqli_query($con, $select);
+            }
+            catch (PDOException $e) {
+                die("Błąd połączenia z bazą danych: " . $e->getMessage());
+            }
+            
+            $select = "SELECT `id`, `nazwa`, `opis`, `path` FROM `zdj` WHERE 1";
+            $data = mysqli_query($con, $select);
 
-                $ilosc = 0;
-                while($row = mysqli_fetch_array($data))
-                {
-                    $ilosc += 1;
-                }
-                $losowe = rand(1,$ilosc);
-                $select = "SELECT `id`, `nazwa`, `opis`, `path` FROM `zdj` WHERE id = $losowe";
-                $data = mysqli_query($con, $select);
+            $ilosc = 0;
+            while($row = mysqli_fetch_array($data))
+            {
+                $ilosc += 1;
+            }
+            $losowe = rand(1,$ilosc);
+            $select = "SELECT `id`, `nazwa`, `opis`, `path` FROM `zdj` WHERE id = $losowe";
+            $data = mysqli_query($con, $select);
 
-                while($row = mysqli_fetch_array($data))
-                {
-                    echo "<img src='{$row[3]}' class='zdj_menu'></img>";
-                }
- */           ?>
+            while($row = mysqli_fetch_array($data))
+            {
+                echo "<img src='{$row[3]}' class='zdj_menu'></img>";
+            }
+        ?>
         </div>
     </div>
     <div id="wpisy">
