@@ -46,6 +46,10 @@ h2 {
   text-decoration: none;
 }
 
+#myNav .pogoda{
+  color: #fff;
+}
+
 .header-container{
   position: relative;
   color: #ffffff;
