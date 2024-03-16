@@ -16,7 +16,7 @@
         ?>
     </div>
     <div id="myNav" class="">
-        <div class="">
+        <div class="header-container">
             <a href="./index.php">Strona Główna</a>
             <a href="./search_books.php">Wyszukaj Książki</a>
             <a href="./search_guests.php">Księga Gości</a>

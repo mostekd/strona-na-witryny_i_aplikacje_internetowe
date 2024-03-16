@@ -41,8 +41,12 @@ h2 {
     font-size: 16px;
     margin: 0px;
 }
+#myNav a{
+  color: #fff;
+  text-decoration: none;
+}
 
-.header-container {
+.header-container{
   position: relative;
   color: #ffffff;
   text-shadow: 3px 3px 5px #000000;
