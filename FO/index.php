@@ -1,7 +1,7 @@
 <?php
 include('./header.php');
 ?>
-    <div id="wpisy">
+    <div id="wpisy" class="wpisy-container">
         <div class="link">
             <a href="./wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
         </div>

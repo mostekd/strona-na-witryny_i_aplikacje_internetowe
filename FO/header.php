@@ -15,13 +15,15 @@
         // wyświetlanie 3 zdjęć które można podmienić w panelu administracyjnym w zakładce zmień zdjęcie
         ?>
     </div>
-    <div id="myNav">
+    <div id="myNav" class="panel_lewy">
         <div class="header-container">
             <a href="./index.php">Strona Główna</a>
             <a href="./search_books.php">Wyszukaj Książki</a>
             <a href="./search_guests.php">Księga Gości</a>
             <a href="./contact_info.php">Kontakt</a>
         </div>
+    </div>
+    <div id="myNav" class="panel_prawy">
         <div class="pogoda">
             <div class="temp">-°C</div>
             <div class="summary">----</div>
