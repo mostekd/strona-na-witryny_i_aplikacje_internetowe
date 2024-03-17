@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2024 at 07:39 PM
+-- Generation Time: Mar 17, 2024 at 09:59 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -61,7 +61,11 @@ CREATE TABLE `artykul` (
 
 INSERT INTO `artykul` (`artykul_id`, `title`, `tresc`, `link`, `autor`, `data`) VALUES
 (50, 'test', 'test', 'https://pl.wikipedia.org/wiki/Biblioteka', 'test', '2024-03-09 22:23:01'),
-(51, 'test2', 'test2', 'https://pl.wikipedia.org/wiki/Biblioteka', 'test2', '2024-03-10 10:24:09');
+(51, 'test2', 'test2', 'https://pl.wikipedia.org/wiki/Biblioteka', 'test2', '2024-03-10 10:24:09'),
+(55, '', 'asdsad', '', '', '2024-03-13 12:00:15'),
+(56, '', 'dasda', '', '', '2024-03-13 12:00:25'),
+(57, '', 'dsadas', '', '', '2024-03-13 12:01:06'),
+(58, 'asdasd', 'asdasd', '', 'asdas', '2024-03-13 12:01:10');
 
 -- --------------------------------------------------------
 
@@ -163,16 +167,16 @@ CREATE TABLE `zdj` (
 --
 
 INSERT INTO `zdj` (`id`, `nazwa`, `opis`, `path`) VALUES
-(1, '', '', './zdj/1.jpg'),
-(2, '', '', './zdj/2.jpg'),
-(3, '', '', './zdj/3.jpeg'),
-(4, '', '', './zdj/4.jpg'),
-(5, '', '', './zdj/5.jpeg'),
-(6, '', '', './zdj/6.jpeg'),
-(7, '', '', './zdj/7.jpeg'),
-(8, '', '', './zdj/8.jpeg'),
-(9, '', '', './zdj/9.jpeg'),
-(10, '', '', './zdj/10.jpeg');
+(1, '', '', '../zdj/1.jpg'),
+(2, '', '', '../zdj/2.jpg'),
+(3, '', '', '../zdj/3.jpeg'),
+(4, '', '', '../zdj/4.jpg'),
+(5, '', '', '../zdj/5.jpeg'),
+(6, '', '', '../zdj/6.jpeg'),
+(7, '', '', '../zdj/7.jpeg'),
+(8, '', '', '../zdj/8.jpeg'),
+(9, '', '', '../zdj/9.jpeg'),
+(10, '', '', '../zdj/10.jpeg');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -236,7 +240,7 @@ ALTER TABLE `administratorzy`
 -- AUTO_INCREMENT for table `artykul`
 --
 ALTER TABLE `artykul`
-  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `artykul_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `ksiazki`
