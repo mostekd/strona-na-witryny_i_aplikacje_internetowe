@@ -88,6 +88,9 @@ h2 {
   height: 80%;
 }
 
+#myNav{
+  overflow: hidden;
+}
 
 #myNav a {
   text-align: center;
