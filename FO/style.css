@@ -9,7 +9,7 @@
 #loginPage {
   margin-top: 2%;
   text-align: center;
-  color: #ffffff;
+  color: #000;
   text-shadow: 3px 3px 5px #000000;
 }
 #bookTitle,
@@ -19,7 +19,6 @@
   border-radius: 10px;
 }
 body {
-  background-image: url('../zdj/ksiazki.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -29,13 +28,12 @@ body {
 }
 h2 {
     font-weight: bold;
-    background-image: url('../zdj/header_tło.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: 100% 100%;
     border-radius: 10px;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     text-shadow: 3px 3px 5px #000000;
     padding: 14px;
     font-size: 16px;
@@ -47,7 +45,6 @@ h2 {
   bottom: 0;
   height: 93vh;
   width: 250px; /* Adjust width as needed */
-  background-image: url('../zdj/panel_lewy.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
@@ -64,7 +61,6 @@ h2 {
   bottom: 0;
   height: 93vh;
   width: 250px; /* Adjust width as needed */
-  background-color: #333; /* Example background color */
   z-index: 1;
   overflow-y: auto; /* Enable scrolling if content exceeds viewport height */
   display: flex;
@@ -97,7 +93,7 @@ h2 {
   padding: 8px;
   text-decoration: none;
   font-size: 20px;
-  color: #ffffff;
+  color: #000;
   text-shadow: 3px 3px 5px #000000;
   display: block;
   transition: 0.3s;
@@ -109,7 +105,7 @@ h2 {
   position: fixed;
   height: 8vh;
   width: 100vw;
-  color: #ffffff;
+  color: #000;
   text-shadow: 3px 3px 5px #000000;
 }
 
@@ -132,7 +128,6 @@ h2 {
   z-index: 1;
   top: 0;
   left: 0;
-  background-image: url('../zdj/panel_lewy.jpg');
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -150,7 +145,7 @@ h2 {
   padding: 8px;
   text-decoration: none;
   font-size: 20px;
-  color: #ffffff;
+  color: #000;
   text-shadow: 3px 3px 5px #000000;
   display: block;
   transition: 0.3s;
@@ -169,7 +164,7 @@ h2 {
 }
 
 .overlay .container{
-  color: #ffffff;
+  color: #000;
   text-shadow: 3px 3px 5px #000000;
   align-items: center;
   text-align: center;
@@ -321,7 +316,7 @@ button{
 }
 #footer{
     position: fixed;
-    color: #ffffff;
+    color: #000;
     text-shadow: 3px 3px 5px #000000;
     margin-left: 20px;
     text-align: left;
