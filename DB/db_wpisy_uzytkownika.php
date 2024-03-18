@@ -18,7 +18,7 @@ class db_wpisy_uzytkownika extends db_connection{
         }
     }
 
-    function selectKsiazkaByAktywna(){
+    function selectWpisByAktywna(){
         $query = "SELECT `tytul`, `tresc`, `autor`, `data` FROM `wpisy_urzytkownika` WHERE `aktywny` = 1";
         $data = mysqli_query($this->connect, $query);
 	    if (mysqli_num_rows($data) > 0) {
