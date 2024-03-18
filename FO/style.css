@@ -45,7 +45,7 @@ h2 {
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 92vh;
+  height: 93vh;
   width: 250px; /* Adjust width as needed */
   background-image: url('../zdj/panel_lewy.jpg');
   background-repeat: no-repeat;
@@ -62,7 +62,7 @@ h2 {
   position: fixed;
   right: 0;
   bottom: 0;
-  height: 92vh;
+  height: 93vh;
   width: 250px; /* Adjust width as needed */
   background-color: #333; /* Example background color */
   z-index: 1;
@@ -114,7 +114,11 @@ h2 {
 }
 
 .zdj_header {
-  padding: 0 270px; /* Adjust padding to match the width of the panels */
+  position: fixed;
+  width: 67%;
+  margin-left: 250px;
+  margin-right: 250px;
+  height: 100px;
 }
 
 .wpisy-container {

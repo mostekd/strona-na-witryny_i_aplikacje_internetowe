@@ -11,7 +11,7 @@ class db_wpisy_uzytkownika extends db_connection{
     }
 
     function selectWpisUrzytkownika(){
-        $query = 'SELECT `tytul`, `tresc`, `autor`, `data` FROM `wpisy_urzytkownika` ORDER BY id_wpisu_urzytkownika DESC';
+        $query = 'SELECT * FROM `wpisy_urzytkownika` ORDER BY id_wpisu_urzytkownika DESC';
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0){
             return $data;

@@ -10,11 +10,11 @@
     <div class="header-container">
         <h2>Biblioteka Wesoła Szkoła</h2>
     </div>
-    <div class="zdj_header">
+    <!-- <div class="zdj_header">
         <?php
         // wyświetlanie 3 zdjęć które można podmienić w panelu administracyjnym w zakładce zmień zdjęcie
         ?>
-    </div>
+    </div> -->
     <div id="myNav" class="panel_lewy">
         <div class="">
             <a href="./index.php">Strona Główna</a>

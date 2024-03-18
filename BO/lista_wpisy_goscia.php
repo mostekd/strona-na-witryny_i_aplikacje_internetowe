@@ -33,7 +33,7 @@ include('./head_admin.php');
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='lista_wpisy_goscia.php?id=".$row['id_wpisu_urzytkownika']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
+                echo "<div id='wpis' class='artykul'><a href='lista_wpisy_goscia.php?id=".$row['id_wpisu_urzytkownika']."'>Tytuł: ".$row['tytul']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
                 <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['id_wpisu_urzytkownika'].">
                 Usuń wpis
                 </a></button>
