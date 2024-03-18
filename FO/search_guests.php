@@ -15,10 +15,10 @@ include('./header.php');
                 while($row = mysqli_fetch_assoc($data))
                 {
                     echo "<div id='aktywany_wpis'>Tytuł: ".$row['tytul']." Tresc: ".$row['tresc']." Autor: ".$row['autor']." Data dodania: ".$row['data']."
-                    </div><br>";
+                    </div>";
                 }
             }else {
-                echo "Brak Wpisów";
+                echo "<br><br>Brak Wpisów";
             }
             $baza->close();
         ?>
