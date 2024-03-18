@@ -20,7 +20,7 @@ include('./head_admin.php');
 							<input type=text name='tytul' placeholder='tytuł' id='tytul' class='tytul' value=".$row['tytul']."></input>
 							<input type=text  name='autor' placeholder='autor' id='autor' class='autor' value=".$row['autor']."></input>
 							<input type=text name='wydawnictwo' placeholder='wydawnictwo' id='wydawnictwo' class='wydawnictwo' value=".$row['wydawnictwo']."></input>
-							<input type=text name='rok_wydania' placeholder='rok wydania' id='rok_wydania' class='rok_wydania' value=".$row['rok_wydania']."></input>
+							<input type=month name='rok_wydania' placeholder='rok wydania' id='rok_wydania' class='rok_wydania' value=".$row['rok_wydania']."></input>
 							<input type=text name='isbn' placeholder='isbn' id='isbn' class='isbn' value=".$row['isbn']."></input>
 							<textarea type=text name='uwagi' placeholder='uwagi' id='uwagi' class='uwagi'>".$row['uwagi']."</textarea>";
 						$test = 0;
