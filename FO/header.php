@@ -16,7 +16,7 @@
         ?>
     </div>
     <div id="myNav" class="panel_lewy">
-        <div class="header-container">
+        <div class="">
             <a href="./index.php">Strona Główna</a>
             <a href="./search_books.php">Wyszukaj Książki</a>
             <a href="./search_guests.php">Księga Gości</a>

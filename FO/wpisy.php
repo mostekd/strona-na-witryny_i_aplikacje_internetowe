@@ -22,7 +22,7 @@
                     </article>
             </div>";
             $counter++;
-            if ($counter >= 8) {
+            if ($counter >= 4) {
                 break; // Przerwij pętlę po wyświetleniu 5 artykułów
             }
         }

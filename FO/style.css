@@ -44,8 +44,8 @@ h2 {
 .panel_lewy {
   position: fixed;
   left: 0;
-  top: 0;
-  height: 100vh;
+  bottom: 0;
+  height: 92vh;
   width: 250px; /* Adjust width as needed */
   background-image: url('../zdj/panel_lewy.jpg');
   background-repeat: no-repeat;
@@ -61,8 +61,8 @@ h2 {
 .panel_prawy {
   position: fixed;
   right: 0;
-  top: 0;
-  height: 100vh;
+  bottom: 0;
+  height: 92vh;
   width: 250px; /* Adjust width as needed */
   background-color: #333; /* Example background color */
   z-index: 1;
@@ -105,10 +105,12 @@ h2 {
 }
 
 .header-container {
-  position: relative;
+  top: 0;
+  position: fixed;
+  height: 8vh;
+  width: 100vw;
   color: #ffffff;
   text-shadow: 3px 3px 5px #000000;
-  padding: 0 255px; /* Adjust padding to match the width of the panels */
 }
 
 .zdj_header {
@@ -207,7 +209,7 @@ h2 {
 }
 
 .link{
-  margin-top: 10px;
+  margin-top: 55px;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
