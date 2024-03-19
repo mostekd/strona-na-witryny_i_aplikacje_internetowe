@@ -17,10 +17,10 @@
     </div> -->
     <div id="myNav" class="panel_lewy">
         <div class="">
-            <a href="./index.php">Strona Główna</a>
-            <a href="./search_books.php">Wyszukaj Książki</a>
-            <a href="./search_guests.php">Księga Gości</a>
-            <a href="./contact_info.php">Kontakt</a>
+            <a href="wpisy">Strona Główna</a>
+            <a href="searchBooks">Wyszukaj Książki</a>
+            <a href="searchGuests">Księga Gości</a>
+            <a href="contactInfo">Kontakt</a>
         </div>
     </div>
     <div id="myNav" class="panel_prawy">
