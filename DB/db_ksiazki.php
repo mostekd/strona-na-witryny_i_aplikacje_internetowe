@@ -26,6 +26,14 @@ class db_ksiazki extends db_connection{
         }
     }
 
+    function selectKsiazkaByTitle($title){
+        $query = "SELECT `tytul`, `autor`, `wydawnictwo`, `rok_wydania` FROM `ksiazki` WHERE `tytul` like '%".$title."%';";
+        $data = mysqli_query($this->connect, $query);
+	    if (mysqli_num_rows($data) > 0) {
+            return $data;
+        }
+    }
+
     function insertKsiazka($tytul, $autor, $wydawnictwo, $rok_wydania, $isbn, $aktywna, $uwagi){
         $query = "INSERT INTO `ksiazki`(`tytul`, `autor`, `wydawnictwo`, `rok_wydania`, `isbn`, `aktywna`, `uwagi`) VALUES ('".$tytul."','".$autor."','".$wydawnictwo."','".$rok_wydania."','".$isbn."','".$aktywna."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);

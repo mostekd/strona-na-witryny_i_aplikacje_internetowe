@@ -1,3 +1,4 @@
+<div id="contactInfo" class="contact-container">
 <?php
     include('../DB/db_artykuly.php');
     $baza = new db_artykuly();
@@ -29,3 +30,4 @@
     }
     $baza->close();
 ?>
+</div>
