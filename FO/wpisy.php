@@ -1,4 +1,7 @@
 <div id="contactInfo" class="contact-container">
+<div class="link">
+        <a href="./wszystkie_wpisy.php"><button>Pokaż wszystkie artykuły</button></a> 
+    </div>
 <?php
     include('../DB/db_artykuly.php');
     $baza = new db_artykuly();
