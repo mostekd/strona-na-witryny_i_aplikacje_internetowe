@@ -102,7 +102,7 @@ h2 {
 
 .header-container {
   top: 0;
-  position: fixed;
+  position: static;
   height: 8vh;
   width: 100vw;
   color: #000;
@@ -118,6 +118,7 @@ h2 {
 }
 
 .wpisy-container {
+  position: static;
   padding: 0 200px; /* Adjust padding to match the width of the panels */
 }
 

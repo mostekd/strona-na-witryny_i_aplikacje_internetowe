@@ -38,7 +38,6 @@ class db_artykuly extends db_connection{
     function updateArtykul($artykul_id, $tytul, $tresc, $link, $autor){
         $query = "UPDATE `artykul` SET `title`='".$tytul."',`tresc`='".$tresc."',`link`='".$link."',`autor`='".$autor."' WHERE `artykul_id`=".$artykul_id.";";
 		$data = mysqli_query($this->connect, $query);
-		
 		unset($_GET['id']);
         header('location: ../BO/lista_wpisy.php');   
         $this->close();
