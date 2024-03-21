@@ -2,16 +2,16 @@
 include('db_connection.php');
 class db_guestbook extends db_connection{
     
-    function deleteGuestbookByID($id_wpisu_urzytkownika){
-        $query = "Delete from artykul where id_wpisu_urzytkownika =".$id_wpisu_urzytkownika.";";
+    function deleteGuestbookByID($id_guestbook){
+        $query = "Delete from guestbook where id_guestbook =".$id_guestbook.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
-        header('location: ../BO/lista_wpisy_goscia.php');   
+        header('location: ../BO/guestbook_list.php');   
         $this->close();
     }
 
     function selectGuestbookAll(){
-        $query = 'SELECT * FROM `wpisy_urzytkownika` ORDER BY id_wpisu_urzytkownika DESC';
+        $query = 'SELECT * FROM `guestbook` ORDER BY id_guestbook DESC';
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0){
             return $data;
@@ -19,26 +19,26 @@ class db_guestbook extends db_connection{
     }
 
     function selectGuestbookActive(){
-        $query = "SELECT `tytul`, `tresc`, `autor`, `data` FROM `wpisy_urzytkownika` WHERE `aktywny` = 1";
+        $query = "SELECT `title`, `text`, `author`, `data` FROM `guestbook` WHERE `active` = 1";
         $data = mysqli_query($this->connect, $query);
 	    if (mysqli_num_rows($data) > 0) {
             return $data;
         }
     }
 
-    function insertGuestbook($tytul, $tresc, $autor){
+    function insertGuestbook($title, $text, $author){
         $date = date('Y-m-d H:i:s');
-        $query = "INSERT INTO `wpisy_urzytkownika`(`tytul`, `tresc`, `autor`, `data`, `aktywny`)VALUES ('".$tytul."','".$tresc."','".$autor."','".$date."',0);";
+        $query = "INSERT INTO `guestbook`(`title`, `text`, `author`, `data`, `active`)VALUES ('".$title."','".$text."','".$author."','".$date."',0);";
         $data = mysqli_query($this->connect, $query);
         $this->close();
         header('location: index.php?id=searchGuests'); 
     }
 
-    function updateGuestbookByID($id_wpisu_urzytkownika, $tytul, $tresc, $autor, $aktywny){
-        $query = "UPDATE `wpisy_urzytkownika` SET `title`='".$tytul."',`tresc`='".$tresc."',`autor`='".$autor."',`aktywny'".$aktywny."' WHERE `id_wpisu_urzytkownika`=".$id_wpisu_urzytkownika.";";
+    function updateGuestbookByID($id_guestbook, $title, $text, $author, $active){
+        $query = "UPDATE `guestbook` SET `title`='".$title."',`text`='".$text."',`author`='".$author."',`active'".$active."' WHERE `id_guestbook`=".$id_guestbook.";";
 		$data = mysqli_query($this->connect, $query);
 		unset($_GET['id']);
-        header('location: ../BO/lista_wpisy_goscia.php');   
+        header('location: ../BO/guestbook_list.php');   
         $this->close();
     }
 }

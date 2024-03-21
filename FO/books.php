@@ -1,14 +1,14 @@
 <?php
-    include('../DB/db_ksiazki.php');
-    $baza = new db_ksiazki();
+    include('../DB/db_book.php');
+    $baza = new db_book();
     
     $baza->databaseConnect();
     if(isset($_GET)){
         if(isset($_GET['bookTitle'])){
-        $data = $baza->selectKsiazkaByTitle($_GET['bookTitle']);
+        $data = $baza->selectBookByTitle($_GET['bookTitle']);
         }
         else{
-            $data = $baza->selectKsiazkaByAktywna();
+            $data = $baza->selectBookByActive();
         }
     }
     if (!empty($data)){
@@ -25,7 +25,7 @@
                 <?php
                         while($row = mysqli_fetch_assoc($data))
                         {
-                            echo "<div id='aktywana_ksiazka'>Tytuł: ".$row['tytul']." Autor: ".$row['autor']." Wydawnictwo: ".$row['wydawnictwo']." Rok wydania: ".$row['rok_wydania']."
+                            echo "<div id='aktywana_ksiazka'>Tytuł: ".$row['title']." Autor: ".$row['author']." Wydawnictwo: ".$row['publisher']." Rok wydania: ".$row['publishYear']."
                             </div>";
                         }
                     }else {

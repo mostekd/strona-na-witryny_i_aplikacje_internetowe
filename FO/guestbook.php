@@ -22,7 +22,7 @@
         if (!empty($data)){
                 while($row = mysqli_fetch_assoc($data))
                 {
-                    echo "<div id='aktywany_wpis'>Tytuł: ".$row['tytul']." Tresc: ".$row['tresc']." Autor: ".$row['autor']." Data dodania: ".$row['data']."</div>";
+                    echo "<div id='aktywany_wpis'>Tytuł: ".$row['title']." Tresc: ".$row['text']." Autor: ".$row['author']." Data dodania: ".$row['data']."</div>";
                 }
             }else {
                 echo "<br><br>Brak Wpisów";

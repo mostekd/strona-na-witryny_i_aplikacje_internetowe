@@ -1,7 +1,7 @@
 <?php
     
-    include('../DB/db_wpisy_uzytkownika.php');
-    $baza = new db_wpisy_uzytkownika();
+    include('../DB/db_guestbook.php');
+    $baza = new db_guestbook();
 
     if(!empty($_GET)){
         $baza->databaseConnect();

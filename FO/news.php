@@ -1,10 +1,10 @@
 <div id="contactInfo" class="contact-container">
 <?php
-    include('../DB/db_artykuly.php');
-    $baza = new db_artykuly();
+    include('../DB/db_article.php');
+    $baza = new db_article();
     
     $baza->databaseConnect();
-    $data = $baza->selectArtykul();
+    $data = $baza->selectArticle();
     
     $counter = 0; // Licznik artykułów wyświetlonych
     if (mysqli_num_rows($data) > 0)
@@ -18,8 +18,8 @@
                     </section>
                     <article>
                         <p>Treść:</p>
-                        ".substr($row['tresc'],0,150)." ...
-                        <a href='./index.php?id=article&id_article=".$row['artykul_id']."'>Więcej</a>
+                        ".substr($row['text'],0,150)." ...
+                        <a href='./index.php?id=article&id_article=".$row['article_id']."'>Więcej</a>
                     </article>
             </div>";
             $counter++;

@@ -1,33 +1,33 @@
 <?php
 include('db_connection.php');
-class db_artykuly extends db_connection{
+class db_article extends db_connection{
     
-    function deleteArtykul($artykul_id){
-        $query = "Delete from artykul where artykul_id =".$artykul_id.";";
+    function deleteArticle($article_id){
+        $query = "Delete from article where article_id =".$article_id.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
         header('location: ../BO/lista_wpisy.php');   
         $this->close();
     }
 
-    function selectArtykul(){
-        $query = 'SELECT * FROM `artykul` ORDER BY artykul_id DESC';
+    function selectArticle(){
+        $query = 'SELECT * FROM `article` ORDER BY article_id DESC';
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0){
             return $data;
         }
     }
 
-    function insertArtykul($tytul, $tresc, $link, $autor){
+    function insertArticle($title, $text, $link, $author){
         $dateTest = date('Y-m-d H:i:s');
-        $query = "INSERT INTO `artykul`(`title`, `tresc`, `link`, `autor`, `data`) VALUES ('".$tytul."','".$tresc."','".$link."','".$autor."','".$dateTest."');";
+        $query = "INSERT INTO `article`(`title`, `text`, `link`, `author`, `data`) VALUES ('".$title."','".$text."','".$link."','".$author."','".$dateTest."');";
         $data = mysqli_query($this->connect, $query);
         header('location: ../BO/lista_wpisy.php'); 
         $this->close();
     }
     
-    function selectArtykulByID($artykul_id){
-        $query = "SELECT * FROM `artykul` WHERE artykul_id =".$artykul_id;
+    function selectArticleByID($article_id){
+        $query = "SELECT * FROM `article` WHERE article_id =".$article_id;
 		$data = mysqli_query($this->connect, $query);
 		
 		if (mysqli_num_rows($data) > 0) {
@@ -35,8 +35,8 @@ class db_artykuly extends db_connection{
         }
     }
 
-    function updateArtykul($artykul_id, $tytul, $tresc, $link, $autor){
-        $query = "UPDATE `artykul` SET `title`='".$tytul."',`tresc`='".$tresc."',`link`='".$link."',`autor`='".$autor."' WHERE `artykul_id`=".$artykul_id.";";
+    function updateArticle($article_id, $title, $text, $link, $author){
+        $query = "UPDATE `article` SET `title`='".$title."',`text`='".$text."',`link`='".$link."',`author`='".$author."' WHERE `article_id`=".$article_id.";";
 		$data = mysqli_query($this->connect, $query);
 		unset($_GET['id']);
         header('location: ../BO/lista_wpisy.php');   
