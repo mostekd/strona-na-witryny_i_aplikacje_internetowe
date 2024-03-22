@@ -7,7 +7,7 @@ include('./head_admin.php');
 
         <?php
          include('../DB/db_article.php');
-         $baza = new db_article();;
+         $baza = new db_article();
          
             if(!empty($_GET)){                
                 $baza->databaseConnect();
