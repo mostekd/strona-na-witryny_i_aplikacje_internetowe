@@ -2,7 +2,7 @@
 include('./head_admin.php');
 ?>
         <div class="panel_lewy">
-            <a class="przycisk" href="./lista_wpisy.php"><i class="fa-regular fa-newspaper" style="color: #fff;"></i> Wpisy</a>
+            <a class="przycisk" href="./news_list.php"><i class="fa-regular fa-newspaper" style="color: #fff;"></i> Wpisy</a>
         </div>
 
         <?php
@@ -16,7 +16,7 @@ include('./head_admin.php');
                 if (!empty($data)){
                     while($row = mysqli_fetch_assoc($data))
                     {
-                        echo "<form class='MyForm' action='./lista_wpisy.php' method = 'get'>";
+                        echo "<form class='MyForm' action='./news_list.php' method = 'get'>";
                         echo "<input type=text name='tytul' placeholder='tytuł' id='tytul' class='tytul' value=".$row['title']."></input>";
                         echo "<textarea type=text name='tresc' placeholder='treść' id='tresc' class='tresc'>".$row['tresc']."</textarea>";
                         echo "<input type=url  name='link' placeholder='link' id='link' class='link' value=".$row['link']."></input>";

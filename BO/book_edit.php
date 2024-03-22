@@ -2,7 +2,7 @@
 include('./head_admin.php');
 ?>
         <div class="panel_lewy">
-            <a class="przycisk" href="./lista_ksiazki.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Książki</a>
+            <a class="przycisk" href="./book_list.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Książki</a>
         </div>
 
         <?php
@@ -16,7 +16,7 @@ include('./head_admin.php');
                 if (!empty($data)){
                     while($row = mysqli_fetch_assoc($data))
                     {
-                        echo "<form class='MyForm' action='./lista_ksiazki.php' method = 'get'>
+                        echo "<form class='MyForm' action='./book_list.php' method = 'get'>
 							<input type=text name='tytul' placeholder='tytuł' id='tytul' class='tytul' value=".$row['tytul']."></input>
 							<input type=text  name='autor' placeholder='autor' id='autor' class='autor' value=".$row['autor']."></input>
 							<input type=text name='wydawnictwo' placeholder='wydawnictwo' id='wydawnictwo' class='wydawnictwo' value=".$row['wydawnictwo']."></input>

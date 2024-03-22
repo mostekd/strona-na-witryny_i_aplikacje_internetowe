@@ -2,9 +2,9 @@
 include('./head_admin.php');
 ?>
         <div class="panel_lewy">
-            <a class="przycisk" href="./lista_wpisy.php"><i class="fa-regular fa-newspaper" style="color: #fff;"></i> Wpisy</a>
+            <a class="przycisk" href="./news_list.php"><i class="fa-regular fa-newspaper" style="color: #fff;"></i> Wpisy</a>
         </div>
-        <form class="MyForm" action="./lista_wpisy.php" method = "get">
+        <form class="MyForm" action="./news_list.php" method = "get">
             <input type=text name="tytul" placeholder="tytuł" id="tytul" class="tytul"></input>
             <textarea type=text name="tresc" placeholder="treść" id="tresc" class="tresc"></textarea>
             <input type=url  name="link" placeholder="link" id="link" class="link"></input>

@@ -48,8 +48,8 @@ include('./head_admin.php');
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='lista_wpisy.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
-                <button class='delete'><a href=lista_wpisy.php?del=True&id=".$row['artykul_id'].">
+                echo "<div id='wpis' class='artykul'><a href='news_list.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
+                <button class='delete'><a href=news_list.php?del=True&id=".$row['artykul_id'].">
                 Usuń wpis
                 </a></button>
                 <button class='delete'><a href=edytuj_wpis.php?id=".$row['artykul_id'].">
