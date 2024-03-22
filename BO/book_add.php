@@ -2,9 +2,9 @@
 include('./head_admin.php');
 ?>
         <div class="panel_lewy">
-        <a class="przycisk" href="./lista_ksiazki.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Ksiązki</a>
+        <a class="przycisk" href="./book_list.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Ksiązki</a>
         </div>
-        <form class="MyForm" action="./lista_ksiazki.php" method = "get">
+        <form class="MyForm" action="./book_list.php" method = "get">
             <input type=text name="tytul" placeholder="tytuł" id="tytul" class="tytul"></input>
             <input type=text name="autor" placeholder="autor" id="autor" class="autor"></input>
             <input type=text name="wydawnictwo" placeholder="wydawnictwo" id="wydawnictwo" class="wydawnictwo"></input>

@@ -3,7 +3,7 @@ include('./head_admin.php');
 ?>
     <div class="panel_lewy">
     <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i> Strona główna</a>
-    <a class="przycisk" href="./dodaj_ksiazka.php"><i class="fa-solid fa-book-open" style="color: #fff;"></i> Dodaj książkę</a>
+    <a class="przycisk" href="./book_add.php"><i class="fa-solid fa-book-open" style="color: #fff;"></i> Dodaj książkę</a>
     </div>
 
     <?php
@@ -61,10 +61,10 @@ include('./head_admin.php');
             while($row = mysqli_fetch_assoc($data))
             {
                 echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']." author: ".$row['author']." publisher: ".$row['publisher']." Rok wydania: ".$row['publishYear']." ISBN: ".$row['isbn']." active: ".$row['active']." comment: ".$row['comment']."
-                <button class='delete'><a href=lista_ksiazki.php?del=True&id=".$row['idbook'].">
+                <button class='delete'><a href=book_list.php?del=True&id=".$row['idbook'].">
                 Usuń książke
                 </a></button>
-                <button class='delete'><a href=edytuj_ksiazke.php?id=".$row['idbook'].">
+                <button class='delete'><a href=book_edit.php?id=".$row['idbook'].">
                 Edytuj książke
                 </a></button>
                 </div>";
