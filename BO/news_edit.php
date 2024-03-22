@@ -6,8 +6,8 @@ include('./head_admin.php');
         </div>
 
         <?php
-         include('../DB/db_artykuly.php');
-         $baza = new db_artykuly();
+         include('../DB/db_article.php');
+         $baza = new db_article();
          
             if(!empty($_GET)){                
                 $baza->databaseConnect();
