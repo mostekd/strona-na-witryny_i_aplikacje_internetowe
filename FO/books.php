@@ -13,7 +13,7 @@
     }
     if (!empty($data)){
         ?>
-        <div id="searchBooks">
+        <div id="searchBooks">>
             <h3>Wyszukaj Książki</h3>
             <form id="searchBooksForm" action="./index.php" method = "get">
                 <label for="bookTitle">Tytuł książki:</label>
