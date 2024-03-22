@@ -3,12 +3,12 @@ include('./head_admin.php');
 ?>
     <div class="panel_lewy">
     <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i>Strona główna</a>
-    <a class="przycisk" href="./dodaj_ucznia.php"><i class="fa-solid fa-user-plus" style="color: #fff;"></i>Dodaj ucznia</a>
+    <a class="przycisk" href="./studenet_add.php"><i class="fa-solid fa-user-plus" style="color: #fff;"></i>Dodaj ucznia</a>
     </div>
 
     <?php
-    include('../DB/db_uczniowie.php');
-    $baza = new db_uczniowie();
+    include('../DB/db_student.php');
+    $baza = new db_student();
 
     if(!empty($_GET)){
         $baza->databaseConnect();

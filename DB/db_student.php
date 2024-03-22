@@ -1,6 +1,6 @@
 <?php
 include('db_connection.php');
-class db_uczniowie extends db_connection{
+class db_student extends db_connection{
     function selectUczen(){
         $query = 'SELECT `id_ucznia`,`imie`, `nazwisko`, `PESEL`, `email`, `uwagi` FROM `uczen` WHERE 1';
         $data = mysqli_query($this->connect, $query);
