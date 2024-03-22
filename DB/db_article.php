@@ -6,7 +6,7 @@ class db_article extends db_connection{
         $query = "Delete from article where article_id =".$article_id.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
-        header('location: ../BO/lista_wpisy.php');   
+        header('location: ../BO/news_list.php');   
         $this->close();
     }
 
@@ -22,7 +22,7 @@ class db_article extends db_connection{
         $dateTest = date('Y-m-d H:i:s');
         $query = "INSERT INTO `article`(`title`, `text`, `link`, `author`, `data`) VALUES ('".$title."','".$text."','".$link."','".$author."','".$dateTest."');";
         $data = mysqli_query($this->connect, $query);
-        header('location: ../BO/lista_wpisy.php'); 
+        header('location: ../BO/news_list.php'); 
         $this->close();
     }
     
@@ -39,7 +39,7 @@ class db_article extends db_connection{
         $query = "UPDATE `article` SET `title`='".$title."',`text`='".$text."',`link`='".$link."',`author`='".$author."' WHERE `article_id`=".$article_id.";";
 		$data = mysqli_query($this->connect, $query);
 		unset($_GET['id']);
-        header('location: ../BO/lista_wpisy.php');   
+        header('location: ../BO/news_list.php');   
         $this->close();
     }
 }

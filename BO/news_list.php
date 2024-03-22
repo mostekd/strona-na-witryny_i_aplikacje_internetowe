@@ -14,24 +14,24 @@ include('./head_admin.php');
         $baza->databaseConnect();
         if(isset($_GET['del']))
         {
-            $artykul_id=$_GET['id'];
-            $baza->deleteArtykul($artykul_id);
+            $article_id=$_GET['id'];
+            $baza->deleteArticle($article_id);
         }
         if(isset($_GET['opcja'])){
             if($_GET['opcja'] == 'dodaj'){
-                $tytul = $_GET['tytul'];
+                $tytul = $_GET['title'];
                 $text = $_GET['text'];
                 $link = $_GET['link'];
-                $autor = $_GET['autor'];
-                $baza->insertArtykul($tytul, $text, $link, $autor);
+                $autor = $_GET['author'];
+                $baza->insertArticle($title, $text, $link, $author);
             }
             elseif($_GET['opcja'] == 'edytuj'){
-                $tytul = $_GET['tytul'];
+                $tytul = $_GET['title'];
                 $text = $_GET['text'];
                 $link = $_GET['link'];
-                $autor = $_GET['autor'];
+                $autor = $_GET['author'];
                 $article_id = $_GET['article_id'];
-                $baza->updateArtykul($article_id, $tytul, $text, $link, $autor);
+                $baza->updateArticle($article_id, $title, $text, $link, $author);
             }
         }
         else{
