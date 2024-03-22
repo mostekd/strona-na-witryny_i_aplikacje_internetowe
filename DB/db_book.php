@@ -26,8 +26,8 @@ class db_book extends db_connection{
         }
     }
 
-    function selectBookByTitle($title){
-        $query = "SELECT `title`, `author`, `publisher`, `publishYear` FROM `book` WHERE `title` like '%".$title."%';";
+    function selectBookBy($text){
+        $query = "SELECT * FROM `book` WHERE `title` like '%".$text."%'" or `author` like '%".$text."%'";";
         $data = mysqli_query($this->connect, $query);
 	    if (mysqli_num_rows($data) > 0) {
             return $data;
