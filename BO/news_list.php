@@ -52,7 +52,7 @@ include('./head_admin.php');
                 <button class='delete'><a href=news_list.php?del=True&id=".$row['article_id'].">
                 Usuń wpis
                 </a></button>
-                <button class='delete'><a href=edytuj_wpis.php?id=".$row['article_id'].">
+                <button class='delete'><a href=news_edit.php?id=".$row['article_id'].">
                 Edytuj wpis
                 </a></button>
                 </div>";

@@ -12,7 +12,7 @@ include('./head_admin.php');
             if(!empty($_GET)){                
                 $baza->databaseConnect();
                 $artykul_id=$_GET['id'];
-                $data = $baza->selectArtykulByID($artykul_id);
+                $data = $baza->selectArticleByID($article_id);
                 if (!empty($data)){
                     while($row = mysqli_fetch_assoc($data))
                     {
