@@ -20,18 +20,18 @@ include('./head_admin.php');
         if(isset($_GET['opcja'])){
             if($_GET['opcja'] == 'dodaj'){
                 $tytul = $_GET['tytul'];
-                $tresc = $_GET['tresc'];
+                $text = $_GET['text'];
                 $link = $_GET['link'];
                 $autor = $_GET['autor'];
-                $baza->insertArtykul($tytul, $tresc, $link, $autor);
+                $baza->insertArtykul($tytul, $text, $link, $autor);
             }
             elseif($_GET['opcja'] == 'edytuj'){
                 $tytul = $_GET['tytul'];
-                $tresc = $_GET['tresc'];
+                $text = $_GET['text'];
                 $link = $_GET['link'];
                 $autor = $_GET['autor'];
-                $artykul_id = $_GET['artykul_id'];
-                $baza->updateArtykul($artykul_id, $tytul, $tresc, $link, $autor);
+                $article_id = $_GET['article_id'];
+                $baza->updateArtykul($article_id, $tytul, $text, $link, $autor);
             }
         }
         else{
@@ -40,7 +40,7 @@ include('./head_admin.php');
     }
     
     $baza->databaseConnect();
-    $data = $baza->selectArtykul();
+    $data = $baza->selectArticle();
     if (!empty($data)){
     
     ?>
@@ -48,11 +48,11 @@ include('./head_admin.php');
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='news_list.php?id=".$row['artykul_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
-                <button class='delete'><a href=news_list.php?del=True&id=".$row['artykul_id'].">
+                echo "<div id='wpis' class='artykul'><a href='news_list.php?id=".$row['article_id']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['text'],0,150)." ...</article>
+                <button class='delete'><a href=news_list.php?del=True&id=".$row['article_id'].">
                 Usuń wpis
                 </a></button>
-                <button class='delete'><a href=edytuj_wpis.php?id=".$row['artykul_id'].">
+                <button class='delete'><a href=edytuj_wpis.php?id=".$row['article_id'].">
                 Edytuj wpis
                 </a></button>
                 </div>";
