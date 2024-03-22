@@ -11,17 +11,17 @@ include('./head_admin.php');
          
             if(!empty($_GET)){                
                 $baza->databaseConnect();
-                $artykul_id=$_GET['id'];
+                $article_id=$_GET['id'];
                 $data = $baza->selectArticleByID($article_id);
                 if (!empty($data)){
                     while($row = mysqli_fetch_assoc($data))
                     {
                         echo "<form class='MyForm' action='./news_list.php' method = 'get'>";
-                        echo "<input type=text name='tytul' placeholder='tytuł' id='tytul' class='tytul' value=".$row['title']."></input>";
-                        echo "<textarea type=text name='tresc' placeholder='treść' id='tresc' class='tresc'>".$row['tresc']."</textarea>";
+                        echo "<input type=text name='title' placeholder='tytuł' id='title' class='title' value=".$row['title']."></input>";
+                        echo "<textarea type=text name='text' placeholder='treść' id='text' class='text'>".$row['text']."</textarea>";
                         echo "<input type=url  name='link' placeholder='link' id='link' class='link' value=".$row['link']."></input>";
-                        echo "<input type=text name='autor' placeholder='autor' id='autor' class='autor' value=".$row['autor']."></input>";
-                        echo "<input type=hidden name='artykul_id' id='artykul_id' class='artykul_id' value=".$row['artykul_id']."></input>";
+                        echo "<input type=text name='author' placeholder='autor' id='author' class='author' value=".$row['author']."></input>";
+                        echo "<input type=hidden name='article_id' id='article_id' class='article_id' value=".$row['article_id']."></input>";
                         echo "<input type=hidden name='opcja' id='opcja' class='opcja' value='edytuj'></input>";
                         echo "<input type='submit'></input>";
                         echo "</form>";
