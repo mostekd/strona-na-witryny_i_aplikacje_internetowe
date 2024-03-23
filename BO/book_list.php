@@ -52,7 +52,7 @@ include('./head_admin.php');
     }
     
     $baza->databaseConnect();
-    $data = $baza->selectBooksAll();
+    $data = $baza->selectBookAll();
     if (!empty($data)){
     
     ?>
