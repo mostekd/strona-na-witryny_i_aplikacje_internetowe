@@ -5,13 +5,13 @@ include('./head_admin.php');
         <a class="przycisk" href="./book_list.php"><i class="fa-solid fa-book" style="color: #fff;"></i> Ksiązki</a>
         </div>
         <form class="MyForm" action="./book_list.php" method = "get">
-            <input type=text name="tytul" placeholder="tytuł" id="tytul" class="tytul"></input>
-            <input type=text name="autor" placeholder="autor" id="autor" class="autor"></input>
-            <input type=text name="wydawnictwo" placeholder="wydawnictwo" id="wydawnictwo" class="wydawnictwo"></input>
-            <input type=month name="rok_wydania" placeholder="rok_wydania" id="rok_wydania" class="rok_wydania"></input>
+            <input type=text name="title" placeholder="tytuł" id="title" class="title"></input>
+            <input type=text name="author" placeholder="autor" id="author" class="author"></input>
+            <input type=text name="publisher" placeholder="wydawnictwo" id="publisher" class="publisher"></input>
+            <input type=month name="publishYear" placeholder="rok_wydania" id="publishYear" class="publishYear"></input>
             <input type=text  name="isbn" placeholder="isbn" id="isbn" class="isbn"></input>
-            <textarea type=text name="uwagi" placeholder="uwagi" id="uwagi" class="uwagi"></textarea>
-            Aktywna: <input type=checkbox name="aktywna" id="aktywna" class="aktywna"></input>
+            <textarea type=text name="comments" placeholder="uwagi" id="comments" class="comments"></textarea>
+            Aktywna: <input type=checkbox name="active" id="active" class="active"></input>
             <input type=hidden name="opcja" id="opcja" class="opcja" value='dodaj'></input>
             <input type="submit"></input>
         </form>
