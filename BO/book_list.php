@@ -41,8 +41,8 @@ include('./head_admin.php');
                 if(isset($_GET['active'])){
                    $active = 1;
                 }
-                $comment = $_GET['comment'];
-                $idbook = $_GET['idbook'];
+                $comment = $_GET['comments'];
+                $idbook = $_GET['id_book'];
                 $baza->updateBookByID($idbook, $title, $author, $publisher, $publishYear, $isbn, $active, $comment);
             }
         }

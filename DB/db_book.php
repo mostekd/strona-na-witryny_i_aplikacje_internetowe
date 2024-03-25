@@ -50,7 +50,7 @@ class db_book extends db_connection{
     }
 
     function updateBookByID($idbook, $title, $author, $publisher, $publishYear, $isbn, $active, $comment){
-        $query = "UPDATE `book` SET `title`='".$title."',`author`='".$author."',`publisher`='".$publisher."',`publishYear`='".$publishYear."',`isbn`='".$isbn."',`active`='".$active."',`comment`='".$comment."' WHERE `idbook` = ".$idbook.";";
+        $query = "UPDATE `book` SET `title`='".$title."',`author`='".$author."',`publisher`='".$publisher."',`publishYear`='".$publishYear."',`isbn`='".$isbn."',`active`='".$active."',`comments`='".$comment."' WHERE `id_book` = ".$idbook.";";
         $data = mysqli_query($this->connect, $query);	
 	    unset($_GET['id']);
         $this->close();
