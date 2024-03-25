@@ -60,7 +60,7 @@ include('./head_admin.php');
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']." Autor: ".$row['author']." publisher: ".$row['publisher']." Rok wydania: ".$row['publishYear']." ISBN: ".$row['isbn']." active: ".$row['active']." comment: ".$row['comments']."
+                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']." Autor: ".$row['author']." Wydawnictwo: ".$row['publisher']." Rok wydania: ".$row['publishYear']." ISBN: ".$row['isbn']." active: ".$row['active']." comment: ".$row['comments']."
                 <button class='delete'><a href=book_list.php?del=True&id=".$row['id_book'].">
                 Usuń książke
                 </a></button>

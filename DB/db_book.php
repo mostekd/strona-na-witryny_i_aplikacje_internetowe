@@ -11,7 +11,7 @@ class db_book extends db_connection{
     }
     
     function selectBookByID($idbook){
-        $query = "SELECT * FROM `book` WHERE idbook =".$idbook;
+        $query = "SELECT * FROM `book` WHERE id_book =".$idbook;
         $data = mysqli_query($this->connect, $query);
         if (mysqli_num_rows($data) > 0) {
             return $data;
