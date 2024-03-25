@@ -5,7 +5,7 @@
     $baza->databaseConnect();
     if(isset($_GET)){
         if(isset($_GET['bookTitle'])){
-        $data = $baza->selectBookByTitle($_GET['bookTitle']);
+        $data = $baza->selectBookBy($_GET['bookTitle']);
         }
         else{
             $data = $baza->selectBookByActive();
