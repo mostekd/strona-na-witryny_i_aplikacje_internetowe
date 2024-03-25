@@ -6,13 +6,13 @@ include('./head_admin.php');
         </div>
 
         <?php
-         include('../DB/db_ksiazki.php');
-         $baza = new db_ksiazki();
+         include('../DB/db_book.php');
+         $baza = new db_book();
          
             if(!empty($_GET)){                
                 $baza->databaseConnect();
-                $id_ksiazki=$_GET['id'];
-                $data = $baza->selectKsiazkaByID($id_ksiazki);
+                $idbook=$_GET['id'];
+                $data = $baza->selectKsiazkaByID($idbook);
                 if (!empty($data)){
                     while($row = mysqli_fetch_assoc($data))
                     {

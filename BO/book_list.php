@@ -29,7 +29,7 @@ include('./head_admin.php');
                    $active = 1;
                 }
                 $comment = $_GET['comment'];
-                $baza->insertKsiazka($title, $author, $publisher, $publishYear, $isbn, $active, $comment);
+                $baza->insertBook($title, $author, $publisher, $publishYear, $isbn, $active, $comment);
             }
             elseif($_GET['opcja'] == 'edytuj'){
                 $title = $_GET['title'];
@@ -43,7 +43,7 @@ include('./head_admin.php');
                 }
                 $comment = $_GET['comment'];
                 $idbook = $_GET['idbook'];
-                $baza->updateKsiazka($idbook, $title, $author, $publisher, $publishYear, $isbn, $active, $comment);
+                $baza->updateBookByID($idbook, $title, $author, $publisher, $publishYear, $isbn, $active, $comment);
             }
         }
         else{
