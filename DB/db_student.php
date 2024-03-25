@@ -10,7 +10,7 @@ class db_student extends db_connection{
     }
 
     function insertUczen($imie, $nazwisko, $PESEL, $email, $uwagi){
-        $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `uwagi`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$uwagi."');";
+        $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `comments`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);
         header('location: ../BO/lista_uczniowie.php'); 
         $this->close();
