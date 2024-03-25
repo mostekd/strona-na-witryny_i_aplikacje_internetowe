@@ -5,8 +5,8 @@ include('./head_admin.php');
         <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i> Strona główna</a>
     </div>
     <?php
-    include('../DB/db_wpisy_uzytkownika.php');
-    $baza = new db_wpisy_uzytkownika();
+    include('../DB/db_guestbook.php');
+    $baza = new db_guestbook();
     
     if(!empty($_GET)){
         $baza->databaseConnect();
@@ -25,7 +25,7 @@ include('./head_admin.php');
         }
 
     $baza->databaseConnect();
-    $data = $baza->selectWpisUrzytkownika();
+    $data = $baza->selectGuestbookAll();
     if (!empty($data)){
     
     ?>

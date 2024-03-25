@@ -19,10 +19,10 @@ include('./head_admin.php');
         }
         if(isset($_GET['opcja'])){
             if($_GET['opcja'] == 'dodaj'){
-                $tytul = $_GET['title'];
+                $title = $_GET['title'];
                 $text = $_GET['text'];
                 $link = $_GET['link'];
-                $autor = $_GET['author'];
+                $author = $_GET['author'];
                 $baza->insertArticle($title, $text, $link, $author);
             }
             elseif($_GET['opcja'] == 'edytuj'){

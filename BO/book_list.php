@@ -29,7 +29,7 @@ include('./head_admin.php');
                    $active = 1;
                 }
                 $comment = $_GET['comment'];
-                $baza->insertKsiazka($title, $author, $publisher, $publishYear, $isbn, $active, $comment);
+                $baza->insertBook($title, $author, $publisher, $publishYear, $isbn, $active, $comment);
             }
             elseif($_GET['opcja'] == 'edytuj'){
                 $title = $_GET['title'];
@@ -41,9 +41,9 @@ include('./head_admin.php');
                 if(isset($_GET['active'])){
                    $active = 1;
                 }
-                $comment = $_GET['comment'];
-                $idbook = $_GET['idbook'];
-                $baza->updateKsiazka($idbook, $title, $author, $publisher, $publishYear, $isbn, $active, $comment);
+                $comment = $_GET['comments'];
+                $idbook = $_GET['id_book'];
+                $baza->updateBookByID($idbook, $title, $author, $publisher, $publishYear, $isbn, $active, $comment);
             }
         }
         else{
@@ -60,7 +60,7 @@ include('./head_admin.php');
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']." Autor: ".$row['author']." publisher: ".$row['publisher']." Rok wydania: ".$row['publishYear']." ISBN: ".$row['isbn']." active: ".$row['active']." comment: ".$row['comments']."
+                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']." Autor: ".$row['author']." Wydawnictwo: ".$row['publisher']." Rok wydania: ".$row['publishYear']." ISBN: ".$row['isbn']." active: ".$row['active']." comment: ".$row['comments']."
                 <button class='delete'><a href=book_list.php?del=True&id=".$row['id_book'].">
                 Usuń książke
                 </a></button>
