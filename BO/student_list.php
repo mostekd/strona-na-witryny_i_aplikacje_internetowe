@@ -3,7 +3,7 @@ include('./head_admin.php');
 ?>
     <div class="panel_lewy">
     <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i>Strona główna</a>
-    <a class="przycisk" href="./studenet_add.php"><i class="fa-solid fa-user-plus" style="color: #fff;"></i>Dodaj ucznia</a>
+    <a class="przycisk" href="./student_add.php"><i class="fa-solid fa-user-plus" style="color: #fff;"></i>Dodaj ucznia</a>
     </div>
 
     <?php
@@ -54,7 +54,7 @@ include('./head_admin.php');
                 <button class='delete'><a href=lista_uczniowie.php?del=True&id=".$row['id_ucznia'].">
                 Usuń ucznia
                 </a></button>
-                <button class='delete'><a href=edytuj_ucznia.php?id=".$row['id_ucznia'].">
+                <button class='delete'><a href=student_edit.php?id=".$row['id_ucznia'].">
                 Edytuj ucznia
                 </a></button>
                 </div>";
