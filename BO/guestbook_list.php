@@ -13,14 +13,15 @@ include('./head_admin.php');
         if(isset($_GET['del']))
         {
             $id_guestbook=$_GET['id'];
-            $baza->deleteWpisUrzytkownika($id_guestbook);
+            $baza->deleteGuestbookByID($id_guestbook);
         }
-            elseif($_GET['opcja'] == 'edytuj'){
+            elseif($_GET['opcja'] == 'edit'){
                 $title = $_GET['title'];
                 $text = $_GET['text'];
                 $author = $_GET['author'];
                 $id_guestbook = $_GET['id_guestbook'];
-                $baza->updateWpisUrzytkownika($id_guestbook, $title, $text, $link, $author);
+                $active = 1;
+                $baza->updateWpisUrzytkownika($id_guestbook, $title, $text, $link, $author, $active);
             }
         }
 
@@ -34,10 +35,10 @@ include('./head_admin.php');
             while($row = mysqli_fetch_assoc($data))
             {
                 echo "<div id='wpis' class='artykul'><a href='lista_wpisy_goscia.php?id=".$row['id_guestbook']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['text'],0,150)." ...</article>
-                <button class='delete'><a href=news_list.php?del=True&id=".$row['id_guestbook'].">
+                <button class='delete'><a href=guestbook_list.php?del=True&id=".$row['id_guestbook'].">
                 Usuń wpis
                 </a></button>
-                <button class='delete'><a href=edytuj_wpis.php?id=".$row['id_guestbook'].">
+                <button class='delete'><a href=guestbook_list.php?edit=True&id=".$row['id_guestbook'].">
                 Zatwierdź wpis
                 </a></button>
                 </div>";
