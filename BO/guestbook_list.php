@@ -12,15 +12,15 @@ include('./head_admin.php');
         $baza->databaseConnect();
         if(isset($_GET['del']))
         {
-            $id_wpisu_urzytkownika=$_GET['id'];
-            $baza->deleteWpisUrzytkownika($id_wpisu_urzytkownika);
+            $id_guestbook=$_GET['id'];
+            $baza->deleteWpisUrzytkownika($id_guestbook);
         }
             elseif($_GET['opcja'] == 'edytuj'){
-                $tytul = $_GET['tytul'];
-                $tresc = $_GET['tresc'];
-                $autor = $_GET['autor'];
-                $id_wpisu_urzytkownika = $_GET['id_wpisu_urzytkownika'];
-                $baza->updateWpisUrzytkownika($id_wpisu_urzytkownika, $tytul, $tresc, $link, $autor);
+                $title = $_GET['title'];
+                $text = $_GET['text'];
+                $author = $_GET['author'];
+                $id_guestbook = $_GET['id_guestbook'];
+                $baza->updateWpisUrzytkownika($id_guestbook, $title, $text, $link, $author);
             }
         }
 
@@ -33,11 +33,11 @@ include('./head_admin.php');
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='lista_wpisy_goscia.php?id=".$row['id_wpisu_urzytkownika']."'>Tytuł: ".$row['tytul']."</a><article>Treść:".substr($row['tresc'],0,150)." ...</article>
-                <button class='delete'><a href=news_list.php?del=True&id=".$row['id_wpisu_urzytkownika'].">
+                echo "<div id='wpis' class='artykul'><a href='lista_wpisy_goscia.php?id=".$row['id_guestbook']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['text'],0,150)." ...</article>
+                <button class='delete'><a href=news_list.php?del=True&id=".$row['id_guestbook'].">
                 Usuń wpis
                 </a></button>
-                <button class='delete'><a href=edytuj_wpis.php?id=".$row['id_wpisu_urzytkownika'].">
+                <button class='delete'><a href=edytuj_wpis.php?id=".$row['id_guestbook'].">
                 Zatwierdź wpis
                 </a></button>
                 </div>";
