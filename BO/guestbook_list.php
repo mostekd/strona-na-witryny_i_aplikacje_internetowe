@@ -29,7 +29,7 @@ include('./head_admin.php');
     if (!empty($data)){
     
     ?>
-    <div class="wpisy_urzytkownika">
+    <div class="wpisy">
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
