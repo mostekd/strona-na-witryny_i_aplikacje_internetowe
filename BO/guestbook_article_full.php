@@ -6,6 +6,15 @@
 	$baza->databaseConnect();
 	$id_guestbook = $_GET['id_guestbook'];
 	$data = $baza->selectGuestbookAll();
+    if($_GET['opcja'] == 'edit'){
+        $title = $_GET['title'];
+        $text = $_GET['text'];
+        $author = $_GET['author'];
+        $link = $_GET['link'];  
+        $id_guestbook = $_GET['id_guestbook'];
+        $active = 1;
+        $baza->updateGuestbookByID($id_guestbook, $title, $text, $link, $author, $active);
+    }
 	
 	while($row = mysqli_fetch_assoc($data))
 	{
