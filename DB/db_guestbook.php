@@ -18,6 +18,15 @@ class db_guestbook extends db_connection{
         }
     }
 
+    function selectArticleByID($id_guestbook){
+        $query = "SELECT * FROM `guestbook` WHERE id_guestbook =".$id_guestbook;
+		$data = mysqli_query($this->connect, $query);
+		
+		if (mysqli_num_rows($data) > 0) {
+            return $data;
+        }
+    }
+
     function selectGuestbookActive(){
         $query = "SELECT `title`, `text`, `author`, `data` FROM `guestbook` WHERE `active` = 1";
         $data = mysqli_query($this->connect, $query);
