@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2024 at 09:59 AM
+-- Generation Time: Mar 30, 2024 at 03:52 AM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -16,10 +16,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
-
-drop database if exists `wiai`;
-create database `wiai`;
-use `wiai`;
 
 --
 -- Database: `wiai`
@@ -78,7 +74,7 @@ INSERT INTO `article` (`article_id`, `title`, `text`, `link`, `author`, `data`) 
 --
 
 CREATE TABLE `book` (
-  `id_book` int(11) NOT NULL ,
+  `id_book` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `author` varchar(255) NOT NULL,
   `publisher` varchar(255) NOT NULL,
@@ -93,11 +89,36 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`id_book`, `title`, `author`, `publisher`, `publishYear`, `isbn`, `active`, `comments`) VALUES
-(1, 'Harry Potter i Kamień Filozoficzny', 'J.K. Rowling', 'Media Rodzina', '1999', '9781408855652', 1, '');
-INSERT INTO `book` (`id_book`, `title`, `author`, `publisher`, `publishYear`, `isbn`, `active`, `comments`) VALUES
-(2, 'Harry Potter i Czara Ognia', 'J.K. Rowling', 'Media Rodzina', '2001', '83-7278-021-8', 1, '');
-INSERT INTO `book` (`id_book`, `title`, `author`, `publisher`, `publishYear`, `isbn`, `active`, `comments`) VALUES
-(3, 'Ciało', 'Stephen King', 'Prima', '1998', 'none', 1, '');
+(1, 'Harry Potter i Kamień Filozoficzny', 'J.K. Rowling', 'Media Rodzina', '1999', '9781408855652', 1, ''),
+(2, 'Harry Potter i Czara Ognia', 'J.K. Rowling', 'Media Rodzina', '2001', '83-7278-021-8', 1, ''),
+(3, 'Ciało', 'Stephen King', 'Prima', '1998', 'none', 1, ''),
+(150, 'test', 'test', 'test', '2024-01', 'test', 1, 'test'),
+(151, 'tes1', 'test1', 'test1', '2024-01', 'test1', 1, 'test1');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `guestbook`
+--
+
+CREATE TABLE `guestbook` (
+  `id_guestbook` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `text` longtext NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `data` datetime NOT NULL,
+  `active` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `guestbook`
+--
+
+INSERT INTO `guestbook` (`id_guestbook`, `title`, `text`, `author`, `data`, `active`) VALUES
+(1, 'Witam wszystkich', 'pierwszy wpis w księdze gosci', 'Testowy uzytkownik', '2024-03-11 21:55:46', 1),
+(2, 'Witam was', 'drugi wpis w księdze gosci', 'Testowy uzytkownik', '2024-03-12 21:55:46', 1),
+(3, 'Trolla machają', 'Troll', 'Testowy uzytkownik', '2024-03-13 21:55:46', 1),
+(4, 'Harry to kłamca', 'Harry Potter umiera w 9tej części', 'Testowy uzytkownik', '2024-03-14 21:55:46', 0);
 
 -- --------------------------------------------------------
 
@@ -120,34 +141,6 @@ CREATE TABLE `uczen` (
 
 INSERT INTO `uczen` (`id_ucznia`, `imie`, `nazwisko`, `PESEL`, `email`, `comments`) VALUES
 (45, 'test', 'test', '01234567890', 'test@test.pl', 'test');
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `guestbook`
---
-
-CREATE TABLE `guestbook` (
-  `id_guestbook` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `text` longtext NOT NULL,
-  `author` varchar(255) NOT NULL,
-  `data` datetime NOT NULL,
-  `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
-
---
--- Dumping data for table `guestbook`
---
-
-INSERT INTO `guestbook` (`id_guestbook`, `title`, `text`, `author`, `data`, `active`) VALUES
-(1, 'Witam wszystkich', 'pierwszy wpis w księdze gosci', 'Testowy uzytkownik', '2024-03-11 21:55:46', 1);
-INSERT INTO `guestbook` (`id_guestbook`, `title`, `text`, `author`, `data`, `active`) VALUES
-(2, 'Witam was', 'drugi wpis w księdze gosci', 'Testowy uzytkownik', '2024-03-12 21:55:46', 1);
-INSERT INTO `guestbook` (`id_guestbook`, `title`, `text`, `author`, `data`, `active`) VALUES
-(3, 'Trolla machają', 'Troll', 'Testowy uzytkownik', '2024-03-13 21:55:46', 1);
-INSERT INTO `guestbook` (`id_guestbook`, `title`, `text`, `author`, `data`, `active`) VALUES
-(4, 'Harry to kłamca', 'Harry Potter umiera w 9tej części', 'Testowy uzytkownik', '2024-03-14 21:55:46', 0);
 
 -- --------------------------------------------------------
 
@@ -215,16 +208,16 @@ ALTER TABLE `book`
   ADD PRIMARY KEY (`id_book`);
 
 --
--- Indeksy dla tabeli `uczen`
---
-ALTER TABLE `uczen`
-  ADD PRIMARY KEY (`id_ucznia`);
-
---
 -- Indeksy dla tabeli `guestbook`
 --
 ALTER TABLE `guestbook`
   ADD PRIMARY KEY (`id_guestbook`);
+
+--
+-- Indeksy dla tabeli `uczen`
+--
+ALTER TABLE `uczen`
+  ADD PRIMARY KEY (`id_ucznia`);
 
 --
 -- Indeksy dla tabeli `wypożyczenia`
@@ -254,25 +247,25 @@ ALTER TABLE `administratorzy`
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
+  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+
+--
+-- AUTO_INCREMENT for table `guestbook`
+--
+ALTER TABLE `guestbook`
+  MODIFY `id_guestbook` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `uczen`
 --
 ALTER TABLE `uczen`
   MODIFY `id_ucznia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
---
--- AUTO_INCREMENT for table `guestbook`
---
-ALTER TABLE `guestbook`
-  MODIFY `id_guestbook` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `wypożyczenia`
