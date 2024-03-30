@@ -1,28 +1,24 @@
 <div id="contactInfo" class="contact-container">
 <?php
-    include('../DB/db_guestbook.php');
-    $baza = new db_guestbook();
-	
-	$baza->databaseConnect();
-	$id_guestbook = $_GET['id_guestbook'];
-	$data = $baza->selectGuestbookByID($id_guestbook);
-    if($_GET['opcja'] == 'edit'){
-        $title = $_GET['title'];
-        $text = $_GET['text'];
-        $author = $_GET['author'];
-        $link = $_GET['link'];  
-        $id_guestbook = $_GET['id_guestbook'];
-        $active = 1;
-        $baza->updateGuestbookByID($id_guestbook, $title, $text, $link, $author, $active);
-    }
-	
-	while($row = mysqli_fetch_assoc($data))
-	{
-		echo "<div class='artykul_full'>Tytuł: ".$row['title']."<br>Data: ".$row['data']."<article><p>Treść:</p>".$row['text']."</article><br>Autor: ".$row['author']."
-        </div>";
-        echo "<input type=hidden name='opcja' id='opcja' class='opcja' value='edytuj'></input><a href='./guestbook_list.php'></a>"
-	}
+include('../DB/db_guestbook.php');
+$baza = new db_guestbook();
+$baza->databaseConnect();
 
-	$baza->close();
+$id_guestbook = isset($_GET['id_guestbook']) ? $_GET['id_guestbook'] : null;
+
+if($id_guestbook !== null) {
+    $data = $baza->selectGuestbookByID($id_guestbook);
+    if($data) {
+        while($row = mysqli_fetch_assoc($data)) {
+            echo "<div class='artykul_full'>Tytuł: ".$row['title']."<br>Data: ".$row['data']."<article><p>Treść:</p>".$row['text']."</article><br>Autor: ".$row['author']."</div>";
+        }
+    } else {
+        echo "Guestbook entry not found.";
+    }
+} else {
+    echo "No guestbook ID provided.";
+}
+
+$baza->close();
 ?>
 </div>

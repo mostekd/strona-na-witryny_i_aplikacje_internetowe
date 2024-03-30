@@ -30,7 +30,7 @@ include('./head_admin.php');
                 <button class='delete'><a href=guestbook_list.php?del=True&id=".$row['id_guestbook'].">
                 Usuń wpis
                 </a></button>
-                <button class='delete'><a href=guestbook_article_full.php?edit=True&id=".$row['id_guestbook'].">
+                <button class='delete'><a href='./guestbook_article_full.php?id=".$row['id_guestbook']."'>
                 Zatwierdź wpis
                 </a></button>
                 </div>";
