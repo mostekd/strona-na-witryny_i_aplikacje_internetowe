@@ -18,7 +18,7 @@ class db_guestbook extends db_connection{
         }
     }
 
-    function selectArticleByID($id_guestbook){
+    function selectGuestbookByID($id_guestbook){
         $query = "SELECT * FROM `guestbook` WHERE id_guestbook =".$id_guestbook;
 		$data = mysqli_query($this->connect, $query);
 		

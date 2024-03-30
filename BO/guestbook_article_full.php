@@ -5,7 +5,7 @@
 	
 	$baza->databaseConnect();
 	$id_guestbook = $_GET['id_guestbook'];
-	$data = $baza->selectGuestbookAll();
+	$data = $baza->selectGuestbookByID($id_guestbook);
     if($_GET['opcja'] == 'edit'){
         $title = $_GET['title'];
         $text = $_GET['text'];
