@@ -21,7 +21,7 @@ include('./head_admin.php');
                 $author = $_GET['author'];
                 $id_guestbook = $_GET['id_guestbook'];
                 $active = 1;
-                $baza->updateWpisUrzytkownika($id_guestbook, $title, $text, $link, $author, $active);
+                $baza->updateGuestbookByID($id_guestbook, $title, $text, $link, $author, $active);
             }
         }
 
