@@ -19,6 +19,7 @@ include('./head_admin.php');
                 $title = $_GET['title'];
                 $text = $_GET['text'];
                 $author = $_GET['author'];
+                $link = $_GET['link'];
                 $id_guestbook = $_GET['id_guestbook'];
                 $active = 1;
                 $baza->updateGuestbookByID($id_guestbook, $title, $text, $link, $author, $active);
