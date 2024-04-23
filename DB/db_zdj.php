@@ -1,11 +1,17 @@
 <?php
 include('db_connection.php');
-class db_zdj extends db_connection {
+class db_zdj extends db_connection{
     function selectMaxZdjId() {
-        $query = "SELECT MAX(id) FROM `zdj`";
+        $query = "SELECT MAX(id) as mmax FROM `zdj`";
         $data = mysqli_query($this->connect, $query);
-        $row = mysqli_fetch_assoc($data);
-        return $row['max_id'];
+        if (mysqli_num_rows($data) > 0) {
+            while($row = mysqli_fetch_assoc($data))
+            {
+                return $row['mmax'];
+            }
+        } else {
+            return 0;
+        }
     }
 
     function selectRandomZdj() {
