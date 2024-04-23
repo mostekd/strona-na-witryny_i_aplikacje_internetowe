@@ -1,6 +1,5 @@
 <?php
-include('db_connection.php');
-class db_zdj extends db_connection{
+class db_zdj{
     function selectMaxZdjId() {
         $query = "SELECT MAX(id) as mmax FROM `zdj`";
         $data = mysqli_query($this->connect, $query);
