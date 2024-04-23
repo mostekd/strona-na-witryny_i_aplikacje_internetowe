@@ -1,19 +1,18 @@
 <?php
 include('db_connection.php');
 class db_zdj extends db_connection{
-    function selectRandomZdj(){
-        $query = 'SELECT * FROM `zdj` WHERE';
+    function selectMaxZdjId{
+        $query = "SELECT MAX(id) FROM `zdj`";
         $data = mysqli_query($this->connect, $query);
-        if (mysqli_num_rows($data) > 0){
-		return $data;
-        }
     }
 
-    function selectZdj(){
-        $query = 'SELECT * FROM `zdj` WHERE 1';
+    function selectZdj($id){
+        $query = "SELECT * FROM `zdj` WHERE id = $id";
         $data = mysqli_query($this->connect, $query);
-        if (mysqli_num_rows($data) > 0){
-		return $data;
+        if ($data && mysqli_num_rows($data) > 0){
+            return mysqli_fetch_assoc($data);
+        } else {
+            return false;
         }
     }
 }
