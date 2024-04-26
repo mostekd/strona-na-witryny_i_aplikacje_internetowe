@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <?php
+    include('../DB/db_connection.php');
     include('./header.php');
     include('./leftNav.php');
     include('./rightNav.php');

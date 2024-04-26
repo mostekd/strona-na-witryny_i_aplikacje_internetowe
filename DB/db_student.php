@@ -1,5 +1,4 @@
 <?php
-include('db_connection.php');
 class db_student extends db_connection{
     function selectUczen(){
         $query = 'SELECT * FROM `uczen` WHERE 1';

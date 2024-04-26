@@ -1,6 +1,4 @@
 <?php
-include('db_connection.php');
-
 class db_guestbook extends db_connection{
     
     function deleteGuestbookByID($id_guestbook){

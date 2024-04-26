@@ -1,5 +1,4 @@
 <?php
-include('db_connection.php');
 class db_article extends db_connection{
     
     function deleteArticle($article_id){
