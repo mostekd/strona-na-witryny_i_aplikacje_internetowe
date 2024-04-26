@@ -16,13 +16,15 @@ include('./head_admin.php');
             $id_guestbook=$_GET['id_guestbook'];
             $baza->deleteGuestbookByID($id_guestbook);
         }
-        elseif($_GET['opcja'] == 'confirm'){
-            $tytul = $_GET['title'];
-            $text = $_GET['text'];
-            $author = $GET['author'];
-            $id_guestbook = $_GET['id_guestbook'];
-            $acrive = $GET['1'];
-            $baza->updateArticle($id_guestbook, $title, $text, $author, $active);
+        if(isset($_GET['opcja'])){
+            if($_GET['opcja'] == 'confirm'){
+                $tytul = $_GET['title'];
+                $text = $_GET['text'];
+                $author = $GET['author'];
+                $active = $GET['active'];
+                $id_guestbook = $_GET['id_guestbook'];
+                $baza->updateGuestbookByID($id_guestbook, $title, $text, $author, $active);
+            }
         }
         }
 
