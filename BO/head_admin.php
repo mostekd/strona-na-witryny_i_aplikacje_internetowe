@@ -13,3 +13,6 @@
         <h2>Biblioteka Wesoła Szkoła<br>Panel Administracyjny</h2>
         <a href="login.php" class="logout" id="logout"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #fff;"></i> Wyloguj się</a>
     </header>
+    <?php
+        include('../DB/db_connection.php');
+    ?>
