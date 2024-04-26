@@ -1,3 +1,6 @@
+<?php
+    include('../DB/db_connection.php');
+?>
 <div id="contactInfo" class="contact-container">
 <?php
     include('../DB/db_article.php');
@@ -22,13 +25,9 @@
                         <a href='./index.php?id=article&id_article=".$row['article_id']."'>Więcej</a>
                     </article>
             </div>";
-            $counter++;
-            if ($counter >= 4) {
-                break; // Przerwij pętlę po wyświetleniu 5 artykułów
-            }
         }
     }
     $baza->close();
 ?>
-<a href="./news_all.php">Pokaż wszystkie wpisy</a>
+<a href="./index.php">Powrót</a>
 </div>
