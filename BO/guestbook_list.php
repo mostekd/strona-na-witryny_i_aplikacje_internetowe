@@ -20,7 +20,6 @@ include('./head_admin.php');
     $baza->databaseConnect();
     $data = $baza->selectGuestbookAll();
     if (!empty($data)){
-    
     ?>
     <div class="wpisy">
         <?php
