@@ -1,3 +1,6 @@
+<?php
+include("head_admin.php");
+?>
 <div id="contactInfo" class="contact-container">
 <?php
 include('../DB/db_guestbook.php');
