@@ -4,6 +4,7 @@ include('./head_admin.php');
     <div class="panel_lewy">
         <a class="przycisk" href="./admin_panel.php"><i class="fa-solid fa-house" style="color: #fff;"></i> Strona główna</a>
     </div>
+    <div class="guesbook_article">
     <?php
     include('../DB/db_guestbook.php');
     $baza = new db_guestbook();
@@ -14,6 +15,14 @@ include('./head_admin.php');
         {
             $id_guestbook=$_GET['id_guestbook'];
             $baza->deleteGuestbookByID($id_guestbook);
+        }
+        elseif($_GET['opcja'] == 'confirm'){
+            $tytul = $_GET['title'];
+            $text = $_GET['text'];
+            $author = $GET['author'];
+            $id_guestbook = $_GET['id_guestbook'];
+            $acrive = $GET['1'];
+            $baza->updateArticle($id_guestbook, $title, $text, $author, $active);
         }
         }
 
@@ -26,13 +35,13 @@ include('./head_admin.php');
         if($data) {
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']."</a><article>Treść:".$row['text']." ...</article>
+                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']."</a><article>Treść:".$row['text']." ...</article> Autor:".$row['author']."
                 <button class='delete'><a href=guestbook_list.php?del=True&id=".$row['id_guestbook'].">
                 Usuń wpis
                 </a></button>
-                <button class='delete'><a href='./guestbook_article_full.php?id=".$row['id_guestbook']."'>
+                <input type=hidden name='opcja' id='opcja' class='opcja' value='confirm'><button class='delete'><a href='./guestbook_list.php'>
                 Zatwierdź wpis
-                </a></button>
+                </a></button></input>
                 </div>";
             }}
             else {
