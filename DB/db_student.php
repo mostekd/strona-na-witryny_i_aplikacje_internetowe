@@ -11,7 +11,7 @@ class db_student extends db_connection{
     function insertUczen($imie, $nazwisko, $PESEL, $email, $uwagi){
         $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `comments`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$uwagi."');";
         $data = mysqli_query($this->connect, $query);
-        header('location: ../BO/lista_uczniowie.php'); 
+        header('location: ../BO/student_list.php'); 
         $this->close();
     }
 
@@ -19,7 +19,7 @@ class db_student extends db_connection{
         $query = "Delete from uczen where id_ucznia =".$id_ucznia.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
-        header('location: ./lista_uczniowie.php');   
+        header('location: ./student_list.php');   
         $this->close();
     }
 
@@ -27,7 +27,7 @@ class db_student extends db_connection{
         $query = "UPDATE `uczen` SET `imie`='".$imie."',`nazwisko`='".$nazwisko."',`PESEL`='".$PESEL."',`email`='".$email."',`uwagi`='".$uwagi."' WHERE `id_ucznia`=".$id_ucznia.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
-        header('location: ../BO/lista_uczniowie.php');   
+        header('location: ../BO/student_list.php');   
         $this->close();
     }
 
