@@ -14,4 +14,5 @@
 
 	$baza->close();
 ?>
+<a href="./index.php">Powrót</a>
 </div>
