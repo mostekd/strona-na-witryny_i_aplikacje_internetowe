@@ -26,7 +26,7 @@ include('./head_admin.php');
         <?php
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'><a href='guestbook_list.php?id=".$row['id_guestbook']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['text'],0,150)." ...</article>
+                echo "<div id='wpis' class='artykul'><a href='guestbook_article_full.php?id=".$row['id_guestbook']."'>Tytuł: ".$row['title']."</a><article>Treść:".substr($row['text'],0,150)." ...</article>
                 <button class='delete'><a href=guestbook_list.php?del=True&id=".$row['id_guestbook'].">
                 Usuń wpis
                 </a></button>
