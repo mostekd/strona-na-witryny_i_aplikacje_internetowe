@@ -18,10 +18,7 @@ class db_guestbook extends db_connection{
     }
 
     function selectGuestbookByID($id_guestbook){
-        if($id_guestbook === null) {
-            return false;
-        }
-        $query = "SELECT * FROM `guestbook` WHERE id_guestbook =" . $id_guestbook;
+        $query = "SELECT * FROM `guestbook` WHERE id_guestbook =".$id_guestbook;
         $data = mysqli_query($this->connect, $query);
         
         if (mysqli_num_rows($data) > 0) {

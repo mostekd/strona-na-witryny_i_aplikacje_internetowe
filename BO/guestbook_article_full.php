@@ -12,7 +12,7 @@ include('./head_admin.php');
         $baza->databaseConnect();
         if(isset($_GET['del']))
         {
-            $id_guestbook=$_GET['id'];
+            $id_guestbook=$_GET['id_guestbook'];
             $baza->deleteGuestbookByID($id_guestbook);
         }
         }
