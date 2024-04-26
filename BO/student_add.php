@@ -2,9 +2,9 @@
 include('./head_admin.php');
 ?>
         <div class="panel_lewy">
-            <a class="przycisk" href="./lista_uczniowie.php"><i class="fa-regular fa-user" style="color: #fff;"></i>Uczniowie</a>
+            <a class="przycisk" href="./student_list.php"><i class="fa-regular fa-user" style="color: #fff;"></i>Uczniowie</a>
         </div>
-        <form class="MyForm" action="./lista_uczniowie.php" method = "get">
+        <form class="MyForm" action="./student_list.php" method = "get">
             <input type=text name="imie" placeholder="imie" id="imie" class="imie"></input>
             <input type=text name="nazwisko" placeholder="nazwisko" id="nazwisko" class="nazwisko"></input>
             <input type=text name="PESEL" placeholder="PESEL" id="PESEL" class="PESEL"></input>

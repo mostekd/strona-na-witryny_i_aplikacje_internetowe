@@ -2,7 +2,7 @@
 include('./head_admin.php');
 ?>
         <div class="panel_lewy">
-            <a class="przycisk" href="./lista_uczniowie.php"><i class="fa-regular fa-user" style="color: #fff;"></i> Uczniowie</a>
+            <a class="przycisk" href="./student_list.php"><i class="fa-regular fa-user" style="color: #fff;"></i> Uczniowie</a>
         </div>
 
         <?php
@@ -16,7 +16,7 @@ include('./head_admin.php');
                 if (!empty($data)){
                     while($row = mysqli_fetch_assoc($data))
                     {
-                        echo "<form class='MyForm' action='./lista_uczniowie.php' method = 'get'>
+                        echo "<form class='MyForm' action='./student_list.php' method = 'get'>
                         <input type=text name='imie' placeholder='imię' id='imie' class='imie' value=".$row['imie']."></input>
                         <input type=text name='nazwisko' placeholder='nazwisko' id='nazwisko' class='nazwisko' value=".$row['nazwisko']."></input>
                         <input type=text  name='PESEL' placeholder='PESEL' id='PESEL' class='PESEL' value=".$row['PESEL']."></input>
