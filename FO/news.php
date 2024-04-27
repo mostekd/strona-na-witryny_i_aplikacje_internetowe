@@ -30,5 +30,5 @@
     }
     $baza->close();
 ?>
-<a href="./news_all.php">Pokaż wszystkie wpisy</a>
+<a href="index.php?id=news_all" id="news_all">Pokaż wszystkie wpisy</a>
 </div>

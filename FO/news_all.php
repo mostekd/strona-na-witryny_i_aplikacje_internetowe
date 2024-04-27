@@ -1,6 +1,3 @@
-<?php
-    include('../DB/db_connection.php');
-?>
 <div id="contactInfo" class="contact-container">
 <?php
     include('../DB/db_article.php');

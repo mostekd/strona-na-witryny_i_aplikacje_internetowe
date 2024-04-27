@@ -34,6 +34,9 @@
             if($_GET['id'] == 'article'){
                 include('./article.php');
             } 
+            if($_GET['id'] == 'news_all'){
+                include('./news_all.php');
+            } 
         }
         else{
             include('./news.php');
