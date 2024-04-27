@@ -44,8 +44,8 @@ class db_guestbook extends db_connection{
         header('location: index.php?id=searchGuests'); 
     }
 
-    function updateGuestbookByID($id_guestbook, $title, $text, $author, $active){
-        $query = "UPDATE `guestbook` SET `title`='".$title."', `text`='".$text."', `author`='".$author."', `active`='".$active."' WHERE `id_guestbook`=".$id_guestbook;
+    function updateGuestbookByID($id_guestbook, $title, $text, $author){
+        $query = "UPDATE `guestbook` SET `title`='".$title."', `text`='".$text."', `author`='".$author."', `active` = '1' WHERE `id_guestbook`=".$id_guestbook;
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id_guestbook']);
         header('location: ../BO/guestbook_list.php');   
