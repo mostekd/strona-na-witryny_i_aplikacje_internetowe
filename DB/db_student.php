@@ -8,8 +8,8 @@ class db_student extends db_connection{
         }
     }
 
-    function insertUczen($imie, $nazwisko, $PESEL, $email, $uwagi){
-        $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `comments`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$uwagi."');";
+    function insertUczen($imie, $nazwisko, $PESEL, $email, $comments){
+        $query = "INSERT INTO `uczen`(`imie`, `nazwisko`, `PESEL`, `email`, `comments`) VALUES ('".$imie."','".$nazwisko."','".$PESEL."','".$email."','".$comments."');";
         $data = mysqli_query($this->connect, $query);
         header('location: ../BO/student_list.php'); 
         $this->close();
@@ -23,8 +23,8 @@ class db_student extends db_connection{
         $this->close();
     }
 
-    function updateUczen($id_ucznia, $imie, $nazwisko, $PESEL, $email, $uwagi){
-        $query = "UPDATE `uczen` SET `imie`='".$imie."',`nazwisko`='".$nazwisko."',`PESEL`='".$PESEL."',`email`='".$email."',`uwagi`='".$uwagi."' WHERE `id_ucznia`=".$id_ucznia.";";
+    function updateUczen($id_ucznia, $imie, $nazwisko, $PESEL, $email, $comments){
+        $query = "UPDATE `uczen` SET `imie`='".$imie."',`nazwisko`='".$nazwisko."',`PESEL`='".$PESEL."',`email`='".$email."',`comments`='".$comments."' WHERE `id_ucznia`=".$id_ucznia.";";
         $data = mysqli_query($this->connect, $query);
         unset($_GET['id']);
         header('location: ../BO/student_list.php');   
@@ -32,7 +32,7 @@ class db_student extends db_connection{
     }
 
     function selectUczenByID($id_ucznia){
-        $query = "SELECT `id_ucznia`,`imie`, `nazwisko`, `PESEL`, `email`, `uwagi` FROM `uczen` WHERE id_ucznia =".$id_ucznia;
+        $query = "SELECT * FROM `uczen` WHERE id_ucznia =".$id_ucznia;
         $data = mysqli_query($this->connect, $query);
 
         if (mysqli_num_rows($data) > 0) {
