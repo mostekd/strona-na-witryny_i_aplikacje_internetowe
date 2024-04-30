@@ -15,6 +15,11 @@ include('./head_admin.php');
             $id_guestbook=$_GET['id'];
             $baza->deleteGuestbookByID($id_guestbook);
         }
+        if(isset($_GET['active']))
+        {
+            $id_guestbook=$_GET['id'];
+            $baza->updateGuestbookByIDsetActive($id_guestbook);
+        }
         }
 
     $baza->databaseConnect();

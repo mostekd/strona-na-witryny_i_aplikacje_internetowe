@@ -51,5 +51,13 @@ class db_guestbook extends db_connection{
         header('location: ../BO/guestbook_list.php');   
         $this->close();
     }
+
+    function updateGuestbookByIDsetActive($id_guestbook){
+        $query = "UPDATE `guestbook` SET  `active`= 1 WHERE `id_guestbook`=".$id_guestbook;
+        $data = mysqli_query($this->connect, $query);
+        unset($_GET['id_guestbook']);
+        header('location: ../BO/guestbook_list.php');   
+        $this->close();
+    }
 }
 ?>

@@ -16,23 +16,13 @@ include('./head_admin.php');
             $id_guestbook=$_GET['id_guestbook'];
             $baza->deleteGuestbookByID($id_guestbook);
         }
-        if(isset($_GET['opcja'])){
-            if($_GET['opcja'] == 'confirm'){
-                $tytul = $_GET['title'];
-                $text = $_GET['text'];
-                $author = $GET['author'];
-                $id_guestbook = $_GET['id_guestbook'];
-                $active = 1;
-                $baza->updateGuestbookByID($id_guestbook, $title, $text, $author, $active);
-            }
-        }
         }
 
     $baza->databaseConnect();
 
     $id_guestbook = isset($_GET['id_guestbook']) ? $_GET['id_guestbook'] : null;
 
-    if($active = 0) {
+    if($id_guestbook !== null) {
         $data = $baza->selectGuestbookByID($id_guestbook);
         if($data) {
             while($row = mysqli_fetch_assoc($data))
@@ -41,17 +31,12 @@ include('./head_admin.php');
                 <button class='delete'><a href=guestbook_list.php?del=True&id=".$row['id_guestbook'].">
                 Usuń wpis
                 </a></button>
-                <input type=hidden name='opcja' id='opcja' class='opcja' value='confirm'><button class='delete'><a href='./guestbook_list.php'>
+                <button class='delete'><a href='./guestbook_list.php?active=True&id=".$row['id_guestbook']."'>
                 Zatwierdź wpis
-                </a></button></input>
                 </div>";
             }}
             else {
-                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']."</a><article>Treść:".$row['text']."</article> Autor:".$row['author']."
-                <button class='delete'><a href=guestbook_list.php?del=True&id=".$row['id_guestbook'].">
-                Usuń wpis
-                </a></button
-                </div>";
+                echo "Guestbook entry not found.";
             }
         } 
         else {
