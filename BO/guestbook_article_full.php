@@ -32,7 +32,7 @@ include('./head_admin.php');
 
     $id_guestbook = isset($_GET['id_guestbook']) ? $_GET['id_guestbook'] : null;
 
-    if($id_guestbook !== null) {
+    if($active = 0) {
         $data = $baza->selectGuestbookByID($id_guestbook);
         if($data) {
             while($row = mysqli_fetch_assoc($data))
@@ -47,7 +47,11 @@ include('./head_admin.php');
                 </div>";
             }}
             else {
-                echo "Guestbook entry not found.";
+                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']."</a><article>Treść:".$row['text']."</article> Autor:".$row['author']."
+                <button class='delete'><a href=guestbook_list.php?del=True&id=".$row['id_guestbook'].">
+                Usuń wpis
+                </a></button
+                </div>";
             }
         } 
         else {
