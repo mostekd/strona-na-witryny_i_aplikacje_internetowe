@@ -37,7 +37,7 @@ include('./head_admin.php');
         if($data) {
             while($row = mysqli_fetch_assoc($data))
             {
-                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']."</a><article>Treść:".$row['text']." ...</article> Autor:".$row['author']."
+                echo "<div id='wpis' class='artykul'>Tytuł: ".$row['title']."</a><article>Treść:".$row['text']."</article> Autor:".$row['author']."
                 <button class='delete'><a href=guestbook_list.php?del=True&id=".$row['id_guestbook'].">
                 Usuń wpis
                 </a></button>
