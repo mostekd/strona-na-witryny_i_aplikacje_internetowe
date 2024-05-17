@@ -52,15 +52,15 @@
     <form class="formularz_kontaktowy" action="./index.php" method = "get">
         <label for="inquiryType">Typ zapytania:</label>
         <select class="contact_form_select" id="inquiryType" name="inquiryType">
-            <option value="null">--</option>
-            <option value="Dostępność książki" selected>Zapytanie o dostępność książki</option>
+            <option value="null" selected>--</option>
+            <option value="Dostępność książki">Zapytanie o dostępność książki</option>
             <option value="Rezerwacja">Prośba o rezerwację</option>
             <option value="Inna sprawa">Inna sprawa</option>
         </select>
-        <input type=text name="imie" placeholder="imię" id="imie" class="imie" value="Tomasz"></input>
-        <input type=text name="nazwisko" placeholder="nazwisko" id="nazwisko" class="nazwisko" value="Szczepanik"></input>
-        <input type=email name="email" placeholder="adres e-mail" id="email" class="email" value="t.szczepan@gmail.com"></input>
-        <textarea type=text name="wiadomosc" placeholder="treść wiadomości" id="wiadomosc" class="wiadomosc">Mostowski to buła</textarea>
+        <input type=text name="imie" placeholder="imię" id="imie" class="imie"></input>
+        <input type=text name="nazwisko" placeholder="nazwisko" id="nazwisko" class="nazwisko"></input>
+        <input type=email name="email" placeholder="adres e-mail" id="email" class="email"></input>
+        <textarea type=text name="wiadomosc" placeholder="treść wiadomości" id="wiadomosc" class="wiadomosc"></textarea>
         <input type=hidden name="id" id="id" class="id" value='contactInfo'></input>
         <input type=hidden name="option" id="option" class="option" value='sendMail'></input>
 
