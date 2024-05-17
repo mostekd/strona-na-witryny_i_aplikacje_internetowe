@@ -1,5 +1,5 @@
 <div id="myNav" class="panel_prawy">
-    <div class="">
+    <div class="zdjprawy">
         <?php
         include('../DB/db_zdj.php');
         $baza = new db_zdj();
