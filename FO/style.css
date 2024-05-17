@@ -326,8 +326,8 @@ button{
     height: 30px;
 }
 
-.zdjprawy{
-  margin-right: 20px;
-  height: 100px;
-  width: 100px;
+.zdjprawy img{
+  margin-right: 5px;
+  height: 250px;
+  width: 250px;
 }
