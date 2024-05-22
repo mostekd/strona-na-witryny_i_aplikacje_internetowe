@@ -392,6 +392,7 @@ input[type="reset"]{
   margin-top: 10px;
 }
 .contact_form_select {
+  margin-bottom: 12px;
   appearance: none;
   padding: 10px;
   background-color: #f9f9f9;
