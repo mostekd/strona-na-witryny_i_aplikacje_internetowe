@@ -564,12 +564,14 @@ th {
   max-height: 60vh;
 }
 .panel_prawy{
+  margin-right: 10px;
   display: flex;
   max-width: 280px;
   overflow: hidden;
   max-height: 170px;
   padding-right: 2vw;
 }
+
 
 .headerzdj{
   display: flex;
