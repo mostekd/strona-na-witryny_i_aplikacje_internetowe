@@ -11,7 +11,6 @@
             echo '<p>No image found</p>';
         }
         ?>
-        <script src="../js/pogoda.js"></script>
         <script src="../js/calendar.js"></script>
     </div>
 </div>

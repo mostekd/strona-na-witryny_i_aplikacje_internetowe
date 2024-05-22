@@ -56,15 +56,7 @@
         <span class="link-text">Kalendarz</span>
       </a>
     </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <ion-icon name="pie-chart-outline"></ion-icon>
-        </div>
-        <span class="link-text">Pogoda</span>
-        <iframe class="pogoda1" src="https://www.meteoblue.com/pl/pogoda/widget/daily?geoloc=detect&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&windgust=1&winddirection=0&winddirection=1&uv=0&uv=1&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&pressure=1&layout=dark"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 216px; height: 440px"></iframe><div></div>
-      </a>
-    </li>
+    <iframe src="https://www.meteoblue.com/pl/pogoda/widget/daily/java_gruzja_614217?geoloc=fixed&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&windgust=1&winddirection=0&winddirection=1&uv=0&uv=1&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&pressure=1&layout=dark"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 216px; height: 440px"></iframe>
   </ul>
 </nav>
   <?php
